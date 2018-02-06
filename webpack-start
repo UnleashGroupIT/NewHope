@@ -1,0 +1,18 @@
+webpack
+standard
+html webpack plugin
+webpack dev server
+
+babel-core
+babel-loader
+babel-preset-react -> transform-react-jsx plugin
+
+react
+react-dom
+
+jest
+
+style-loader
+css-loader
+
+extract-text-plugin
