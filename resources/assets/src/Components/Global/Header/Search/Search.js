@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 
 const Search = props =>(
 	<p>Search</p>
-);
+)
 
-export default Search;
+export default Search

@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react'
 
 const Social = () => (
-	<div className="social">
+	<div className="Social">
 		<p>Face</p>
 		<p>Twitter</p>
 		<p>Linkedin</p>
 		<p>Youtube</p>
 	</div>
-);
+)
 
-export default Social;
+export default Social

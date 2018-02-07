@@ -1,6 +1,10 @@
+@import './reset';
+@import './variables';
 
-// Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+@import './Components/Global/Layout/App';
 
-// Bootstrap
-@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+@import './Components/Global/Header/Header';
+@import './Components/Global/Header/Menu/Menu';
+
+@import './Components/Global/Footer/Footer';
+@import './Components/Global/Footer/Social/Social';

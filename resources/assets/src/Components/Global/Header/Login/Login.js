@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 
 const Login = props =>(
 	<p>Login</p>
-);
+)
 
-export default Login;
+export default Login

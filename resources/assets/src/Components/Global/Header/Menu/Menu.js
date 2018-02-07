@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 
 const Menu = props =>(
-	<nav>
+	<nav className="App-header--nav">
 		<ul>
 			<li>Header Menu 1</li>
 			<li>Header Menu 2</li>
@@ -9,6 +9,6 @@ const Menu = props =>(
 			<li>Header Menu 4</li>
 		</ul>
 	</nav>
-);
+)
 
-export default Menu;
+export default Menu

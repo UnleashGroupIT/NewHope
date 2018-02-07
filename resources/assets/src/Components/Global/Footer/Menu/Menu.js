@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const Menu = props =>(
 	<nav>
@@ -9,6 +9,6 @@ const Menu = props =>(
 			<li>Footer Menu 4</li>
 		</ul>
 	</nav>
-);
+)
 
-export default Menu;
+export default Menu

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const NewsLetter = () => (
 	<div className="newsLetter">
@@ -9,4 +9,4 @@ const NewsLetter = () => (
 	</div>
 );
 
-export default NewsLetter;
+export default NewsLetter

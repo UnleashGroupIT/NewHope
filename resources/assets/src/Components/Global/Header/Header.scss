@@ -1,0 +1,12 @@
+.App-header{
+	background:$gray-light;
+}
+
+.App-header--menu__wrp{
+	background:$white;
+}
+
+.App-header--menu{
+	display:flex;
+	justify-content:space-between;
+}
