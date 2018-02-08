@@ -16,6 +16,14 @@
 });*/
 
 
+Route::get('/moo', function () {
+    return view('moo');
+});
+
+
 Route::view('/{path?}', 'welcome')
      ->where('path', '.*')
      ->name('react');
+
+
+

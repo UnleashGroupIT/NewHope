@@ -1,13 +1,13 @@
 import React from 'react'
-import NewsLatest from './NewsLatest/NewsLatest'
-import NewsPopular from './NewsPopular/NewsPopular'
+import NewsCategory from './NewsCategory/NewsCategory'
 
 const News = () => (
   <section className="News">
     <h2>News page</h2>
     <hr/>
-    <NewsLatest name="Latest"/>
-    <NewsPopular />
+    <NewsCategory name="Latest"/>
+    <NewsCategory name="Popular"/>
+    <NewsCategory name="Future of Work" img="true" alt="IMG" src="src"/>
   </section>
 )
 

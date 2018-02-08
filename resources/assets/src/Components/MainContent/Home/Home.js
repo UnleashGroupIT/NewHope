@@ -1,8 +1,8 @@
 import React from 'react'
 
-import NewsLatest from '../News/NewsLatest/NewsLatest'
+import NewsCategory from '../News/NewsCategory/NewsCategory'
+import TalksCategory from '../Talks/TalksCategory/TalksCategory'
 import Events from '../Events/Events'
-import TalksPopular from '../Talks/TalksPopular/TalksPopular'
 import Poll from '../Poll/Poll'
 import MobileApp from '../MobileApp/MobileApp'
 
@@ -11,9 +11,9 @@ const Home = () => (
   <section className="Home">
     <h2>Home page</h2>
     <hr/>
-    <NewsLatest name="News Latest"/>
+    <NewsCategory name="News Latest"/>
     <Events />
-    <TalksPopular name="Talks Popular" />
+    <TalksCategory name="Talks Popular" />
     <div className="Poll-and-MobileApp">
     	<Poll />
     	<MobileApp />
