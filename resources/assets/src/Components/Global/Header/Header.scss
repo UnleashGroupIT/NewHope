@@ -1,12 +1,21 @@
 .App-header{
-	background:$gray-light;
+	background:$white;
+	margin-bottom:3em;
 }
 
-.App-header--menu__wrp{
-	background:$white;
+.App-header--logo-_-menu{
+	display:flex;
+}
+
+.App-header--logo{
+	margin-right:1em;
 }
 
 .App-header--menu{
 	display:flex;
 	justify-content:space-between;
+}
+
+.App-header--search-_-login{
+	display:flex;
 }

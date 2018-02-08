@@ -2,7 +2,7 @@ import React from 'react'
 
 const Menu = props =>(
 	<nav>
-		<ul>
+		<ul className="App-footer--ul">
 			<li>Footer Menu 1</li>
 			<li>Footer Menu 2</li>
 			<li>Footer Menu 3</li>

@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
+
+
+Route::view('/{path?}', 'welcome')
+     ->where('path', '.*')
+     ->name('react');

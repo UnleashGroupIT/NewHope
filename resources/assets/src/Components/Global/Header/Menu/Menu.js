@@ -1,12 +1,15 @@
 import React from 'react'
 
-const Menu = props =>(
-	<nav className="App-header--nav">
-		<ul>
-			<li>Header Menu 1</li>
-			<li>Header Menu 2</li>
-			<li>Header Menu 3</li>
-			<li>Header Menu 4</li>
+import { Link } from 'react-router-dom'
+
+const Menu = () => (
+	<nav>
+		<ul className="App-header--ul">
+			<li><Link to="/">Home</Link></li>
+        	<li><Link to="/news">News</Link></li>
+        	<li><Link to="/talks">Talks</Link></li>
+        	<li><Link to="/events">Events</Link></li>
+        	<li><Link to="/about">About</Link></li>
 		</ul>
 	</nav>
 )

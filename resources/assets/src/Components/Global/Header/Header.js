@@ -5,19 +5,19 @@ import Login from './Login/Login'
 
 const Header = props =>(
 	<header className="App-header">
-		<div className="App-header--menu__wrp">
-			<div className="Layout-width">
-				<div className="App-header--menu">
+		<div className="Layout-width">
+			<div className="App-header--menu">
+				<div className="App-header--logo-_-menu">
+					<div className="App-header--logo">
+    					<img alt="UNLEASH logo" />
+    				</div>
 					<Menu />
-					<div className="App-header--search&login">
-						<Search />
-						<Login />
-					</div>
+				</div>
+				<div className="App-header--search-_-login">
+					<Search />
+					<Login />
 				</div>
 			</div>
-		</div>
-		<div className="Layout-width">
-			<h1>Header content</h1>
 		</div>
 	</header>
 )
