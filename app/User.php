@@ -3,7 +3,10 @@
 namespace App;
 
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use Jenssegers\Mongodb\Auth\User as Authenticatable;
+use Moloquent;
+use Articles;
+use Talks;
 
 class User extends Moloquent
 {
@@ -26,4 +29,26 @@ class User extends Moloquent
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+   public static function doNotEmbedThis(){
+
+        return [
+            'password',
+            'remember_token',
+            'email'
+        ];
+
+    }
+
+
+    public function articles()
+    {
+        return $this->hasMany('App\Articles');
+    }  
+
+    public function talks()
+    {
+        return $this->hasMany('App\Talks');
+    } 
+
 }

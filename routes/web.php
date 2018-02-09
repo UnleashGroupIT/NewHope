@@ -16,9 +16,7 @@
 });*/
 
 
-Route::get('/moo', function () {
-    return view('moo');
-});
+Route::get('/moo', 'TestController@index');
 
 
 Route::view('/{path?}', 'welcome')
