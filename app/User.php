@@ -41,14 +41,4 @@ class User extends Moloquent
     }
 
 
-    public function articles()
-    {
-        return $this->hasMany('App\Articles');
-    }  
-
-    public function talks()
-    {
-        return $this->hasMany('App\Talks');
-    } 
-
 }

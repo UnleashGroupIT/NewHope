@@ -47,4 +47,43 @@ $factory->define(App\Talks::class, function (Faker $faker) {
     ];
 });
 
+$factory->define(App\Speakers::class, function (Faker $faker) {
+    return [
+        'name' => $faker->catchPhrase,
+        'description' => $faker->paragraph,
+        'img_url' => $faker->imageUrl($width = 800, $height = 600, 'cats')        
+    ];
+});
 
+
+$factory->define(App\Sponsors::class, function (Faker $faker) {
+    return [
+        'company_name' => $faker->catchPhrase,
+        'description' => $faker->paragraph,
+
+    ];
+});
+
+$factory->define(App\Grids::class, function (Faker $faker) {
+    return [
+        'title' => $faker->catchPhrase,
+        'description' => $faker->paragraph,       
+    ];
+});
+
+
+$factory->define(App\AgendaTracks::class, function (Faker $faker) {
+    return [
+        'title' => $faker->catchPhrase,
+        'description' => $faker->paragraph, 
+        'room' => $faker->word,       
+    ];
+});
+
+$factory->define(App\AgendaSessions::class, function (Faker $faker) {
+    return [
+        'title' => $faker->catchPhrase,
+        'description' => $faker->paragraph, 
+        'category' => $faker->word,       
+    ];
+});
