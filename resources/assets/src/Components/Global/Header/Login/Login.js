@@ -1,7 +1,9 @@
 import React from 'react'
 
 const Login = props =>(
-	<p>Login</p>
+	<section className="Login">
+		LOGIN
+	</section>
 )
 
 export default Login

@@ -11,15 +11,15 @@ import MainContent from '../../MainContent/MainContent'
 class App extends React.Component {
   render() {
     return(
-    	<div className="App">
-    		<Router>
-                <div className="App-container">
-                    <Header />
-        			<MainContent />
-        		</div>
-            </Router>
-    		<Footer />
-    	</div>
+    	<Router>
+            <div className="App">
+    		  <div className="App-container">
+                <Header />
+        		<MainContent />
+        	  </div>
+              <Footer />
+            </div>
+        </Router>
     )
   }
 }

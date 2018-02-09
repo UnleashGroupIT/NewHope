@@ -1,5 +1,43 @@
+
+strong{
+	display:block;
+	margin-bottom:1.5em;
+	color:$white;
+}
+
+.App-footer--nav{
+	@media #{$larg} {
+		width:58%;
+	}
+}
+
 .App-footer--ul{
 	display:flex;
+	flex-wrap:wrap;
 	justify-content:space-between;
+	li{
+		flex-basis:45%;
+		@media #{$larg} {
+			flex-basis:auto;
+		}
+	}
+}
 
+.App-footer--li{
+	margin-top:3em;
+	@media #{$larg} {
+		margin-top:0;
+	}
+}
+
+.App-footer--subul{
+	li{
+		margin:1em 0;
+		a{
+			color:$grey3;
+			&:hover{
+				color:$white;
+			}
+		}		
+	}
 }

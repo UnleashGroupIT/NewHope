@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
 import Menu from './Menu/Menu'
 import Search from './Search/Search'
 import Login from './Login/Login'
@@ -9,7 +11,7 @@ const Header = props =>(
 			<div className="App-header--menu">
 				<div className="App-header--logo-_-menu">
 					<div className="App-header--logo">
-    					<img alt="UNLEASH logo" />
+    					<Link to="/"><img src="/storage/Gfx/Global/Header/unleash-logoB.svg" alt="UNLEASH" /></Link>
     				</div>
 					<Menu />
 				</div>

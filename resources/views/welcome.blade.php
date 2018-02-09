@@ -8,7 +8,7 @@
         <title>UNLEASH React</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
         <link rel='stylesheet' href="{{ mix('css/index.css') }}" type='text/css' />
 	 
         <!-- Styles -->
@@ -16,6 +16,6 @@
     <body>
         <div id="root"></div>
 		
-		 <script src="{{ mix('js/index.js') }}" type="text/javascript"></script>	
+		 <script src="{{ mix('js/index.js') }}"></script>	
     </body>
 </html>

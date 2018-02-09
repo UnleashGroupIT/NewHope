@@ -1,3 +1,19 @@
 .Social{
 	display:flex;
+	margin-top:1em;
+
+	img{
+		margin-right:1.5em;
+	    border-radius: 25px;
+	    height:40px;
+		background: rgba($white,0.12);
+		padding:.5em;
+		&:hover{
+			background: rgba($white,0.25);
+			cursor:pointer;
+		}
+		@media #{$larg} {
+			margin-right:1em;
+		}
+	}
 }

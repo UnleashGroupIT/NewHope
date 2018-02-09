@@ -1,5 +1,10 @@
 .App-header--ul{
 	display:flex;
 	justify-content:space-between;
+}
 
+.App-header--li{
+	text-transform:uppercase;
+	font-weight:bold;
+	margin:0 1.5em;
 }

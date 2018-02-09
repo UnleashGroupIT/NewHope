@@ -7,17 +7,20 @@ const Footer = props => (
   <footer className="App-footer">
   	<div className="Layout-width">
     	<div className="App-footer--logo">
-    		<img alt="UNLEASH logo" />
+    		<img src="/storage/Gfx/Global/Footer/unleash-logoW.svg" alt="UNLEASH" />
     	</div>
     	<div className="App-footer--menu__wrp">
 	    	<Menu />
-			<div className="App-footer--social&newsletter">
-				<Social />
-				<NewsLetter />
+			<div>
+				<p><strong>Follow us</strong></p>
+				<div className="newsLetter-and-Social">
+					<NewsLetter />
+					<Social />
+				</div>
 			</div>
 		</div>
 		<div className="App-footer--copyright">
-		<p>2013-2017 UNLEASH Group</p>
+		<span>&copy; 2013 - 2017 UNLEASH Group. Made with &#10084; in Budapest.</span>
 		</div>
 	</div>
   </footer>

@@ -1,0 +1,38 @@
+.newsLetter{
+	.newsLetter--input{
+		background: rgba($white,0.12);
+		width:95%;
+    	border: none;
+    	padding: 1em;
+    	padding-right: 50px;
+    	font-size:14px;
+    	color:$white;
+    	&::placeholder{
+    		color:$grey3;
+    	}
+    	&:focus{
+    		border:1px solid rgba($white,0.25);
+    		outline-width: 0;
+    	}
+    	@media #{$larg} {
+			width:265px;
+			padding-right:70px;
+		}
+
+	}
+	.newsLetter--submit{
+		margin-left: -45px;
+	    width: 45px;
+	    height: 35px;
+	    border: none;
+	    background: transparent;
+	    position: absolute;
+	    cursor: pointer;
+		&::after{
+			content:url("/storage/Gfx/Global/Footer/envelope.svg");
+			position: absolute;
+		    top: 10px;
+		    right: 10px;
+		}
+	}
+}
