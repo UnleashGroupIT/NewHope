@@ -71,13 +71,37 @@ section {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 
-h1 {
-  font-size: 2em;
-}
-
 h1,h2,h3,h4,h5,h6{
   margin:0;
 }
+
+h1,h2{
+  font-family: 'Anton', sans-serif;
+}
+
+h1 {
+  font-size: 3.5em;
+  line-height: 70px;
+  text-shadow: 0px 1px 0px rgba(17, 12, 17, 0.48);
+  text-transform: uppercase;
+}
+h2{
+  font-size: 1.5em;
+}
+h3{
+  font-size: 1.25em;
+}
+h4{
+  font-size: 1.125em;
+}
+h5{
+  font-size: 1em;
+}
+h6{
+  font-size: .875em;
+}
+
+
 
 /* Grouping content
    ========================================================================== */
@@ -249,6 +273,7 @@ audio:not([controls]) {
 
 img {
   border-style: none;
+  max-width:100%;
 }
 
 /**

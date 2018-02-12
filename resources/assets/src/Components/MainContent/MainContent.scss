@@ -1,0 +1,30 @@
+.MainContent--header{
+	height:600px;
+	color:$white;
+	padding:7em 0;
+
+	&.Home--header{
+		background: url(/storage/Gfx/home-bgD.jpg);
+    	@include bg-cover-pos;
+	};
+	&.News--header{
+		background: url(/storage/Gfx/news-bgD.jpg);
+    	@include bg-cover-pos;
+	}
+	&.Talks--header{
+		background: url(/storage/Gfx/talks-bgD.jpg);
+    	@include bg-cover-pos;
+	}
+}
+
+.MainContent--header---wrp{
+	display:flex;
+	justify-content:space-between;
+
+	.MainContent--title{
+		flex-basis:50%;
+	}
+	.MainContent--highlight{
+		flex-basis:32%;
+	}
+}

@@ -9,6 +9,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
         <link rel='stylesheet' href="{{ mix('css/index.css') }}" type='text/css' />
 	 
         <!-- Styles -->

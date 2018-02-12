@@ -1,10 +1,46 @@
 .Event-card{
-	background:$purple;
-	height:350px;
-	flex-basis:33%;
+	flex-basis:32%;
 	display:flex;
+	flex-direction:column;
+}
+
+.Event-card--details{
+	padding:1em;
+	border:2px solid $grey5;
+}
+
+.Event-card--img{
+	display:flex;
+	img{width:100%;}
 }
 
 .Event-card--name{
-	margin:auto;
+	color:$white;
+	padding:.25em 0;
+	padding-left:1.5em;
+	background:$green;
+}
+
+.Event-card--slogen{
+	padding-bottom:.75em;
+}
+
+.Event-card--place-and-date{
+	border-top:2px solid $grey5;
+	padding-top:1em;
+
+	.Event-card-date{
+		h6::before{
+			content: url(/storage/Gfx/calendar.svg);
+			display:inline-block;
+			margin-right:1em;
+		}
+	}
+	.Event-card-place{
+		h6::before{
+			content: url(/storage/Gfx/pin.svg);
+			display:inline-block;
+			margin: 0 1em .5em 1px;
+		}
+	}
 }

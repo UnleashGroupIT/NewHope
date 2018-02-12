@@ -17,6 +17,7 @@ $grey2 : #8C898B;
 $grey3 : #C5C4C5;
 $grey4 : #ECEBEC;
 $grey5 : #F5F5F5; //LIGHTEST
+$grey9 : #f9f9f9;
 
 $red : #F2385A;
 
@@ -24,8 +25,15 @@ $event-teal : #2DBABA;
 
 $purple : #686BF7;
 
-
+//MEDIA QUERIES
 
 $medium: "screen and (min-width : 30em)";
 $larg: "screen and (min-width : 48em)";
 $extra-larg: "screen and (min-width : 75em)";
+
+//IMG BG
+
+@mixin bg-cover-pos	{
+ background-size: cover;
+ background-position: center;
+}

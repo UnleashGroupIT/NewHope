@@ -1,6 +1,44 @@
 .News-card{
-	background:$red;
-	flex-basis: 46%;
+	display:flex;
+	justify-content:space-between;
+	border: 2px solid $grey5;
+	flex-basis: 100%;
     margin: 1em 0;
-    padding: 1em;
+    @media #{$larg} {
+    	flex-basis:47%;
+    }
+}
+
+.News-card--details{
+	display:flex;
+	flex-direction:column;
+	padding:1em;
+	width:80%;
+
+	h5{
+		font-size:.8em;
+		@media #{$larg} {
+    		font-size:.8em;
+    	}
+    	@media #{$extra-larg} {
+    		font-size:initial;
+    	}
+	}
+}
+
+.News-card--preview{
+	display:flex;
+	img{
+		width:80px;
+	}
+}
+
+.News-card--author-category{
+	margin-top: auto;
+    margin-bottom: .5em;
+	a{color:$purple}
+}
+
+.News-card--date{
+	color:$grey2;
 }

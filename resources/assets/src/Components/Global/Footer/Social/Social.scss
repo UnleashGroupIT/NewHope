@@ -17,3 +17,15 @@
 		}
 	}
 }
+
+//IN HEADER
+
+.App-header--social .Social {
+	margin-bottom:1em;	
+	img{
+		border:1px solid $grey3;
+		&:hover{
+			background:rgba($black,0.03);
+		}
+	}
+}
