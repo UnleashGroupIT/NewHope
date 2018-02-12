@@ -22,6 +22,7 @@
 		}
 		.App-header-dropdownBox--outer{
 			max-height:600px;
+			z-index:100;
 		}
 	}
 }
@@ -42,7 +43,7 @@
     padding:3em 0;
     //transition: all 1s;
 
-    .App-header--subtitle h2{
+    .App-header--subtitle h3{
     	display: inline-block;
     	background: $grey9;
     	padding-right: 1em;

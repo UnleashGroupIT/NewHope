@@ -9,7 +9,7 @@ const AboutSub = () => (
 		<div className="App-header--submenu about">	
 			<div className="App-header--submenu---wrp">
 				<div className="App-header--subtitle">
-					<h2>Unleash</h2>
+					<h3>Unleash</h3>
 				</div>
 				<ul className="App-header--subul">
 					<li className="App-header--subli"><Link to="#">Who we are</Link></li>
@@ -20,7 +20,7 @@ const AboutSub = () => (
 			</div>
 			<div className="App-header--submenu---wrp">
 				<div className="App-header--subtitle">
-					<h2>Careers</h2>
+					<h3>Careers</h3>
 				</div>
 				<ul className="App-header--subul">
 					<li className="App-header--subli"><Link to="#">Sales executive</Link></li>
@@ -38,7 +38,7 @@ const AboutSub = () => (
 		</div>
 		<div className="App-header--highlight">
 			<div className="App-header--subtitle">
-				<h2>Corporate posts</h2>
+				<h3>Corporate posts</h3>
 			</div>
 			<ul className="App-header--subul">
 				<li className="App-header--subli"><Link to="#"><NewsCard src="/storage/Gfx/news-previewHL.png" /></Link></li>

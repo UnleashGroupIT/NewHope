@@ -1,7 +1,19 @@
 .MainContent--header{
 	height:600px;
+	position:relative;
 	color:$white;
 	padding:7em 0;
+
+	&:after{
+		content:'';
+		width:100%;
+		height:150px;
+		background:url("/storage/Gfx/bg-line.png");
+		@include bg-cover-pos;
+		position:absolute;
+		left:0;
+		bottom:0;
+	}
 
 	&.Home--header{
 		background: url(/storage/Gfx/home-bgD.jpg);

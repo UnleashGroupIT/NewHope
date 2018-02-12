@@ -6,7 +6,7 @@ const EventsSub = () => (
 	<div className="App-header--sub">
 		<div className="Event london">
 			<div className="App-header--subtitle">
-				<h2>London</h2>
+				<h3>London</h3>
 			</div>
 			<EventCard src="/storage/Gfx/card-london.png"
 				   alt="UNLEASH London"
@@ -17,7 +17,7 @@ const EventsSub = () => (
 		</div>
 		<div className="Event america">
 			<div className="App-header--subtitle">
-				<h2>Las Vegas</h2>
+				<h3>Las Vegas</h3>
 			</div>
 			<EventCard src="/storage/Gfx/card-america.png"
 				   alt="UNLEASH America"
@@ -28,7 +28,7 @@ const EventsSub = () => (
 		</div>
 		<div className="Event amsterdam">
 			<div className="App-header--subtitle">
-				<h2>Amsterdam</h2>
+				<h3>Amsterdam</h3>
 			</div>
 			<EventCard src="/storage/Gfx/card-amsterdam.png"
 				   alt="UNLEASH Amsterdam"

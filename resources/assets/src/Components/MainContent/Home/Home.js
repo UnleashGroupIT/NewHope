@@ -4,7 +4,7 @@ import NewsCategory from '../News/NewsCategory/NewsCategory'
 import NewsCard from '../News/NewsCard/NewsCard'
 import TalksCategory from '../Talks/TalksCategory/TalksCategory'
 import Events from '../Events/Events'
-import Events from '../Startup/StartupBanner/StartupBanner'
+import StartupBanner from '../Startup/StartupBanner/StartupBanner'
 import Poll from '../Poll/Poll'
 import MobileApp from '../MobileApp/MobileApp'
 
@@ -28,11 +28,11 @@ const Home = () => (
         </div>
     </div>
     <div className="Layout-width">
-        <NewsCategory name="News Latest"/>
+        <NewsCategory name="News" categs/>
     </div>
         <Events />
     <div className="Layout-width">
-        <TalksCategory name="Talks Popular" />
+        <TalksCategory name="Talks" />
         <StartupBanner />
         <div className="Poll-and-MobileApp">
     	   <Poll />

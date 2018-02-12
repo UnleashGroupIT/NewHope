@@ -1,4 +1,11 @@
 .Startup-Banner{
 	background:url("/storage/Gfx/Startup/startup-BG.jpg");
-	bg-cover-pos;
+	@include bg-cover-pos;
+	padding: 3em 2.5em;
+	color:$white;
+	p{
+		margin-top:1em;
+		margin-bottom:2em;
+		width:300px;
+	}
 }

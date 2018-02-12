@@ -6,7 +6,7 @@ const TalksSub = () => (
 	<div className="App-header--sub">
 		<div className="App-header--submenu">	
 			<div className="App-header--subtitle">
-				<h2>Categories</h2>
+				<h3>Categories</h3>
 			</div>
 			<ul className="App-header--subul">
 				<li className="App-header--subli"><Link to="#">HR Technology</Link></li>
@@ -24,7 +24,7 @@ const TalksSub = () => (
 		</div>
 		<div className="App-header--highlight">
 			<div className="App-header--subtitle">
-				<h2>Most Popular</h2>
+				<h3>Most Popular</h3>
 			</div>
 			<ul className="App-header--subul">
 				<li className="App-header--subli"><Link to="#"><TalkCard src="/storage/Gfx/Talks/talk-previewHL.png" /></Link></li>

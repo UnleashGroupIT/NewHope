@@ -7,7 +7,7 @@ const EventCard = props => (
   	</div>
     <span className="Event-card--name">{props.name}</span>
     <div className="Event-card--details">
-    	<h3 className="Event-card--slogen">{props.slogen}</h3>
+    	<h4 className="Event-card--slogen">{props.slogen}</h4>
     	<div className="Event-card--place-and-date">
     		<div className="Event-card-place">
           <h6>{props.place}</h6>
