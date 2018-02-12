@@ -29,21 +29,21 @@ const AboutSub = () => (
 					<li className="App-header--subli all"><Link to="#">See more</Link></li>
 				</ul>
 			</div>
+			<div className="App-header--social">
+				<Social />
+			</div>
+			<div className="App-header--newsletter">
+				<NewsLetter />
+			</div>
 		</div>
 		<div className="App-header--highlight">
 			<div className="App-header--subtitle">
 				<h2>Corporate posts</h2>
 			</div>
 			<ul className="App-header--subul">
-				<li className="App-header--subli"><Link to="#"><NewsCard /></Link></li>
-				<li className="App-header--subli"><Link to="#"><NewsCard /></Link></li>
+				<li className="App-header--subli"><Link to="#"><NewsCard src="/storage/Gfx/news-previewHL.png" /></Link></li>
+				<li className="App-header--subli"><Link to="#"><NewsCard src="/storage/Gfx/news-previewHL2.png" /></Link></li>
 			</ul>
-		</div>
-		<div className="App-header--social">
-			<Social />
-		</div>
-		<div className="App-header--newsletter">
-			<NewsLetter />
 		</div>
 	</div>
 );

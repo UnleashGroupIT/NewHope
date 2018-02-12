@@ -10,6 +10,21 @@
 	&.News--header{
 		background: url(/storage/Gfx/news-bgD.jpg);
     	@include bg-cover-pos;
+
+    	.MainContent--header---wrp{
+    		flex-wrap:wrap;
+    	}
+    	.MainContent--title{
+    		flex-basis:100%;
+    	}
+    	.MainContent--highlight{
+    		display:flex;
+    		justify-content:space-between;
+    		flex-basis:100%;
+    	}
+    	.News-card{
+    		flex-basis:32%;
+    	}
 	}
 	&.Talks--header{
 		background: url(/storage/Gfx/talks-bgD.jpg);
@@ -23,6 +38,12 @@
 
 	.MainContent--title{
 		flex-basis:50%;
+		span{
+			margin-bottom:1em;
+		}
+		button{
+			margin-top:2em;
+		}
 	}
 	.MainContent--highlight{
 		flex-basis:32%;

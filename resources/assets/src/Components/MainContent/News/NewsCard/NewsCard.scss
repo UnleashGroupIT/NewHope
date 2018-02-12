@@ -1,7 +1,7 @@
 .News-card{
 	display:flex;
 	justify-content:space-between;
-	border: 2px solid $grey5;
+	border: 2px solid $grey4;
 	flex-basis: 100%;
     margin: 1em 0;
     @media #{$larg} {
@@ -37,8 +37,45 @@
 	margin-top: auto;
     margin-bottom: .5em;
 	a{color:$purple}
+	@media #{$extra-larg} {
+    	margin-top: 1em;
+    }
 }
 
 .News-card--date{
 	color:$grey2;
+}
+
+//IN THE HEADER
+
+.App-header--subli{
+	.News-card{
+		flex-direction:column-reverse;
+		margin:0;
+	}
+	.News-card--details{
+		width:100%;
+	}
+	.News-card--preview img{
+		width:100%;
+	}
+}
+
+//IN THE MAIN HEADER
+
+.MainContent--highlight{
+	
+	.News-card{
+		border:none;	
+	}
+	.News-card--preview{
+		display:none;
+	}
+	.News-card--details{
+		width:100%;
+		background:rgba($black,0.6)
+	}
+	.News-card--date{
+		color:$white;
+	}
 }

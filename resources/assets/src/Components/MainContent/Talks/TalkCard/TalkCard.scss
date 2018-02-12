@@ -1,7 +1,56 @@
 .Talk-card{
-	background:$green;
-	flex-basis: 32%;
-	height:200px;
+	display:flex;
+	flex-wrap:wrap;
+	border: 2px solid $grey4;
+	flex-basis: 100%;
     margin: 1em 0;
-    padding: 1em;
+    @media #{$larg} {
+    	flex-basis:32%;
+    }
+}
+
+.Talk-card--details{
+	padding:1em;
+	h5{
+		font-size:.8em;
+		@media #{$larg} {
+    		font-size:.8em;
+    	}
+    	@media #{$extra-larg} {
+    		font-size:initial;
+    	}
+	}
+}
+
+.Talk-card--preview{
+	display:flex;
+	position:relative;
+	&:after{
+		content:url("/storage/Gfx/Talks/play.svg");
+		position: absolute;
+		top: 50%;
+    	left: 50%;
+    	transform: translate(-50%, -50%);
+	}
+}
+
+.Talk-card--category{
+	margin-top: auto;
+    margin-bottom: .5em;
+	a{color:$purple}
+	@media #{$extra-larg} {
+    	margin-top: 1em;
+    }
+}
+
+.Talk-card--date{
+	color:$grey2;
+}
+
+// IN THE HEADER
+
+.App-header--subli{
+	.Talk-card{
+		margin:0;
+	}
 }

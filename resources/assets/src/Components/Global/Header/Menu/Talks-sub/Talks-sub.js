@@ -27,8 +27,8 @@ const TalksSub = () => (
 				<h2>Most Popular</h2>
 			</div>
 			<ul className="App-header--subul">
-				<li className="App-header--subli"><Link to="#"><TalkCard /></Link></li>
-				<li className="App-header--subli"><Link to="#"><TalkCard /></Link></li>
+				<li className="App-header--subli"><Link to="#"><TalkCard src="/storage/Gfx/Talks/talk-previewHL.png" /></Link></li>
+				<li className="App-header--subli"><Link to="#"><TalkCard src="/storage/Gfx/Talks/talk-previewHL.png" /></Link></li>
 			</ul>
 		</div>
 	</div>

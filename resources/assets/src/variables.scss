@@ -37,3 +37,9 @@ $extra-larg: "screen and (min-width : 75em)";
  background-size: cover;
  background-position: center;
 }
+
+@mixin bg-contain-pos-norep	{
+ background-size: contain;
+ background-position: center;
+ background-repeat:no-repeat;
+}

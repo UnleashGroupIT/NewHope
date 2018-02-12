@@ -4,6 +4,7 @@ import NewsCategory from '../News/NewsCategory/NewsCategory'
 import NewsCard from '../News/NewsCard/NewsCard'
 import TalksCategory from '../Talks/TalksCategory/TalksCategory'
 import Events from '../Events/Events'
+import Events from '../Startup/StartupBanner/StartupBanner'
 import Poll from '../Poll/Poll'
 import MobileApp from '../MobileApp/MobileApp'
 
@@ -16,7 +17,7 @@ const Home = () => (
                 <div className="MainContent--title">
                     <span>Alex Cooper &middot; Future of Work</span>
                     <h1>The robots are here : is this the end of decision making by humans?</h1>
-                    <button className="btn read-now">Read now</button>
+                    <button className="btn-white">Read now</button>
                 </div>
                 <div className="MainContent--highlight">
                     <NewsCard />
@@ -28,8 +29,11 @@ const Home = () => (
     </div>
     <div className="Layout-width">
         <NewsCategory name="News Latest"/>
+    </div>
         <Events />
+    <div className="Layout-width">
         <TalksCategory name="Talks Popular" />
+        <StartupBanner />
         <div className="Poll-and-MobileApp">
     	   <Poll />
     	   <MobileApp />
