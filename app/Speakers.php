@@ -4,9 +4,11 @@ namespace App;
 
 use Moloquent;
 use Tags;
+use Laravel\Scout\Searchable;
 
 class Speakers extends Moloquent
 {
+   use Searchable;
 
    public static function doNotEmbedThis(){
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Talks;
 
 class TalksController extends Controller
 {
@@ -81,4 +82,29 @@ class TalksController extends Controller
     {
         //
     }
+
+  public function search(Request $request){
+
+     $facets = '';
+
+
+
+ if ($request->filled('keyword')){
+   $keyword = $request->keyword;
+ }else {
+  $keyword = '';
+ }
+
+      $params = [
+                  'filters' => $facets,
+                  'hitsPerPage' => 10,
+                  'page' => 0,
+
+              ];
+
+     $result = Talks::search($keyword)->with($params)->get();
+     return $result;
+    
+    
+  }      
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Sponsors;
 
 class SponsorsController extends Controller
 {
@@ -81,4 +82,29 @@ class SponsorsController extends Controller
     {
         //
     }
+
+   public function search(Request $request){
+
+     $facets = '';
+
+
+
+ if ($request->filled('keyword')){
+   $keyword = $request->keyword;
+ }else {
+  $keyword = '';
+ }
+
+      $params = [
+                  'filters' => $facets,
+                  'hitsPerPage' => 10,
+                  'page' => 0,
+
+              ];
+
+     $result = Sponsors::search($keyword)->with($params)->get();
+     return $result;
+    
+    
+  }      
 }

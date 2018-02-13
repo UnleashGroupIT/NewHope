@@ -6,9 +6,12 @@ use Moloquent;
 use App\Tags;
 use App\User;
 use App\NewsCategories;
+use Laravel\Scout\Searchable;
 
 class Articles extends Moloquent
 {
+
+  use Searchable;
 
    public static function doNotEmbedThis(){
 

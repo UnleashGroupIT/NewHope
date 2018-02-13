@@ -104,7 +104,7 @@ class ArticlesController extends Controller
 
      $result = Articles::search($keyword)->with($params)->get();
      return $result;
-    //return $result->load('speakers')->load('tracks');
+    
     
   }  
 }
