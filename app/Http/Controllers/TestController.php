@@ -11,20 +11,18 @@ class TestController extends Controller
  
  public function index(){
 
-	$article = Articles::first();
+      $flight = Articles::where('tags', 'exists', true)->get();
+      foreach ($flight as $key => $value) {
+	 	  $tag = $value->tags()->where('_id','=','5a81cfc3ca6c3d1d20003914')->first();
+	 	  if($tag){
+	 	  	$tag->name = 'Moooo';
+	 	  	$tag->save();	
+	 	  }
+
+      }
 
 
- 	$Tag = Tags::take(1)->skip(mt_rand(0,Tags::count()-1))->first();
-
- 	dd($Tag['_id']);
- 	$save = [
- 		'name' => $Tag->name,
- 		'description' => $Tag->description
- 	];
- 	
- 	$article->tags()->create($save);
-
- 	return $article;
+ 	  return $flight;
  }
 
 }
