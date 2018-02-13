@@ -13,6 +13,17 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
+/*Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
-});
+});*/
+
+
+Route::get('/articles/search', 'ArticlesController@search');
+
+Route::get('/speakers/search', 'SpeakersController@search');
+
+Route::get('/talks/search', 'TalksController@search');
+
+Route::get('/sponsors/search', 'SponsorsController@search');
+
+Route::get('/agenda/search', 'AgendaSessionsController@search');
