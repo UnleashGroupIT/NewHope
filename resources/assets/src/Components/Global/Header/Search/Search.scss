@@ -1,3 +1,14 @@
+.Search{
+	margin:auto;
+	button{
+		background:url("/storage/Gfx/Global/Header/search.svg");
+		background-repeat: no-repeat;
+		width:30px;
+		height:20px;
+		border:none;
+	}
+}
+
 .Search--wrp{
 	position: absolute;
 	left: 0;
@@ -19,13 +30,6 @@
 
 	.Search--form	{ 
 		padding-top: 5px;
-		button{
-			background:url("/storage/Gfx/Global/Header/search.svg");
-			background-repeat: no-repeat;
-			width:30px;
-			height:20px;
-			border:none;
-		}
 
 		.Search--input-and-results{
 			margin: 4em auto;
