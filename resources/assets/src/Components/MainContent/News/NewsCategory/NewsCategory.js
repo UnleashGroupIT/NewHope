@@ -3,15 +3,18 @@ import NewsCard from '../NewsCard/NewsCard'
 
 const NewsCategory = props => (
     <div className="News--wrp">
-        <div className="News-headline">
-            <div>
+        <div className="Headline">
+            <div className="News--Title-and-Categs">
                 <div className="News--title">
-                    <h3>{props.name}</h3>    
+                    <h2>{props.name}</h2>    
                 </div>
-                {props.categs ? <div className="NewsCategs">
-                    <button className="btn-white">Latest</button>
-                    <button className="btn-white">Popular</button>
+                {props.categs ? <div className="News--Categs">
+                    <button className="btn-bw">Latest</button>
+                    <button className="btn-bw passive">Popular</button>
                 </div> : null}
+            </div>
+            <div className="seeAll">
+                <h5>See all -></h5>
             </div> 
         </div>
         {props.img ? <div className="NewsCategory--img">

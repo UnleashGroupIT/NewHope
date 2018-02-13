@@ -61,3 +61,17 @@
 		flex-basis:32%;
 	}
 }
+
+.Headline{
+	display: flex;
+    justify-content: space-between;
+    margin-bottom:.75em;
+}
+
+.seeAll{
+	display:flex;
+	h5{
+		margin:auto;
+		color:$red;
+	}
+}

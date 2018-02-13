@@ -1,5 +1,5 @@
 .Talks--wrp{
-	margin:3em 0;
+	margin:4em 0;
 }
 
 .TalkCard--wrp{
@@ -8,24 +8,12 @@
 	justify-content:space-between;
 }
 
-.Talks--headline{
-	display: flex;
-    justify-content: space-between;
-
-    .Talks--title{
-		background:repeating-linear-gradient(-45deg, $red, $red 3px, transparent 3px, transparent 6px);
-		display:flex;
-		flex-basis:90%;
-		h2{
-			background:$white;
-			padding-right:1em;
-		}
-	}
-	.Talks--seeAll{
-		display:flex;
-		h5{
-			margin:auto;
-			color:$red;
-		}
+.Talks--title{
+	background:repeating-linear-gradient(-45deg, $red, $red 3px, transparent 3px, transparent 6px);
+	display:flex;
+	flex-basis:90%;
+	h2{
+		background:$white;
+		padding-right:1em;
 	}
 }

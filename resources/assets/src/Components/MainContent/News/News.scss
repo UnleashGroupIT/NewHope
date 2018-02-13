@@ -1,9 +1,27 @@
 .News--wrp{
-	margin:3em 0;
+	margin:4em 0;
+	.seeAll h5{
+		color:$purple;
+	}
 }
 
 .NewsCard--wrp{
 	display:flex;
 	flex-wrap:wrap;
 	justify-content:space-between;
+}
+
+.News--Title-and-Categs{
+	display:flex;
+}
+
+.News--title{
+	margin:auto;
+	h2{
+		padding-right:1em;
+	}
+}
+
+.News--Categs{
+	.btn-bw{margin-right:1em;}
 }
