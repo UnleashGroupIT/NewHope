@@ -18,6 +18,11 @@
 
 Route::get('/moo', 'TestController@index');
 
+Auth::routes();
+
+//Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');
+
 
 Route::view('/{path?}', 'welcome')
      ->where('path', '.*')
@@ -25,3 +30,6 @@ Route::view('/{path?}', 'welcome')
 
 
 
+
+  
+   

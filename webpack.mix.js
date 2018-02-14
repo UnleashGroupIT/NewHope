@@ -14,3 +14,7 @@ let mix = require('laravel-mix');
 
 mix.react('resources/assets/src/index.js', 'public/js')
    .sass('resources/assets/src/index.scss', 'public/css');
+   
+mix.react('resources/assets/auth/js/app.js', 'public/js')
+   .sass('resources/assets/auth/sass/app.scss', 'public/css');
+   
