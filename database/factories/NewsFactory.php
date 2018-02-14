@@ -98,7 +98,8 @@ $factory->define(App\Sponsors::class, function (Faker $faker) {
 $factory->define(App\Grids::class, function (Faker $faker) {
     return [
         'title' => $faker->catchPhrase,
-        'description' => $faker->paragraph,       
+        'description' => $faker->paragraph,   
+        'type' => mt_rand(1,2)   
     ];
 });
 

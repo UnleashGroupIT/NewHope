@@ -15,7 +15,12 @@ class Articles extends Moloquent
 
    public static function doNotEmbedThis(){
 
-        return [];
+        return [
+            'tags',
+            'author',
+            'category'
+
+    ];
 
     }
         

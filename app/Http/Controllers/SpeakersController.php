@@ -14,7 +14,32 @@ class SpeakersController extends Controller
      */
     public function index()
     {
-        //
+        $speakerIds = [];
+
+         $speakers = (new Speakers)->newQuery();
+
+        if ($request->has('exlude')){
+
+            /*$grid = SpeakerGrid::where('grid_id',$request->exlude)->get();
+            foreach ($grid as $key => $value) {
+               array_push($speakerIds, $value->speaker_id);
+            }
+            $speakers->whereNotIn('id', $speakerIds);*/
+
+        }
+
+         if ($request->has('search')){
+            $speakers->where('full_name','like', '%'.$request->search.'%');
+        }      
+
+         if ($request->has('limit')){
+            $limit = $request->limit;
+        }else {
+            $limit = 30;
+        }             
+       
+       // return $speakers->get();
+        return $speakers->paginate($limit);
     }
 
     /**
@@ -24,7 +49,7 @@ class SpeakersController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -35,7 +60,58 @@ class SpeakersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       $fullName = $request->first_name.' '.$request->last_name;
+
+           if(isset($fullName)){
+
+                $slug = htmlspecialchars(Controller::clrSTR($fullName));
+
+            }       
+
+        
+        if ($request->hasFile('speaker_img') && $request->file('speaker_img')->isValid()) {
+
+            switch ($request->file('speaker_img')->getMimeType()) {
+                case 'image/jpeg':
+                   $extension = '.jpg';
+                    break;
+                case 'image/png':
+                    $extension = '.png';
+                    break;                
+                default:
+                     $extension = '.jpg';
+                    break;
+            }
+
+
+               $img_url = 'storage/public/'.$request->file('speaker_img')->storeAs(
+                'public/speakers', $slug.$extension
+                );
+
+             $img_url = $slug.$extension;
+        } else {
+            $img_url = '';
+        }       
+    
+           
+        $created =  Speakers::create([
+            'first_name' => $request->first_name,
+            'last_name' => $request->last_name, 
+            'full_name' => $fullName, 
+            'slug' => $slug,
+            'job_title' => $request->job_title ?? null, 
+            'bio' => $request->bio ?? null, 
+            'company' => $request->company ?? null, 
+            'img_url' => $img_url, 
+            'facebook' => $request->facebook ?? null, 
+            'twitter' => $request->twitter ?? null, 
+            'linkedin' => $request->linkedin ?? null, 
+            'website' => $request->website ?? null, 
+            'blog_url' => $request->blog ?? null
+
+                ]);
+
+        return $created;
     }
 
     /**
@@ -46,7 +122,7 @@ class SpeakersController extends Controller
      */
     public function show($id)
     {
-        //
+       return Speakers::find($id);
     }
 
     /**
@@ -67,9 +143,71 @@ class SpeakersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $speakerId)
     {
-        //
+
+        $speaker = Speakers::find($speakerId);
+
+        if ($request->hasFile('speaker_img') && $request->file('speaker_img')->isValid()) {
+
+            switch ($request->file('speaker_img')->getMimeType()) {
+                case 'image/jpeg':
+                   $extension = '.jpg';
+                    break;
+                case 'image/png':
+                    $extension = '.png';
+                    break;                
+                default:
+                     $extension = '.jpg';
+                    break;
+            }
+
+
+               $img_url = 'storage/public/'.$request->file('speaker_img')->storeAs(
+                'public/speakers', $speaker->slug.$extension
+                );
+
+             $speaker->img_url = $speaker->slug.$extension;
+        }       
+    
+
+         $changable = [
+                'prefix', 
+                'first_name', 
+                'last_name',
+                'full_name',
+                'slug',
+                'job_title',
+                'bio',
+                'company',
+                'img_url',
+                'facebook',
+                'twitter',
+                'linkedin',
+                'website',
+                'blog_url'
+        ];
+        foreach ($request->all() as $field => $value) {
+          
+            if(in_array($field, $changable) && $speaker->$field != $value){
+                
+                $speaker->$field = $value;
+
+                if(($field == "first_name") || ($field == "last_name")){
+                   $speaker->full_name = $request->first_name.' '.$request->last_name;
+                }
+
+            }
+
+
+            
+        }
+
+
+
+        $speaker->save();
+
+        return $speaker;
     }
 
     /**
@@ -80,7 +218,7 @@ class SpeakersController extends Controller
      */
     public function destroy($id)
     {
-        //
+      return Speakers::destroy($id);
     }
 
   public function search(Request $request){
@@ -89,11 +227,11 @@ class SpeakersController extends Controller
 
 
 
- if ($request->filled('keyword')){
-   $keyword = $request->keyword;
- }else {
-  $keyword = '';
- }
+     if ($request->filled('keyword')){
+       $keyword = $request->keyword;
+     }else {
+      $keyword = '';
+     }
 
       $params = [
                   'filters' => $facets,

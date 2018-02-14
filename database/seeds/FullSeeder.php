@@ -31,10 +31,10 @@ class FullSeeder extends Seeder
     {
 
         
-     factory(App\User::class, 15)->create();
-     factory(App\Tags::class, 25)->create();
-     factory(App\NewsCategories::class, 12)->create();
-     factory(App\Articles::class, 50)->create()->each(function($articles){
+     factory(App\User::class, 10)->create();
+     factory(App\Tags::class, 10)->create();
+     factory(App\NewsCategories::class, 5)->create();
+     factory(App\Articles::class, 20)->create()->each(function($articles){
 
 
                for ($i=0; $i < mt_rand(1,6); $i++) { 
@@ -48,7 +48,7 @@ class FullSeeder extends Seeder
                 $articles->category()->create($this->fillWithRandom('App\NewsCategories'));
 
             });
-     factory(App\Talks::class, 50)->create()
+     factory(App\Talks::class, 20)->create()
             ->each(function($talks){
 
                for ($i=0; $i < mt_rand(1,6); $i++) { 
@@ -63,7 +63,7 @@ class FullSeeder extends Seeder
 
             });
 
-     factory(App\Speakers::class, 100)->create()->each(function($speakers){
+     factory(App\Speakers::class, 20)->create()->each(function($speakers){
              for ($i=0; $i < mt_rand(1,3); $i++) { 
 
                 $speakers->tags()->create($this->fillWithRandom('App\Tags'));
@@ -71,7 +71,7 @@ class FullSeeder extends Seeder
      
      });    
 
-     factory(App\Sponsors::class, 100)->create()->each(function($sponsors){
+     factory(App\Sponsors::class, 20)->create()->each(function($sponsors){
              for ($i=0; $i < mt_rand(1,3); $i++) { 
 
                 $sponsors->tags()->create($this->fillWithRandom('App\Tags'));
@@ -80,12 +80,13 @@ class FullSeeder extends Seeder
      });      
 
 
-     factory(App\Grids::class, 10)->create()->each(function($grids){
+     factory(App\Grids::class, 5)->create()->each(function($grids){
 
-            $type = mt_rand(1,2);
+            $type = $grids->type;
 
                 if($type == 1){
-                         for ($i=0; $i < mt_rand(10,35); $i++) { 
+                   
+                         for ($i=0; $i < mt_rand(3,5); $i++) { 
 
                             $grids->speakers()->create($this->fillWithRandom('App\Speakers'));
                         }
@@ -93,7 +94,8 @@ class FullSeeder extends Seeder
                 }
 
                 if($type == 2){
-                         for ($i=0; $i < mt_rand(10,35); $i++) { 
+                    
+                         for ($i=0; $i < mt_rand(3,5); $i++) { 
 
                             $grids->sponsors()->create($this->fillWithRandom('App\Sponsors'));
                         }
@@ -103,7 +105,32 @@ class FullSeeder extends Seeder
      
      }); 
 
-     factory(App\AgendaTracks::class, 25)->create();
+     factory(App\AgendaTracks::class, 5)->create();
+
+     factory(App\Bookmarks::class, 10)->create()->each(function($bookmarks){
+
+           $bookmarks->user()->create($this->fillWithRandom('App\User'));
+
+            
+           
+                 for ($i=0; $i < mt_rand(5,15); $i++) { 
+
+                    $bookmarks->articles()->create($this->fillWithRandom('App\Articles'));
+                }
+
+       
+
+    
+            
+                 for ($i=0; $i < mt_rand(5,15); $i++) { 
+
+                    $bookmarks->talks()->create($this->fillWithRandom('App\Talks'));
+                }
+
+ 
+
+     
+     }); 
             
     }
 
