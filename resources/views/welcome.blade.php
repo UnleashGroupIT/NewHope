@@ -16,6 +16,7 @@
     </head>
     <body>
         <div id="root"></div>
+	<div id="search-root"></div>
 		
 		 <script src="{{ mix('js/index.js') }}"></script>	
     </body>

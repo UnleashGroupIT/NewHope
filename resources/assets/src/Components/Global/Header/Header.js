@@ -16,7 +16,7 @@ const Header = props =>(
 					<Menu />
 				</div>
 				<div className="App-header--search-_-login">
-					<Search toggle={props.toggle} addClass={props.addClass}/>
+					<Search />
 					<Login />
 				</div>
 			</div>

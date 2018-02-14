@@ -1,4 +1,9 @@
 .newsLetter{
+	
+	form{
+		position:relative;
+	}
+
 	.newsLetter--input{
 		background: rgba($white,0.12);
 		width:95%;
@@ -12,7 +17,6 @@
     	}
     	&:focus{
     		border:1px solid rgba($white,0.25);
-    		outline-width: 0;
     	}
     	@media #{$larg} {
 			width:265px;

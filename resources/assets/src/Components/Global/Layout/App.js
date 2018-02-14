@@ -9,25 +9,13 @@ import MainContent from '../../MainContent/MainContent'
 
 
 class App extends Component {
-  
-  constructor(props) {
-    super(props);
-    this.state = {addClass: false};
-    this.toggle = this.toggle.bind(this);
-  }
-
-  toggle(e) {
-    e.preventDefault();
-    this.setState(prevState => ({
-      addClass: !prevState.addClass}));
-  }
 
   render() {
     return(
     	<Router>
         <div className="App">
     		  <div className="App-container">
-            <Header toggle={this.toggle} addClass={this.state.addClass}/>
+            <Header />
         		<MainContent />
         	</div>
           <Footer />
