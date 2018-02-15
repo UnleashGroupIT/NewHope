@@ -46,8 +46,13 @@ class ArticlesController extends Controller
      */
     public function show($id)
     {
-        //
+         return Articles::find($id);
     }
+
+    public function find($slug)
+    {
+         return Articles::where('slug', $slug)->get();
+    }    
 
     /**
      * Show the form for editing the specified resource.

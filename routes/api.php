@@ -35,11 +35,13 @@ Route::middleware(['auth:api', 'roles'])->get('/speakers', 'SpeakersController@i
 
 Route::middleware(['auth:api', 'roles'])->post('/speakers', 'SpeakersController@store');
 
-Route::middleware(['auth:api', 'roles'])->get('/speaker/{speakerId}', 'SpeakersController@show');
+Route::middleware(['auth:api', 'roles'])->get('/speaker/{id}', 'SpeakersController@show');
 
-Route::middleware(['auth:api', 'roles'])->patch('/speaker/{speakerId}', 'SpeakersController@update');
+Route::middleware(['auth:api', 'roles'])->get('/speaker/slug/{slug}', 'SpeakersController@find');
 
-Route::middleware(['auth:api', 'roles'])->delete('/speaker/{speakerId}', 'SpeakersController@destroy');
+Route::middleware(['auth:api', 'roles'])->patch('/speaker/{id}', 'SpeakersController@update');
+
+Route::middleware(['auth:api', 'roles'])->delete('/speaker/{id}', 'SpeakersController@destroy');
 
 /* Sponsor Routes */
 Route::middleware(['auth:api', 'hidden'])->get('/sponsors', 'SponsorsController@index');
@@ -102,3 +104,31 @@ Route::middleware(['auth:api', 'roles'])->patch('/event/{eventId}', 'UnleashEven
 
 Route::middleware(['auth:api', 'roles'])->delete('/event/{eventId}', 'UnleashEventsController@destroy');
 
+
+/* Articles */
+
+Route::middleware(['auth:api', 'roles'])->get('/articles', 'ArticlesController@index');
+
+Route::middleware(['auth:api', 'roles'])->post('/articles', 'ArticlesController@store');
+
+Route::middleware(['auth:api', 'roles'])->get('/article/{id}', 'ArticlesController@show');
+
+Route::middleware(['auth:api', 'roles'])->get('/article/slug/{slug}', 'ArticlesController@find');
+
+Route::middleware(['auth:api', 'roles'])->patch('/article/{id}', 'ArticlesController@update');
+
+Route::middleware(['auth:api', 'roles'])->delete('/article/{id}', 'ArticlesController@destroy');
+
+/* Talks */
+
+Route::middleware(['auth:api', 'roles'])->get('/talks', 'TalksController@index');
+
+Route::middleware(['auth:api', 'roles'])->post('/talks', 'TalksController@store');
+
+Route::middleware(['auth:api', 'roles'])->get('/talk/{id}', 'TalksController@show');
+
+Route::middleware(['auth:api', 'roles'])->get('/talk/slug/{slug}', 'TalksController@find');
+
+Route::middleware(['auth:api', 'roles'])->patch('/talk/{id}', 'TalksController@update');
+
+Route::middleware(['auth:api', 'roles'])->delete('/talk/{id}', 'TalksController@destroy');

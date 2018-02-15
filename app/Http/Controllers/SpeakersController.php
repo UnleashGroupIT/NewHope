@@ -125,6 +125,11 @@ class SpeakersController extends Controller
        return Speakers::find($id);
     }
 
+    public function find($slug)
+    {
+       return Speakers::where('slug',$slug)->get();
+    }    
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -143,10 +148,10 @@ class SpeakersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $speakerId)
+    public function update(Request $request, $id)
     {
 
-        $speaker = Speakers::find($speakerId);
+        $speaker = Speakers::find($id);
 
         if ($request->hasFile('speaker_img') && $request->file('speaker_img')->isValid()) {
 
@@ -225,6 +230,33 @@ class SpeakersController extends Controller
 
      $facets = '';
 
+
+    if($request->filled('tags')){
+
+        $facets .= ' (';
+
+      try{
+        $tags = json_decode($request->tags);
+
+        $firstInLine = 0;
+        foreach ($tags as $key => $tag) {
+
+          if($firstInLine == 0){
+             $facets .= 'tags:'.$tag;
+             $firstInLine++;
+           }else {
+            $facets .= ' OR tags:'.$tag;
+           }
+         
+        } //end foreach
+         $facets .=')';
+
+      } catch (Exception $e) {
+         echo 'Caught exception: ',  $e->getMessage(), "\n";
+    }
+
+
+    }//if tags
 
 
      if ($request->filled('keyword')){

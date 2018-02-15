@@ -46,8 +46,13 @@ class TalksController extends Controller
      */
     public function show($id)
     {
-        //
+        return Talks::find($id);
     }
+
+    public function find($slug)
+    {
+         return Talks::where('slug', $slug)->get();
+    }       
 
     /**
      * Show the form for editing the specified resource.
