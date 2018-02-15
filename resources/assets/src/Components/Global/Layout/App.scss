@@ -1,5 +1,8 @@
 .fx{
 	overflow:hidden;
+	@media #{$larg} {
+    	overflow:auto;
+    }
 }
 
 .App{

@@ -1,5 +1,9 @@
 .Login{
 	margin:auto;
-	margin-left:3em;
+	margin-left:.75em;
 	font-weight:bold;
+
+	&:after{
+		content:url("/storage/Gfx/Global/Header/user-login.svg");
+	}
 }

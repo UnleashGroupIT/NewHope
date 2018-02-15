@@ -17,9 +17,17 @@
 .App-header--menu{
 	display:flex;
 	justify-content:space-between;
+	position:relative;
 	padding:1em 0;
+	@media #{$larg} {
+		position:static;
+	}
 }
 
 .App-header--search-_-login{
 	display:flex;
+	margin-right:3em;
+	@media #{$larg} {
+		margin-right:0;
+	}
 }
