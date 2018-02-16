@@ -5,6 +5,8 @@ namespace Tests\Feature;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
+use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Facades\Storage;
 use App\User;
 
 class SpeakersTest extends TestCase
@@ -50,8 +52,11 @@ class SpeakersTest extends TestCase
 
         $user->user_level = 2;  
 
+         Storage::fake('testing');
+
+
         $response = $this->actingAs($user, 'api')
-                         ->call('POST', '/api/speakers', [
+                         ->json('POST', '/api/speakers', [
                             '_token' => csrf_token(),
                             'prefix' => 'Mr.',
                             'first_name' => 'Fluff',
@@ -61,12 +66,15 @@ class SpeakersTest extends TestCase
                             'job_title' => 'Professional Cat',
                             'bio' => 'Mr. Fluff Ball is a cat. He likes milk and balls.',
                             'company' => 'Fluff Corp.',
-                           // 'img_url' => 'fluff.png',
+                            'speaker_img' =>  UploadedFile::fake()->image('fluff.ball'),
                             'facebook' => 'https://facebook.com/mrfluff',
                             'linkedin' => 'https://linkedin.com/mrfluff',
                             'twitter' => 'https://twitter.com/mrfluff',
                             'website' => 'http://fluffball.com', 
                         ]);
+
+
+              Storage::disk('testing')->assertExists('speakers/fluff.ball.jpg');             
 
         $response
             ->assertStatus(200)

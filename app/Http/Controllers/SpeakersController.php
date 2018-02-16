@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Speakers;
+use Illuminate\Support\Facades\Storage;
 
 class SpeakersController extends Controller
 {
@@ -84,9 +85,7 @@ class SpeakersController extends Controller
             }
 
 
-               $img_url = 'storage/public/'.$request->file('speaker_img')->storeAs(
-                'public/speakers', $slug.$extension
-                );
+               $img_url = Storage::putFileAs('speakers', $request->file('speaker_img'), $slug.$extension);
 
              $img_url = $slug.$extension;
         } else {
