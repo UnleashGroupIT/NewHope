@@ -5,8 +5,8 @@ import NewsLetter from '../../../../../Global/Footer/NewsLetter/NewsLetter'
 import { Link } from 'react-router-dom'
 
 const AboutSub = () => (
-	<div className="App-header--sub about">
-		<div className="App-header--submenu about">	
+	<div className="App-header--sub col3">
+		<div className="App-header--submenu col3">	
 			<div className="App-header--submenu---wrp">
 				<div className="App-header--subtitle">
 					<h3>Unleash</h3>

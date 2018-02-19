@@ -4,6 +4,9 @@
 	border: 2px solid $grey4;
 	flex-basis: 100%;
     margin: 1em 0;
+    @media #{$medium} {
+    	flex-basis:49%;
+    }
     @media #{$larg} {
     	flex-basis:32%;
     }
@@ -23,7 +26,6 @@
 }
 
 .Talk-card--preview{
-	display:flex;
 	position:relative;
 	&:after{
 		content:url("/storage/Gfx/Talks/play.svg");
@@ -52,5 +54,31 @@
 .App-header--subli{
 	.Talk-card{
 		margin:0;
+	}
+	.Talk-card--details{
+		padding:.5em;
+	}
+	.Talk-card--category{
+		margin-top:1em;
+	}
+}
+
+.App-header--subli{
+	.News-card{
+		flex-direction:column-reverse;
+		margin:0;
+	}
+	.News-card--details{
+		width:100%;
+		padding: .5em;
+		.News-card--author-category{
+			margin-top:1em;
+		}
+	}
+	.News-card--preview{
+		display:block;
+		img{
+			width:100%;
+		}
 	}
 }

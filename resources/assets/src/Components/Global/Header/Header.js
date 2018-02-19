@@ -6,7 +6,7 @@ import Search from './Search/Search'
 import Login from './Login/Login'
 
 const Header = props =>(
-	<header className="App-header">
+	<header className={props.directionUP ? "App-header sticky" : "App-header"} >
 		<div className="Layout-width">
 			<div className="App-header--menu">
 				<div className="App-header--logo-_-menu">

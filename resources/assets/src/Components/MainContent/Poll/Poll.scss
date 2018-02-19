@@ -1,6 +1,10 @@
 .Poll{
 	display:flex;
 	flex-basis:48%;
+	text-align:center;
+	@media #{$larg} {
+    	margin-left:0;
+    }
 
 	h2{
 		margin:auto;

@@ -1,8 +1,11 @@
 .MainContent--header{
-	height:600px;
+	min-height:600px;
 	position:relative;
 	color:$white;
-	padding:7em 0;
+	padding:3em 0;
+	@media #{$larg} {
+    	padding:5em 0;
+    }
 
 	&:after{
 		content:'';
@@ -19,29 +22,7 @@
 		background: url(/storage/Gfx/home-bgD.jpg);
     	@include bg-cover-pos;
 	};
-	&.News--header{
-		background: url(/storage/Gfx/news-bgD.jpg);
-    	@include bg-cover-pos;
 
-    	.MainContent--header---wrp{
-    		flex-wrap:wrap;
-    	}
-    	.MainContent--title{
-    		flex-basis:100%;
-    	}
-    	.MainContent--highlight{
-    		display:flex;
-    		justify-content:space-between;
-    		flex-basis:100%;
-    	}
-    	.News-card{
-    		flex-basis:32%;
-    	}
-	}
-	&.Talks--header{
-		background: url(/storage/Gfx/talks-bgD.jpg);
-    	@include bg-cover-pos;
-	}
 }
 
 .MainContent--header---wrp{
@@ -49,7 +30,10 @@
 	justify-content:space-between;
 
 	.MainContent--title{
-		flex-basis:50%;
+		flex-basis:100%;
+		@media #{$larg} {
+    		flex-basis:55%;
+    	}
 		span{
 			margin-bottom:1em;
 		}
@@ -58,7 +42,34 @@
 		}
 	}
 	.MainContent--highlight{
-		flex-basis:32%;
+		display:none;
+		@media #{$larg} {
+			display:flex;
+			flex-direction:column;
+			flex-basis:32%;
+		}
+		.Highlight{
+			background:rgba($black,0.6);
+			padding:1.5em;
+			margin:1em 0;
+			h5{margin-top:.5em;}
+			.Highlight--category{
+				color:$grey5;
+				a{color:$grey5}
+			}
+
+			&.talk{
+				h5:before{
+					background: url(/storage/Gfx/Talks/play.svg);
+				    background-size: cover;
+				    content: '';
+				    width: 15px;
+				    height: 15px;
+				    display: inline-block;
+				    margin-right: .5em;
+				}
+			}
+		}
 	}
 }
 

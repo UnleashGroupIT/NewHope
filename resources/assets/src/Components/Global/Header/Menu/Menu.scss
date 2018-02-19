@@ -3,12 +3,15 @@
 }
 
 .App-header--nav{
+	display:flex;
+	flex-direction:column;
 	transform-origin: 0 100%;
     transition: transform .3s;
     transform: scaleY(0);
 	position: fixed;
 	overflow:auto;
     top: 60px;
+    padding-bottom:60px;
     left: 0;
     width: 100%;
     height: 100%;
@@ -30,6 +33,7 @@
 		height:auto;
 		z-index: auto;
 		margin:auto;
+		padding:0;
 		background:none;
 		transform: none;
 	}
@@ -66,6 +70,25 @@
 		}
 	}
 
+	@media #{$larg} {
+		display:none;
+	}
+}
+
+.App-header--mobileApp{
+	border-top:2px solid $grey4;
+	padding: 1.5em 4.5em;
+	margin-top:auto;
+	h5{
+		text-transform:uppercase;
+		position:relative;
+		&:before{
+			content:url("/storage/Gfx/Menu/mobileApp.svg");
+			position: absolute;
+    		left: -50px;
+    		top: -10px;
+		}
+	}
 	@media #{$larg} {
 		display:none;
 	}
@@ -128,6 +151,18 @@
 		&:after{
 			content:url("/storage/Gfx/Menu/arrow-orange.svg");
 		}
+		.all{
+			margin-top:1em;
+		}
+		.App-header--submenu.col3 .App-header--submenu---wrp{
+			flex-basis:100%;
+			&.competitions{
+				margin-top:1em;
+				.App-header--subli{
+					flex-basis:48%;
+				}
+			}
+		}
 	}
 	&.about{
 		&:after{
@@ -136,7 +171,7 @@
 	}
 
 	@media #{$larg} {
-		padding:0 1.5em;
+		padding:0 0.75em;
 		position: static;
 		&:hover{
 			> p{
@@ -151,6 +186,9 @@
 		&:after{
 			display:none;
 		}
+	}
+	@media #{$extra-larg} {
+		padding:0 1.5em;
 	}
 }
 
@@ -200,14 +238,31 @@
 	@media #{$larg} {
     	flex-direction:row;
     }
-	&.about{
+	&.col3{
 		flex-wrap:wrap;
 	}
 	.Event {
-		flex-basis:31%;
+		flex-basis:32%;
+		margin:1em 0;
+		@media #{$larg} {
+    		margin:0;
+    	}
 		&.london .Event-card--name{background:$green};
 		&.america .Event-card--name{background:$red};
 		&.amsterdam .Event-card--name{background:$light-blue}
+	}
+	.all{
+		a{
+			color:$purple;
+			font-weight:bold;
+			&::after{
+				content: " ->";
+				font-size:20px;
+			}
+		}
+	}
+	p{
+		font-weight:normal;
 	}
 }
 
@@ -222,7 +277,7 @@
     }
 }
 
-.App-header--submenu.about{
+.App-header--submenu.col3{
 	display:flex;
 	flex-direction:column;
 	flex-wrap:wrap;
@@ -253,16 +308,6 @@
 	flex-basis:48%;
 	font-weight:normal;
 	text-transform:none;
-	&.all{
-		a{
-			color:$purple;
-			font-weight:bold;
-			&::after{
-				content: " ->";
-				font-size:20px;
-			}
-		}
-	}
 }
 
 .App-header--subtitle{

@@ -32,7 +32,7 @@ const EventsSub = () => (
 			</div>
 			<EventCard src="/storage/Gfx/card-amsterdam.png"
 				   alt="UNLEASH Amsterdam"
-				   name="UNLEASH World Conference &amp; Expo Amsterdam"
+				   name="UNLEASH Conference &amp; Expo Amsterdam"
 				   slogen="We’re back in the ports of Amsterdam!"
 				   place="Amsterdam  &middot;  Rai"
 				   date="21-22. Oct 2018" />

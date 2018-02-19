@@ -9,13 +9,13 @@ class Search extends Component {
   	}
 
   	componentDidMount() {
-    	document.body.classList.toggle('fx', this.state.addClass)
+    	document.body.classList.toggle('fxs', this.state.addClass)
   	}
   	componentDidUpdate(){
-  		document.body.classList.toggle('fx', this.state.addClass)	
+  		document.body.classList.toggle('fxs', this.state.addClass)	
   	}
   	componentWillUnmount() {
-    	document.body.classList.remove('fx')
+    	document.body.classList.remove('fxs')
   	}
 
   	toggle(e) {

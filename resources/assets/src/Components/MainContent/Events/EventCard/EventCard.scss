@@ -1,7 +1,15 @@
 .Event-card{
-	flex-basis:32%;
+	width:285px;
+	margin:0 5%;
+	position:relative;
+	z-index:1;
 	display:flex;
 	flex-direction:column;
+
+	@media #{$extra-larg} {
+    	flex-basis:32%;
+    	margin:0;
+    }
 }
 
 .Event-card--details{
@@ -42,6 +50,36 @@
 			content: url(/storage/Gfx/pin.svg);
 			display:inline-block;
 			margin: 0 1em .5em 1px;
+		}
+	}
+}
+
+//IN THE HEADER
+
+.App-header--sub{
+	.Event-card{
+		width:auto;
+		margin:0;
+		.Event-card--img{
+			display:grid;
+		}
+		.Event-card--details{
+			@media #{$larg} {
+				padding:.5em;
+			}
+			@media #{$extra-larg} {
+				padding:1em;
+			}
+		}
+		.Event-card--name{
+			@media #{$larg} {
+				padding-right:8em;
+				padding-left:1em;
+			}
+			@media #{$extra-larg} {
+				padding-left:1.5em;
+				padding-right:0;
+			}	
 		}
 	}
 }

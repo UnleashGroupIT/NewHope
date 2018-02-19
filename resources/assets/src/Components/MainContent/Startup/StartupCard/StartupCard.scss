@@ -1,4 +1,4 @@
-.News-card{
+.Startup-card{
 	display:flex;
 	justify-content:space-between;
 	border: 2px solid $grey4;
@@ -9,7 +9,7 @@
     }
 }
 
-.News-card--details{
+.Startup-card--details{
 	display:flex;
 	flex-direction:column;
 	padding:1em;
@@ -23,15 +23,14 @@
 	}
 }
 
-.News-card--preview{
-	display:flex;
+.Startup-card--preview{
 	img{
 		width:80px;
 	}
 }
 
-.News-card--author-category{
-	margin-top: auto;
+.Startup-card--category{
+	margin-top: 1em;
     margin-bottom: .5em;
 	a{color:$purple}
 	@media #{$extra-larg} {
@@ -39,31 +38,26 @@
     }
 }
 
-.News-card--date{
+.Startup-card--rank{
 	color:$grey2;
 }
 
 //IN THE HEADER
 
 .App-header--subli{
-	.News-card{
+	.Startup-card{
 		flex-direction:column-reverse;
 		margin:0;
 	}
-	.News-card--details{
+	.Startup-card--details{
 		width:100%;
-		padding: .5em;
-		.News-card--author-category{
-			margin-top:1em;
-		}
 	}
-	.News-card--preview{
+	.Startup-card--preview{
+		padding:1em;
+		border-bottom:2px solid $grey4;
 		display:block;
 		img{
 			width:100%;
 		}
 	}
 }
-
-//IN THE MAIN HEADER
-

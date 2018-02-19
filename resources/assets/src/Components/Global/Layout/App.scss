@@ -1,7 +1,30 @@
-.fx{
+.fxm{
 	overflow:hidden;
 	@media #{$larg} {
     	overflow:auto;
+    }
+    .App-header{
+    	position:fixed;
+    	width:100%;
+    	z-index:100;
+    	@media #{$larg} {
+    		position:static;
+    		width:auto;
+    		z-index:auto;
+    	}
+    }
+}
+.fxs{
+	overflow:hidden;
+	.App-header{
+    	position:fixed;
+    	width:100%;
+    	z-index:100;
+    	@media #{$larg} {
+    		position:static;
+    		width:auto;
+    		z-index:auto;
+    	}
     }
 }
 
@@ -18,13 +41,15 @@
 }
 
 %btn{
-	min-width:110px;
 	background:none;
 	border:1px solid transparent;
 	padding:.5em;
 	position:relative;
 	text-transform:uppercase;
 	font-weight:bold;
+	@media #{$larg} {
+    	min-width:110px;
+    }
 }
 
 .btn-w{
@@ -53,11 +78,11 @@
 	}
 	&:before{
 	    left: 10px;
-	    bottom: -1px;
+	    bottom: -3px;
 	}
 	&:after{
 	    right: 10px;
-	    top: -1px;
+	    top: -3px;
 	}
 
 	&.passive{

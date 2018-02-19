@@ -14,7 +14,7 @@ const NewsCategory = props => (
                 </div> : null}
             </div>
             <div className="seeAll">
-                <h5>See all -></h5>
+                <h5>See all</h5>
             </div> 
         </div>
         {props.img ? <div className="NewsCategory--img">

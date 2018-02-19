@@ -1,7 +1,11 @@
 .News--wrp{
-	margin:4em 0;
+	margin:3em 0;
 	.seeAll h5{
 		color:$purple;
+		&:after{
+			content:url("/storage/Gfx/News/arrow-forwardPurple.svg");
+			margin-left:5px;
+		}
 	}
 }
 
@@ -18,10 +22,6 @@
 .News--title{
 	margin:auto;
 	h2{
-		padding-right:1em;
+		padding-right:.5em;
 	}
-}
-
-.News--Categs{
-	.btn-bw{margin-right:1em;}
 }
