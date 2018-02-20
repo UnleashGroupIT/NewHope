@@ -3,7 +3,7 @@ import React from 'react'
 const NewsCard = props => (
 
   NewsCard.defaultProps = {
-    src: '/storage/Gfx/news-preview.png'
+    src: '/storage/Gfx/News/news-preview.png'
   },
 
   <div className="News-card">

@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 
 import HomeHeader from './HomeHeader/HomeHeader'
-import NewsCategory from '../News/NewsCategory/NewsCategory'
+import NewsLatestPopular from '../News/NewsLatestPopular/NewsLatestPopular'
 import TalksCategory from '../Talks/TalksCategory/TalksCategory'
 import Events from '../Events/Events'
 import StartupBanner from '../Startup/StartupBanner/StartupBanner'
@@ -23,7 +23,7 @@ class Home extends Component {
             <section className="Home">
                 <HomeHeader />
                 <div className="Layout-width">
-                    <NewsCategory name="News" categs/>
+                    <NewsLatestPopular name="News"/>
                 </div>
                     <Events />
                 <div className="Layout-width">

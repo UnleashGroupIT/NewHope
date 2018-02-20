@@ -4,10 +4,12 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
 use Socialite;
 use Auth;
 use Exception;
 use App\User;
+use Illuminate\Support\Facades\DB;
 
 class LoginController extends Controller
 {
@@ -41,39 +43,110 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 	
-	public function facebookRedirect()
+	public function urlRedirect(Request $request)
     {
-        return Socialite::driver('facebook')->redirect();
+		$uri = $request->path();
+		
+		switch ($uri) {
+			case "login/twitter":
+				return Socialite::driver('twitter')->redirect();
+				break;
+			case "login/facebook":
+				return Socialite::driver('facebook')->redirect();
+				break;
+			case "login/linkedin":
+				return Socialite::driver('linkedin')->redirect();
+				break;			
+			default:
+			 return redirect('login');
+				break;
+		}
+		
+		
+		
+        
     }
 
-    public function facebookCallback()
+    public function urlCallback(Request $request)
     {
-        try {
-            $user = Socialite::driver('facebook')->user();
-        } catch (Exception $e) {
-            return redirect('login/facebook');
-        }
-        $authUser = $this->findOrCreateUser($user);
+		$uri = $request->path();
+		
+		switch ($uri) {
+			case "login/twitter/callback":
+			
+				$social_name = "twitter";
+				$social_id = 'twitter_id';
+				
+				break;
+			case "login/facebook/callback":
+			
+				$social_name = "facebook";
+				$social_id = 'facebook_id';		
+				
+				
+				break;
+			case "login/linkedin/callback":
+				
+				$social_name = "linkedin";
+				$social_id = 'linkedin_id';					
+				
+				break;			
+			default:
+			
+			 return redirect('login');
+			 
+				break;
+		}		
+		
+		
+		 try {
+			$user = Socialite::driver($social_name)->user();
+		} catch (Exception $e) {
+			return redirect('login/'.$social_name);
+		}
+
+        $authUser = $this->findOrCreateUser($user, $social_id);
 
         Auth::login($authUser, true);
 
         return redirect()->route('home');
     }
 
-    private function findOrCreateUser($facebookUser)
+    private function findOrCreateUser($User, $social_id)
     {
-        $authUser = User::where('facebook_id', $facebookUser->id)->first();
+        $authUser = User::where($social_id, $User->id)->first();
 
         if ($authUser){
             return $authUser;
         }
+		
+		//First check if the user exists at all
+		$usr = User::where('email', $User->email)->first();
+		
+		//If exists just add that social media login to their account
+		if($usr){
+			 DB::collection('users')->where('email', $User->email)->update([$social_id => $User->id], ['upsert' => true]);
+		    $authUser = User::where($social_id, $User->id)->first();
+		    return $authUser;
+		} 	
+		
+		
 
-        return User::create([
-            'name' => $facebookUser->name,
-            'email' => $facebookUser->email,
-            'facebook_id' => $facebookUser->id,
-            'avatar' => $facebookUser->avatar
-        ]);
+			
+		 return User::create([
+				'name' => $User->name,
+				'email' => $User->email ?: $this->clrSTR($User->name).'@socialLogin.fake',
+				$social_id => $User->id,
+				'avatar' => $User->avatar
+			]);				
+		
+
+
+		
+
     }
+	
+    
+		
 	
 }

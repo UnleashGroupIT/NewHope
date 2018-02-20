@@ -28,8 +28,14 @@ Route::get('/news', function () {
 
 //Social Media Login Routes
 
-Route::get('login/facebook', 'Auth\LoginController@facebookRedirect');
-Route::get('login/facebook/callback', 'Auth\LoginController@facebookCallback');
+Route::get('login/facebook', 'Auth\LoginController@urlRedirect');
+Route::get('login/facebook/callback', 'Auth\LoginController@urlCallback');
+
+Route::get('login/twitter', 'Auth\LoginController@urlRedirect');
+Route::get('login/twitter/callback', 'Auth\LoginController@urlCallback');
+
+Route::get('login/linkedin', 'Auth\LoginController@urlRedirect');
+Route::get('login/linkedin/callback', 'Auth\LoginController@urlCallback');
 
 //React Route
 Route::view('/{path?}', 'home')

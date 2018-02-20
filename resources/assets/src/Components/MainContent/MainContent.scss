@@ -1,5 +1,7 @@
+//HOME PAGE HEADER
+
 .MainContent--header{
-	height:600px;
+	min-height:600px;
 	position:relative;
 	color:$white;
 	padding:3em 0;
@@ -127,8 +129,29 @@
 			}
 		}
 	}
+} //HOME PAGE HEADER END
+
+
+//NEWS PAGE HEADER
+
+.News{
+	.MainContent--header---wrp{
+		flex-direction:column;
+	}
+	.MainContent--highlight{
+		flex-direction:row;
+		@media #{$larg} {
+			justify-content:space-between;
+			margin-top:2em;
+		}
+		.Highlight{
+			flex-basis:32%;
+		}
+	}
 }
 
+
+////NEWS PAGE HEADER END
 .Headline{
 	display: flex;
     justify-content: space-between;

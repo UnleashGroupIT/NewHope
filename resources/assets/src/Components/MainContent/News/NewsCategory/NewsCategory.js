@@ -1,31 +1,24 @@
 import React from 'react'
 import NewsCard from '../NewsCard/NewsCard'
+import NewsCardHighLight from '../NewsCard/NewsCardHighLight/NewsCardHighLight'
 
 const NewsCategory = props => (
     <div className="News--wrp">
         <div className="Headline">
-            <div className="News--Title-and-Categs">
-                <div className="News--title">
-                    <h2>{props.name}</h2>    
-                </div>
-                {props.categs ? <div className="News--Categs">
-                    <button className="btn-bw">Latest</button>
-                    <button className="btn-bw passive">Popular</button>
-                </div> : null}
+            <div className="News--title">
+                <h2>{props.name}</h2>    
             </div>
             <div className="seeAll">
                 <h5>See all</h5>
             </div> 
-        </div>
-        {props.img ? <div className="NewsCategory--img">
-        	<img src={props.src} alt={props.alt}/>
-        </div> : null}
-        
+        </div>        
         <div className="NewsCard--wrp">
-            <NewsCard />
-            <NewsCard />
-            <NewsCard />
-            <NewsCard />
+            <NewsCardHighLight />
+            <div className="NewsCard--wrp---inner">
+                <NewsCard />
+                <NewsCard />
+                <NewsCard />
+            </div>
         </div>
     </div>
 )
