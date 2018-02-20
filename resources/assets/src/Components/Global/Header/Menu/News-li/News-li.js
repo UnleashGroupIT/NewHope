@@ -9,21 +9,28 @@ class NewsLi extends Component{
       liOpen: false
     };
     this.toggle = this.toggle.bind(this);
+    this.closeLi = this.closeLi.bind(this);
   }
 
   toggle() {
     this.setState(prevState => ({
         liOpen: !prevState.liOpen}));
   }
+  closeLi(){
+   if (this.state.liOpen === true) {
+      this.setState({
+        liOpen: false}); 
+      }      
+   }
 
     render(){
       return(
-        <li onClick={this.toggle} className={this.state.liOpen ? "App-header--li news active" : "App-header--li news"} >
-          <p>News</p>
+        <li className={this.state.liOpen && this.props.width < 768 ? "App-header--li news active" : "App-header--li news"} >
+          <p onClick={this.toggle}>News</p>
           <div className="App-header-dropdownBox--outer">
             <div className="App-header-dropdownBox--inner">
               <div className="Layout-width">
-                <NewsSub />
+                <NewsSub toggleMenu={this.props.toggleMenu} closeLi={this.closeLi}/>
               </div>
             </div>
           </div>

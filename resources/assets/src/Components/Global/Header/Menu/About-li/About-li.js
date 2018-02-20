@@ -19,8 +19,8 @@ class AboutLi extends Component{
     render(){
 
 		return(
-      <li onClick={this.toggle} className={this.state.liOpen ? "App-header--li about active" : "App-header--li about"} >
-        <p>About</p>
+      <li className={this.state.liOpen && this.props.width < 768 ? "App-header--li about active" : "App-header--li about"} >
+        <p onClick={this.toggle}>About</p>
         <div className="App-header-dropdownBox--outer" >
               <div className="App-header-dropdownBox--inner">
                 <div className="Layout-width">

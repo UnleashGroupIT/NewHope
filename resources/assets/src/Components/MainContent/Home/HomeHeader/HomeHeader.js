@@ -24,7 +24,7 @@ class HomeHeader extends Component {
     	this.setState({
       		slideCount:2});
     }
-    slideTwo(){
+    slideThree(){
     	this.setState({
       		slideCount:3});
     }

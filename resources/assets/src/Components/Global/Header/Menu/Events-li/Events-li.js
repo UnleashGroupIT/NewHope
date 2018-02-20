@@ -18,8 +18,8 @@ class EventsLi extends Component{
 
     render(){
       return(
-        <li onClick={this.toggle} className={this.state.liOpen ? "App-header--li events active" : "App-header--li events"} >
-          <p>Events</p>
+        <li className={this.state.liOpen && this.props.width < 768 ? "App-header--li events active" : "App-header--li events"} >
+          <p onClick={this.toggle}>Events</p>
           <div className="App-header-dropdownBox--outer" >
                 <div className="App-header-dropdownBox--inner">
                   <div className="Layout-width">

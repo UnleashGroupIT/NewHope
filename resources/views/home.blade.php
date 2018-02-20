@@ -2,12 +2,12 @@
 
 @section('meta')
 
-<meta name="description" content="Unleash React WELCOME WebApp">
+<meta name="description" content="Unleash React HOME WebApp">
 
 @endsection
 
 
-@section('title', 'Unleash - WELCOME')
+@section('title', 'Unleash - HOME')
 
 
 

@@ -12,7 +12,7 @@
 */
 
 /*Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });*/
 
 
@@ -20,11 +20,19 @@ Route::get('/moo', 'TestController@index');
 
 Auth::routes();
 
-//Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/news', function () {
+ return view('news');
+});
 
-Route::view('/{path?}', 'welcome')
+//Social Media Login Routes
+
+Route::get('login/facebook', 'Auth\LoginController@facebookRedirect');
+Route::get('login/facebook/callback', 'Auth\LoginController@facebookCallback');
+
+//React Route
+Route::view('/{path?}', 'home')
      ->where('path', '.*')
      ->name('react');
 

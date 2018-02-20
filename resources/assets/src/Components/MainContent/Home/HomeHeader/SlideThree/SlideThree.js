@@ -1,10 +1,11 @@
 import React from 'react';
 
-import NewsHighLight from '../../../News/NewsHighLight/NewsHighLight'
-import TalkHighLight from '../../../Talks/TalkHighLight/TalkHighLight'
+import HighLightOne from '../HighLightOne/HighLightOne'
+import HighLightTwo from '../HighLightTwo/HighLightTwo'
+import HighLightThree from '../HighLightThree/HighLightThree'
 
 const SlideThree = props => (
-	<div className="MainContent--header SlideThree">
+	<div className="MainContent--header slideThree">
         <div className="Layout-width">
      		<div className="MainContent--header---wrp">
 	    		<div className="MainContent--title">
@@ -13,9 +14,9 @@ const SlideThree = props => (
 	        		<button className="btn-w">Read now</button>
 	    		</div>
 			    <div className="MainContent--highlight">
-			        <NewsHighLight slideOne={props.slideOne}/>
-			        <NewsHighLight slideTwo={props.slideTwo}/>
-			        <TalkHighLight slideThree={props.slideThree}/>
+			        <HighLightOne slideOne={props.slideOne}/>
+			        <HighLightTwo slideTwo={props.slideTwo}/>
+			        <HighLightThree active slideThree={props.slideThree}/>
 			    </div>
 			</div>      
         </div>

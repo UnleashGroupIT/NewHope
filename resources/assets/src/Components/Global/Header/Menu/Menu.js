@@ -11,28 +11,35 @@ class Menu extends Component {
       super(props);
       this.state = {
         menuOpen: false,
+        width:window.innerWidth
       };
-      this.toggle = this.toggle.bind(this);
+      this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+      this.toggleMenu = this.toggleMenu.bind(this);
     }
 
     componentDidMount() {
     	document.body.classList.toggle('fxm', this.state.menuOpen)
+    	this.updateWindowDimensions()
+    	window.addEventListener('resize', this.updateWindowDimensions)
   	}
   	componentDidUpdate(){
   		document.body.classList.toggle('fxm', this.state.menuOpen)	
   	}
   	componentWillUnmount() {
     	document.body.classList.remove('fxm')
+    	window.removeEventListener('resize', this.updateWindowDimensions)
+  	}
+  	updateWindowDimensions() {
+    	this.setState({ width: window.innerWidth});
   	}
 
-    toggle() {
+    toggleMenu() {
     	this.setState(prevState => ({
       		menuOpen: !prevState.menuOpen}));
  	}
 
 
 	render(){
-
 		return(
 			<div className="App-header--nav---wrp">
 				<nav className={this.state.menuOpen ? "App-header--nav active" : "App-header--nav"}>
@@ -55,18 +62,18 @@ class Menu extends Component {
 							</div>
 							
 							<ul className="App-header--ul">
-					        	<NewsLi />
-					        	<TalksLi />
-								<EventsLi />
-								<StartupLi />
-								<AboutLi />
+					        	<NewsLi {...this.state} toggleMenu={this.toggleMenu}/>
+					        	<TalksLi {...this.state} toggleMenu={this.toggleMenu}/>
+								<EventsLi {...this.state} toggleMenu={this.toggleMenu}/>
+								<StartupLi {...this.state} toggleMenu={this.toggleMenu}/>
+								<AboutLi {...this.state} toggleMenu={this.toggleMenu}/>
 							</ul>
 						</div>
 						<div className="App-header--mobileApp">
 							<h5>Download the app</h5>
 						</div>
 				</nav>
-				<div onClick={this.toggle} className={this.state.menuOpen ? "hamburger hamburger--emphatic is-active" : "hamburger hamburger--emphatic"}>
+				<div onClick={this.toggleMenu} className={this.state.menuOpen ? "hamburger hamburger--emphatic is-active" : "hamburger hamburger--emphatic"}>
 				  <div className="hamburger-box">
 				    <div className="hamburger-inner"></div>
 				  </div>

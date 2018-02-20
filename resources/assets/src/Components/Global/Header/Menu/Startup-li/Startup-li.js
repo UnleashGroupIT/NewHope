@@ -19,8 +19,8 @@ class StartupLi extends Component{
     render(){
 
     return(
-      <li onClick={this.toggle} className={this.state.liOpen ? "App-header--li startup active" : "App-header--li startup"} >
-        <p>Startup HUB</p>
+      <li className={this.state.liOpen && this.props.width < 768 ? "App-header--li startup active" : "App-header--li startup"} >
+        <p onClick={this.toggle}>Startup HUB</p>
         <div className="App-header-dropdownBox--outer" >
               <div className="App-header-dropdownBox--inner">
                 <div className="Layout-width">

@@ -19,8 +19,8 @@ class TalksLi extends Component{
     render(){
 
 		return(
-       <li onClick={this.toggle} className={this.state.liOpen ? "App-header--li talks active" : "App-header--li talks"} >
-        <p>Talks</p>
+       <li className={this.state.liOpen && this.props.width < 768 ? "App-header--li talks active" : "App-header--li talks"} >
+        <p onClick={this.toggle}>Talks</p>
         <div className="App-header-dropdownBox--outer" >
           <div className="App-header-dropdownBox--inner">
             <div className="Layout-width">

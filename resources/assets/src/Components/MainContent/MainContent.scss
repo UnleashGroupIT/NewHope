@@ -1,5 +1,5 @@
 .MainContent--header{
-	min-height:600px;
+	height:600px;
 	position:relative;
 	color:$white;
 	padding:3em 0;
@@ -18,8 +18,16 @@
 		bottom:0;
 	}
 
-	&.Home--header{
-		background: url(/storage/Gfx/home-bgD.jpg);
+	&.slideOne{
+		background: url(/storage/Gfx/slideOne-bgD.jpg);
+    	@include bg-cover-pos;
+	};
+	&.slideTwo{
+		background: url(/storage/Gfx/slideTwo-bgD.jpg);
+    	@include bg-cover-pos;
+	};
+	&.slideThree{
+		background: url(/storage/Gfx/slideThree-bgD.jpg);
     	@include bg-cover-pos;
 	};
 
@@ -27,32 +35,66 @@
 
 .MainContent--header---wrp{
 	display:flex;
+	flex-direction:column;
 	justify-content:space-between;
+	@media #{$larg} {
+    	flex-direction:row;
+    }
 
 	.MainContent--title{
 		flex-basis:100%;
+		margin-bottom:2em;
+		max-width:400px;
 		@media #{$larg} {
     		flex-basis:55%;
+    		margin-bottom:0;
+    		max-width:none;
     	}
 		span{
 			margin-bottom:1em;
 		}
 		button{
 			margin-top:2em;
+			position: relative;
+    		z-index: 80;
 		}
 	}
 	.MainContent--highlight{
-		display:none;
+		display:flex;
+		justify-content:center;
+		position:absolute;
+		bottom:2em;
+		left:50%;
+		z-index:80;
+		transform: translate(-50%, 0);
 		@media #{$larg} {
-			display:flex;
 			flex-direction:column;
 			flex-basis:32%;
+			margin-top:0;
+			position:static;
+			transform:none;
 		}
 		.Highlight{
 			background:rgba($black,0.6);
-			padding:1.5em;
-			margin:1em 0;
-			h5{margin-top:.5em;}
+			width:15px;
+			height:15px;
+			border-radius:25px;
+			cursor:pointer;
+			margin:0 .25em;
+			.Highlight--details{
+				display:none;
+			}
+			@media #{$larg} {
+				width:auto;
+				height:auto;
+				padding:1.5em;
+				margin:1em 0;
+				border-radius:0;
+				h5{margin-top:.5em;}
+				.Highlight--details{
+					display:block;
+				}
+			}
 			.Highlight--category{
 				color:$grey5;
 				a{color:$grey5}
@@ -67,6 +109,20 @@
 				    height: 15px;
 				    display: inline-block;
 				    margin-right: .5em;
+				}
+			}
+			&.Active{
+				background:$white;
+				color:$black;
+				.Highlight--category{
+					color:$black;
+					a{color:$black}
+				}
+				&.talk{
+					h5:before{
+						background: url(/storage/Gfx/Talks/playB.svg);
+				    	background-size: cover;
+				    }
 				}
 			}
 		}
