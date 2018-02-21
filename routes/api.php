@@ -132,3 +132,5 @@ Route::middleware(['auth:api', 'roles'])->get('/talk/slug/{slug}', 'TalksControl
 Route::middleware(['auth:api', 'roles'])->patch('/talk/{id}', 'TalksController@update');
 
 Route::middleware(['auth:api', 'roles'])->delete('/talk/{id}', 'TalksController@destroy');
+
+Route::apiResource('bookmarks', 'BookmarksController');

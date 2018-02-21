@@ -20,4 +20,20 @@ class Controller extends BaseController
 	    return $string;
 	}
 
+    protected function fillWithElem($model, $id){
+        $results = [];
+        $instance = $model::find($id)->getAttributes(); 
+      
+        $protected = $model::doNotEmbedThis();
+
+            foreach ($instance as $resultKey => $resultValue) {
+                if(!$protected || !in_array($resultKey,  $protected)){
+                    $results[$resultKey] = $resultValue;
+                }
+                
+            }
+
+        return $results;
+    }
+
 }

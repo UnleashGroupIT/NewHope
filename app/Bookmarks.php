@@ -20,10 +20,10 @@ class Bookmarks extends Moloquent
         return $this->embedsMany(Articles::class);
     }
 
-    public function user()
+   /* public function user()
     {
         return $this->embedsOne(User::class);
-    }
+    }*/
 
     public function talks()
     {
