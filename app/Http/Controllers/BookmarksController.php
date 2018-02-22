@@ -23,7 +23,9 @@ class BookmarksController extends Controller
      */
     public function index()
     {
-        //
+        $user = Auth::id();
+
+       return $bookmark = Bookmarks::where('user_id',$user)->with(['talks', 'articles'])->first();  
     }
 
     /**
