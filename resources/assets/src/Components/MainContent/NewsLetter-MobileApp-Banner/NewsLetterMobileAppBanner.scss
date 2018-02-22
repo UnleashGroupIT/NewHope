@@ -1,0 +1,88 @@
+
+.NewsLetterMobileApp-Banner{
+	display:flex;
+	flex-direction:column;
+	@media #{$larg} {
+    	flex-direction:row;
+    }
+
+    p{margin:1em 0;}
+    span{
+    	margin-top:1.35em;
+    	line-height:1.5em;
+    	color:$grey2;
+    }
+}
+
+.NewsLetter-Banner{
+	background:$grey5;
+	padding:3em 1.5em;
+	flex-basis:100%;
+	@media #{$larg} {
+		padding:3em;
+    	flex-basis:50%;
+    }
+    @media #{$extra-larg} {
+    	flex-basis:40%;
+    }
+
+	.newsLetter .newsLetter--input{
+		background:$white;
+		color:$black;
+	}
+}
+
+.MobileApp-Banner{
+	background:$purple;
+	color:$white;
+	padding:3em 1.5em;
+	display:flex;
+	justify-content:space-between;
+	flex-basis:100%;
+	@media #{$larg} {
+    	flex-basis:50%;
+    	padding:3em;
+    }
+    @media #{$extra-larg} {
+    	flex-basis:60%;
+    }
+
+	.MobileApp-Banner--details{
+		flex-basis:100%;
+		@media #{$extra-larg} {
+    		flex-basis:45%;
+    	}
+    	h2{
+    		position:relative;
+    		padding-left:2em;
+    		@media #{$extra-larg} {
+    			padding-left:0;
+    		}
+    		&:before{
+    			content:url("/storage/Gfx/MobileApp/iphone-small.svg");
+    			position:absolute;
+    			left:0;
+    			@media #{$extra-larg} {
+    				display:none;
+    			}
+    		}
+
+    	}
+	}
+	.MobileApp-Banner--iphoneBG{
+		flex-basis:40%;
+		display:none;
+		position:relative;
+		@media #{$extra-larg} {
+    		display:block;
+    	}
+		#iphone-big{
+			display:none;
+			@media #{$extra-larg} {
+    			display:block;
+    			position: absolute;
+    			bottom: -3em;
+    		}			
+		}
+	}
+}

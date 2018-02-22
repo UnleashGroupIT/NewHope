@@ -2,11 +2,11 @@ import React from 'react'
 
 import NewsCard from '../NewsCard/NewsCard'
 
-const NewsSaved = props => (
-    <div className="News--wrp Pinned Saved">
+const NewsRecommended = props => (
+    <div className="News--wrp Pinned Recommended">
         <div className="Headline">
             <div className="News--title">
-                <h2>Saved Articles</h2>    
+                <h2>Recommended</h2>    
             </div> 
         </div>        
         <div className="NewsCard--wrp">
@@ -15,9 +15,9 @@ const NewsSaved = props => (
             <NewsCard />
         </div>
         <div className="seeAll">
-            <button className="btn-bw">See all</button>
+            <button className="btn-bw">Refine Interests</button>
         </div>
     </div>
 )
 
-export default NewsSaved
+export default NewsRecommended

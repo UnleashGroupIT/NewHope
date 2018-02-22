@@ -2,14 +2,12 @@
 	display:flex;
 	justify-content:space-between;
 	border: 2px solid $grey4;
+	background:$white;
 	flex-basis: 100%;
-	height:$NewsCardHeight;
+	z-index:2;
     margin-bottom: 1em;
-    &:last-child{
-    	margin-bottom:0;
-    }
     @media #{$larg} {
-    	flex-basis:47%;
+    	flex-basis:48%;
     }
 }
 
@@ -21,8 +19,10 @@
 
 	h5{
 		font-size:.8em;
+		margin-bottom:1em;
     	@media #{$extra-larg} {
     		font-size:initial;
+    		margin-bottom:0;
     	}
 	}
 }
@@ -74,12 +74,22 @@
 .News-card--HighLight{
 	position:relative;
 	flex-basis:48%;
+	margin-bottom: 1em;
+	&:before{
+		content:'';
+	    width: 100%;
+	    height: 70%;
+	    position: absolute;
+	    bottom: 0;
+	    background: linear-gradient(rgba($black, 0), rgba($black, 1));
+	    z-index: 1;
+	}
 
 	.News-card--details{
 		position:absolute;
 		z-index:2;
 		width:100%;
-		bottom:0;
+		bottom:1em;
 		color:$white;
 		span{color:$white}
 	}
