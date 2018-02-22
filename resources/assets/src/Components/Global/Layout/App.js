@@ -44,8 +44,8 @@ class App extends Component {
     	<Router>
         <div className="App">
     		  <div className="App-container">
-            <Header {...this.state}/>
-        		<MainContent />
+            <Header direction={this.state.directionUP}/>
+        		<MainContent direction={this.state.directionUP}/>
         	</div>
           <Footer />
         </div>

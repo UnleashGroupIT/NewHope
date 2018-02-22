@@ -1,5 +1,20 @@
 .CategSlider{
-	background:$light-blue;
+	background:$white;
+	padding:1em;
+	border-top:1px solid  $grey4;
+    border-bottom:1px solid  $grey4;
+    &.sticky{
+        position:fixed;
+        width:100%;
+        top:0;
+        z-index:90;
+    }
+    &.stickywM{
+        position:fixed;
+        width:100%;
+        top:60px;
+        z-index:90;
+    }
 }
 
 
@@ -11,6 +26,8 @@
     visibility: hidden;
 }
 .slick-slider {
+	padding: 0 1em;
+    margin: 0 1.5em;
     box-sizing: border-box;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -55,6 +72,7 @@
     display: none;
     float: left;
     height: 100%;
+    width:200px;
     min-height: 1px;
 }
 [dir=rtl] .slick-slide {
@@ -70,7 +88,13 @@
     pointer-events: none;
 }
 .slick-initialized .slick-slide {
-    display: block;
+        display: block;
+	    text-align: center;
+	    width: auto!important;
+	    margin: 0 1em;
+	    &:hover a{
+	    	color:$purple;
+	    }
 }
 .slick-vertical .slick-slide {
     display: block;
@@ -88,6 +112,7 @@
     .slick-dots, .slick-next, .slick-prev {
     position: absolute;
     display: block;
+    background:none;
     padding: 0;
 }
 .slick-dots li button:before, .slick-next:before, .slick-prev:before {
@@ -102,15 +127,17 @@
     top: 50%;
     width: 20px;
     height: 20px;
-    -webkit-transform: translate(0, -50%);
-    -ms-transform: translate(0, -50%);
     transform: translate(0, -50%);
     cursor: pointer;
     color: transparent;
     border: none;
     outline: 0;
-    background: 0 0;
 }
+
+.slick-prev{
+	transform: translate(0, -50%) rotate(180deg);
+}
+
 .slick-next:focus, .slick-next:hover, .slick-prev:focus, .slick-prev:hover {
     color: transparent;
     outline: 0;
@@ -136,9 +163,9 @@
     left: auto;
 }
 .slick-prev:before {
-    content: 'â†'}
+    content: url("/storage/Gfx/CategSlider/arrow-prev.svg")}
 .slick-next:before, [dir=rtl] .slick-prev:before {
-    content: 'â†’'}
+    content: url("/storage/Gfx/CategSlider/arrow-next.svg")}
 .slick-next {
     right: -25px;
 }
@@ -194,7 +221,7 @@
     left: 0;
     width: 20px;
     height: 20px;
-    content: 'â€¢';
+    content: '<--';
     text-align: center;
     opacity: .25;
     color: #000;
