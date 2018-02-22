@@ -9,6 +9,8 @@ use App\User;
 
 class Bookmarks extends Moloquent
 {
+    protected $guarded = [];
+    
    public static function doNotEmbedThis(){
 
         return [];
@@ -17,17 +19,17 @@ class Bookmarks extends Moloquent
         
     public function articles()
     {
-        return $this->embedsMany(Articles::class);
+        return $this->belongsToMany(Articles::class);
     }
 
-   /* public function user()
+    public function user()
     {
-        return $this->embedsOne(User::class);
-    }*/
+        return $this->hasOne(User::class, '_id', 'user_id');
+    }
 
     public function talks()
     {
-        return $this->embedsOne(Talks::class);
+        return $this->embedsMany(Talks::class);
     }
 
 }

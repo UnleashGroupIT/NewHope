@@ -12,6 +12,8 @@ class Talks extends Moloquent
 {
   use Searchable;
 
+protected $guarded = [];
+
    public static function doNotEmbedThis(){
 
         return [
