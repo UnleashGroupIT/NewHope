@@ -1,0 +1,30 @@
+.SpeakerCard{
+	flex-basis:24%;
+	position:relative;
+
+	.SpeakerCard--details{
+		position: absolute;
+	    bottom: 0;
+	    z-index:2;
+	    width: 100%;
+	    padding:1em;
+	    color:$white;
+	    background:repeating-linear-gradient(-45deg, $black, $black 1px, rgba($black,0.8) 1px, rgba($black,0.8) 2px);
+
+	    h5{
+	    	font-family:$anton;
+	    	text-transform: uppercase;
+    		letter-spacing: 1px;
+	    }
+	    span{
+	    	margin-top:.5em;
+	    }
+	}
+
+	.SpeakerCard--img{
+		@include img-crop--parent($SpeakerCardHeight);
+		img{
+			@include img-crop;
+		}
+	}
+}

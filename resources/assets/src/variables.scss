@@ -25,6 +25,12 @@ $event-teal : #2DBABA;
 
 $purple : #686BF7;
 
+
+//FONT
+
+$anton :'Anton';
+
+
 //MEDIA QUERIES
 
 $medium: "screen and (min-width : 30em)";
@@ -44,8 +50,26 @@ $extra-larg: "screen and (min-width : 75em)";
  background-repeat:no-repeat;
 }
 
+@mixin img-crop--parent($height) {
+	height: $height;
+    overflow: hidden;
+    position: relative;
+}
+
+@mixin img-crop {
+	position: absolute;
+    left: 50%;
+    top: 50%;
+    min-height: 100%;
+    min-width: 100%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    max-width: none;
+}
+
 
 //SIZES
 
 $NewsCardHeight: 120px;
 $NewsCardHighLightedIMG : 390px;
+$SpeakerCardHeight: 315px;

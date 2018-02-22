@@ -5,7 +5,7 @@ import { Route, Switch } from 'react-router-dom'
 import Home from './Home/Home'
 import News from './News/News'
 import Talks from './Talks/Talks'
-import Events from './Events/Events'
+import London from './Events/London/London'
 import About from './About/About'
 import NotFound from '../Global/404/NotFound'
 
@@ -18,7 +18,7 @@ class MainContent extends Component {
                               <Route exact path="/" component={Home}/>
                               <Route path="/news" render={routeProps => <News {...routeProps} direction={this.props.direction}/>}/>
                               <Route path="/talks" component={Talks}/>
-                              <Route path="/events" component={Events}/>
+                              <Route path="/london" component={London}/>
                               <Route path="/about" component={About}/>
                               <Route component={NotFound}/>
                         </Switch>
