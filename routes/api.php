@@ -107,7 +107,7 @@ Route::middleware(['auth:api', 'roles'])->delete('/event/{eventId}', 'UnleashEve
 
 /* Articles */
 
-Route::middleware(['auth:api', 'roles'])->get('/articles', 'ArticlesController@index');
+Route::get('/articles', 'ArticlesController@index');
 
 Route::middleware(['auth:api', 'roles'])->post('/articles', 'ArticlesController@store');
 
