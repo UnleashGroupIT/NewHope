@@ -36,4 +36,22 @@ class Controller extends BaseController
         return $results;
     }
 
+ protected function embeddedDocumentUpdater($model, $embedded, $idField, $id, $newData){
+      $update = $model::where($embedded, 'exists', true)->get();
+                       
+      if($update){
+        foreach ($update as $key => $value) {
+            if($value->$embedded->$idField == $id){
+                try{
+                    $value->$embedded->update($newData);
+                }catch(\Exception $e){
+                    return $e;
+                }
+            }
+        }
+      }
+        return $update;
+
+ }
+
 }

@@ -21,9 +21,7 @@ class ArticlesController extends Controller
 
         $articles = (new Articles)->newQuery();
 
-        if ($request->has('category')){
-            
-        }
+
 
 
          if ($request->has('order')){
@@ -44,60 +42,28 @@ class ArticlesController extends Controller
             
          }
 
-         if ($request->has('limit')){
-            $articles->take((int)$request->limit);
-         }
-
-        return $articles->get();
-
-        /*$speakerIds = [];
-
-         $speakers = (new Speakers)->newQuery();
-
-        if ($request->has('exlude')){
-
-            $grid = SpeakerGrid::where('grid_id',$request->exlude)->get();
-            foreach ($grid as $key => $value) {
-               array_push($speakerIds, $value->speaker_id);
-            }
-            $speakers->whereNotIn('id', $speakerIds);
-
-        }
-
-         if ($request->has('search')){
-            $speakers->where('full_name','like', '%'.$request->search.'%');
-        }      
-
-         if ($request->has('limit')){
-            $limit = $request->limit;
-        }else {
-            $limit = 30;
-        }             
-       
-       // return $speakers->get();
-        return $speakers->paginate($limit);*/
 
 
 
+        $result = $articles->get();
 
-
-        /* if ($request->filled('filter')){
-            switch ('filter') {
-                case 'latest':
-                    return Articles::orderBy('created_at', 'desc')->take(4)->get();
-                    break;
-                
-                default:
-                    # code...
-                    break;
-            }
-
+        if ($request->has('category')){
+            $category = "hr-tech";
             
+            $result = $result->filter(function($value, $key) use ($category){
+              
+                if($value->category->slug == $category){
+                   return true;
+                }
+               
+            });
+        }         
+
+         if ($request->has('limit')){
+            return $result->take((int)$request->limit);
          } else {
-            return Articles::all();
-
-         }*/
-
+             return $result->all();
+         }
         
     }
 
