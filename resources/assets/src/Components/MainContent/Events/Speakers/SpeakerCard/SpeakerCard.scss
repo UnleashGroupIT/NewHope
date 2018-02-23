@@ -1,6 +1,7 @@
 .SpeakerCard{
-	flex-basis:24%;
+	flex-basis:23%;
 	position:relative;
+	margin:.75em 0;
 
 	.SpeakerCard--details{
 		position: absolute;
@@ -25,6 +26,129 @@
 		@include img-crop--parent($SpeakerCardHeight);
 		img{
 			@include img-crop;
+		}
+	}
+
+	&.BecomeSpeaker{
+		padding:3em 1.5em 1.5em 1.5em;
+		border:1px solid $black;
+		position:relative;
+		display:flex;
+		flex-direction:column;
+		&:before,&:after{
+			content: '';
+		    width: 30px;
+		    height: 5px;
+		    position: absolute;
+		    background: $white;
+		}
+		&:before{
+		    left: 10px;
+		    bottom: -3px;
+		}
+		&:after{
+		    right: 10px;
+		    top: -3px;
+		}
+
+		h5{
+			margin-top:auto;
+		}
+	}
+}
+
+
+
+// HIGHLIGHTED
+
+.SpeakerCardHighLight{
+	display:flex;
+	flex-basis:100%;
+	margin:1.5em 0;
+
+	.SpeakerCardHighLight--img{
+		@include img-crop--parent($SpeakerCardHighLightedIMG);
+		flex-basis:35%;
+		img{
+			@include img-crop;
+		}
+	}
+
+	.SpeakerCardHighLight--details{
+		display:flex;
+		flex-direction:column;
+		flex-basis:65%;
+		padding:0 1.5em;
+	}
+
+	.SpeakerCardHighLight--name-and-social{
+		display:flex;
+		justify-content: space-between;
+
+		.SpeakerCardHighLight--social{
+			margin:auto 0;
+			img{
+				margin-left:2em;
+			}
+		}
+	}
+
+	.SpeakerCardHighLight--categ-date-place{
+		display:flex;
+		margin:1.5em 0;
+		> div {
+			margin-right:2em;
+			display:flex;
+			
+			span{
+				margin:auto;
+				font-weight:bold;
+			}
+
+			&.categ{
+				padding:.25em .5em;
+				background:$red;
+				color:$white;
+			}
+			&.date{
+				position:relative;
+				&:before{
+					content:url('/storage/Gfx/Events/Speakers/speaker-calendar.svg');
+					position:absolute;
+					left: -20px;
+    				top: 2px;
+    			}
+			}
+			&.place{
+				position:relative;
+				&:before{
+					content:url('/storage/Gfx/Events/Speakers/speaker-pin.svg');
+					position:absolute;
+					left: -20px;
+    				top: 2px;
+				}
+			}
+		}
+	}
+
+	.SpeakerCardHighLight--speakContent{
+		h4{
+			margin-bottom:1em;
+		}
+	}
+
+	.SpeakerCardHighLight--bio{
+		margin-top:auto;
+		position:relative;
+		color:$grey2;
+		padding-top:1em;
+		&:before{
+			content:'';
+			width:80px;
+			height:5px;
+			position:absolute;
+			top:0;
+			border-top:2px solid $grey3;
 		}
 	}
 }

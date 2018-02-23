@@ -133,7 +133,7 @@ $factory->define(App\AgendaSessions::class, function (Faker $faker) {
 
 $factory->define(App\Bookmarks::class, function (Faker $faker) {
     return [
-        'moo' => 'Mooo'
+        'moo' => 'Mooo',
     ];
 });
 

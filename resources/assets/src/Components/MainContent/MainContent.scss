@@ -150,13 +150,20 @@
 	}
 }
 
-
 ////NEWS PAGE HEADER END
+
+
 .Headline{
 	display: flex;
+	flex-basis:100%;
     justify-content: space-between;
     margin-bottom:.75em;
 	background:repeating-linear-gradient(-45deg, $grey4, $grey4 3px, transparent 3px, transparent 6px);
+
+	.Headline--title{
+		background:$white;
+		padding-right:1.5em;
+	}
 }
 
 .seeAll{

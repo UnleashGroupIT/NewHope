@@ -31,7 +31,7 @@ class FullSeeder extends Seeder
     {
 
         
-     factory(App\User::class, 10)->create();
+     factory(App\User::class, 16)->create();
      factory(App\Tags::class, 10)->create();
      factory(App\NewsCategories::class, 5)->create();
      factory(App\Articles::class, 20)->create()->each(function($articles){
@@ -106,16 +106,18 @@ class FullSeeder extends Seeder
      }); 
 
      factory(App\AgendaTracks::class, 5)->create();
+	 
 
-     factory(App\Bookmarks::class, 10)->create()->each(function($bookmarks){
+     factory(App\Bookmarks::class, 2)->create()->each(function($bookmarks){
 
-           $bookmarks->user()->create($this->fillWithRandom('App\User'));
+			$user = App\User::take(1)->skip(mt_rand(0,App\User::count()-1))->first();
+			$bookmarks->user_id = $user->id;
 
-            
+            $bookmarks->save();
            
                  for ($i=0; $i < mt_rand(5,15); $i++) { 
 
-                    $bookmarks->articles()->create($this->fillWithRandom('App\Articles'));
+                    $bookmarks->articles()->save(App\Articles::take(1)->skip(mt_rand(0,App\Articles::count()-1))->first());
                 }
 
        
@@ -124,7 +126,7 @@ class FullSeeder extends Seeder
             
                  for ($i=0; $i < mt_rand(5,15); $i++) { 
 
-                    $bookmarks->talks()->create($this->fillWithRandom('App\Talks'));
+                    $bookmarks->talks()->save(App\Talks::take(1)->skip(mt_rand(0,App\Talks::count()-1))->first());
                 }
 
  

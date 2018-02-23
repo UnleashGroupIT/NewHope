@@ -29,7 +29,7 @@ class Bookmarks extends Moloquent
 
     public function talks()
     {
-        return $this->embedsMany(Talks::class);
+        return $this->belongsToMany(Talks::class);
     }
 
 }

@@ -1,0 +1,24 @@
+.IntroBoxes{
+	display:flex;
+
+	.ContentBox{
+		flex-basis:40%;
+		background:$dark-blue;
+
+		.ContentBox--topics{
+			margin-top:auto;
+		}
+	}
+
+	.ImgBoxes--wrp{
+		display:flex;
+		flex-wrap:wrap;
+		flex-basis:60%;
+		.BigBox{
+			flex-basis:100%;
+		}
+		.SmallBox{
+			flex-basis:50%;
+		}
+	}
+}
