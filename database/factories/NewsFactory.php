@@ -23,6 +23,7 @@ $factory->define(App\Tags::class, function (Faker $faker) {
 $factory->define(App\NewsCategories::class, function (Faker $faker) {
     return [
         'name' => $faker->word,
+        'slug' => $faker->slug,
         'description' => $faker->paragraph
     ];
 });

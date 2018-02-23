@@ -28,17 +28,17 @@ class Articles extends Moloquent
         
     public function tags()
     {
-        return $this->embedsMany(Tags::class);
+        return $this->embedsMany('App\Tags');
     }
 
     public function author()
     {
-        return $this->embedsOne(User::class);
+        return $this->embedsOne('App\User');
     }
 
     public function category()
     {
-        return $this->embedsOne(NewsCategories::class);
+        return $this->embedsOne('App\NewsCategories');
     }
 
 }
