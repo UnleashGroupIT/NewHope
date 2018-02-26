@@ -1,8 +1,8 @@
 import React from 'react';
 
-const BigBox = () => (
+const BigBox = props => (
 	<div className="BigBox">
-		big
+		<img src={props.src} alt="IMG" />
 	</div>
 )
 

@@ -5,7 +5,7 @@ import HighLightTwo from '../HighLightTwo/HighLightTwo'
 import HighLightThree from '../HighLightThree/HighLightThree'
 
 const SlideOne = props => (
-	<div className="MainContent--header slideOne">
+	<div className="MainContent--header sldr slideOne">
         <div className="Layout-width">
      		<div className="MainContent--header---wrp">
 	    		<div className="MainContent--title">

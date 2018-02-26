@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 
-import HomeHeader from './HomeHeader/HomeHeader'
+import HeaderSlider from '../HeaderSlider/HeaderSlider'
 import NewsLatestPopular from '../News/NewsLatestPopular/NewsLatestPopular'
 import TalksCategory from '../Talks/TalksCategory/TalksCategory'
 import Events from '../Events/Events'
@@ -21,7 +21,7 @@ class Home extends Component {
     render(){
         return(
             <section className="Home">
-                <HomeHeader />
+                <HeaderSlider />
                 <div className="Layout-width">
                     <NewsLatestPopular name="News"/>
                 </div>

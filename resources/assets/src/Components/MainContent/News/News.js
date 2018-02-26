@@ -3,7 +3,7 @@ import NewsCategory from './NewsCategory/NewsCategory'
 import NewsSaved from './NewsSaved/NewsSaved'
 import NewsRecommended from './NewsRecommended/NewsRecommended'
 import NewsLatestPopular from './NewsLatestPopular/NewsLatestPopular'
-import HomeHeader from '../Home/HomeHeader/HomeHeader'
+import HeaderSlider from '../HeaderSlider/HeaderSlider'
 import CategSlider from '../CategSlider/CategSlider'
 import NewsLetterMobileAppBanner from '../NewsLetter-MobileApp-Banner/NewsLetterMobileAppBanner'
 
@@ -12,7 +12,7 @@ class News extends Component {
   render(){
     return(
         <section className="News">
-            <HomeHeader />
+            <HeaderSlider />
             <CategSlider direction={this.props.direction}/>
             <div className="Layout-width">
                 <NewsLatestPopular />

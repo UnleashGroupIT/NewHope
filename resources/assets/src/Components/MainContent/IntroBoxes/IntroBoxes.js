@@ -9,9 +9,14 @@ const IntroBoxes = () => (
 	<section className="IntroBoxes">
 		<ContentBox />
 		<div className="ImgBoxes--wrp">
-			<BigBox />
-			<SmallBox />
-			<SmallBox />
+			<div className="BigBox--wrp">
+				<BigBox src="/storage/Gfx/IntroBoxes/confExpo-IMG.jpg"/>
+				<div className="linear-BG"></div>
+			</div>
+			<div className="SmallBox--wrp">
+				<SmallBox src="/storage/Gfx/IntroBoxes/confExpo-IMG2.jpg"/>
+				<SmallBox src="/storage/Gfx/IntroBoxes/confExpo-IMG3.jpg"/>
+			</div>
 		</div>
 	</section>
 )

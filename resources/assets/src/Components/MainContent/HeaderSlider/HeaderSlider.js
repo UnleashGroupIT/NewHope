@@ -4,7 +4,7 @@ import SlideOne from './SlideOne/SlideOne';
 import SlideTwo from './SlideTwo/SlideTwo';
 import SlideThree from './SlideThree/SlideThree';
 
-class HomeHeader extends Component {
+class HeaderSlider extends Component {
 	
 	constructor(props) {
         super(props);
@@ -40,4 +40,4 @@ class HomeHeader extends Component {
 	}
 }
 
-export default HomeHeader
+export default HeaderSlider

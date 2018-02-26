@@ -18,6 +18,10 @@
 
 @import './Components/MainContent/Home/Home';
 
+@import './Components/MainContent/Testimonial/Testimonial';
+
+@import './Components/MainContent/Agenda/Agenda';
+
 @import './Components/MainContent/News/News';
 @import './Components/MainContent/News/NewsCategory/NewsCategory';
 @import './Components/MainContent/News/NewsCard/NewsCard';
@@ -29,6 +33,7 @@
 @import './Components/MainContent/Events/EventCard/EventCard';
 @import './Components/MainContent/Events/Speakers/Speakers';
 @import './Components/MainContent/Events/Speakers/SpeakerCard/SpeakerCard';
+@import './Components/MainContent/Events/Sponsors/HeadlineSponsorsBox/HeadlineSponsorsBox';
 
 @import './Components/MainContent/Startup/Startup';
 @import './Components/MainContent/Startup/StartupCard/StartupCard';
@@ -41,6 +46,7 @@
 
 @import './Components/MainContent/MobileApp/MobileApp';
 
-@import './Components/MainContent/IntroBoxes/IntroBoxes'; 
+@import './Components/MainContent/IntroBoxes/IntroBoxes';
+@import './Components/MainContent/IntroHeader/IntroHeader';  
 
 @import './Components/MainContent/NewsLetter-MobileApp-Banner/NewsLetterMobileAppBanner';

@@ -35,6 +35,7 @@ $anton :'Anton';
 
 $medium: "screen and (min-width : 30em)";
 $larg: "screen and (min-width : 48em)";
+$larg-60: "screen and (min-width : 60em)";
 $extra-larg: "screen and (min-width : 75em)";
 
 //IMG BG
@@ -75,3 +76,9 @@ $NewsCardHighLightedIMG : 390px;
 
 $SpeakerCardHeight: 315px;
 $SpeakerCardHighLightedIMG : 430px;
+
+$IntroBoxes-BigBoxIMG : 270px;
+$IntroBoxes-SmallBoxMobileIMG : 160px;
+$IntroBoxes-SmallBoxDesktopIMG : 220px;
+
+$HeadlineSponsorsBoxWidth : 390px;

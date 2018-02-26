@@ -1,0 +1,72 @@
+.Agenda--wrp{
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
+	margin:1.5em 0;
+}
+
+.AgendaSessionCard--wrp{
+	display:flex;
+	> div {
+		margin:auto 0;
+		margin-right:2em;
+		color:$grey1;
+		font-weight:bold;
+	}
+
+	.AgendaSessionCard--category{
+		border:1px solid $grey1;
+		padding:.25em .5em;
+	}
+
+	.AgendaSessionCard--place{
+		position:relative;
+		&:before{
+			content: url(/storage/Gfx/pin.svg);
+		    position: absolute;
+		    left: -15px;
+		    top: -2px;
+		}
+	}
+
+	.AgendaSessionCard--date{
+		position:relative;
+		&:before{
+			content: url(/storage/Gfx/calendar.svg);
+		    position: absolute;
+		    left: -20px;
+		    top: -2px;
+		}
+	}
+}
+
+.AgendaSessionCard{
+	flex-basis:48%;
+	padding:1em;
+	border:1px solid $grey4;
+	margin-bottom:2em;
+
+	h5{
+		margin-top:1em;
+		margin-bottom:.5em;
+	}
+	h6{
+		color:$grey2;
+	}
+}
+
+.AgendaSessionCard--speaker{
+	display:flex;
+	margin-top:1em;
+	.AgendaSessionCard--speakerIMG{
+		margin-right:.5em;
+	}
+	.AgendaSessionCard--speakerDetails {
+		h6{
+			color:$black;
+		}
+		span{
+			margin-top:.5em;
+		}
+	}
+}

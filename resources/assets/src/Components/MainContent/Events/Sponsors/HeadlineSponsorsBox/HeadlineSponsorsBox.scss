@@ -1,0 +1,36 @@
+.HeadlineSponsorsBox{
+	position: absolute;
+    right: 0;
+    top: -65px;
+
+    h2{
+    	margin-bottom:.75em;
+    }
+
+    .HeadlineSponsorsBox--wrp{
+    	background:$grey5;
+		padding:1.5em;
+		width:$HeadlineSponsorsBoxWidth;
+    }
+
+    .linear-BG{
+    	padding:2em 0;
+    }
+}
+
+.HeadlineSponsorsBox--Sponsors{
+	display:flex;
+	flex-wrap:wrap;
+	justify-content: space-between;
+
+	.SponsorImgBox{
+		height:60px;
+		width:100px;
+		background:$white;
+		display:flex;
+		margin:.5em 0;
+		img{
+			margin:auto;
+		}
+	}
+}

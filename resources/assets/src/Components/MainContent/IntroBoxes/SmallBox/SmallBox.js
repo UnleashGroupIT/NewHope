@@ -1,8 +1,9 @@
 import React from 'react';
 
-const SmallBox = () => (
+const SmallBox = props => (
+
 	<div className="SmallBox">
-		small
+		<img src={props.src} alt="IMG" />
 	</div>
 )
 

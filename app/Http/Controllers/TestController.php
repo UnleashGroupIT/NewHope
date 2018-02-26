@@ -12,7 +12,7 @@ class TestController extends Controller
  public function index(){
 
 
-    return $this->embeddedDocumentUpdater('App\Articles', 'category', 'slug', 'hr-tech', ['name' => 'HR Tech', 'slug' => 'hr-tech']);
+    return $this->embeddedDocumentUpdater('App\Articles', 'category', 'name', 'magnam', ['name' => 'Learning', 'slug' => 'learning']);
 
  	 
  }

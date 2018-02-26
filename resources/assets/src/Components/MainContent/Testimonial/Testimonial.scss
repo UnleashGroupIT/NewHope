@@ -1,0 +1,53 @@
+.Testimonial--wrp{
+	margin:1.5em 0;
+}
+
+.TestimonialDetails--wrp{
+	display:flex;
+	justify-content:space-between;
+
+	.Testimonial--person{
+		h5{
+			text-transform:uppercase;
+			font-family:'Anton';
+		}
+	}
+}
+
+.Testimonial{
+	display:flex;
+	flex-direction:column-reverse;
+	justify-content:space-between;
+	margin:3em 0;
+
+	@media #{$larg-60} {
+    	flex-direction:row;
+    }
+
+	.BigBox{
+		margin-right:1.5em;
+		@include img-crop--parent(470px);
+		img{
+			@include img-crop;
+		}
+	}
+
+	.BigBox--wrp{
+		display:flex;
+		flex-direction:column;
+
+		h1{
+			&:before{
+				content:url("/storage/Gfx/Testimonial/coma.svg");
+			}
+		}
+	}
+
+	.ImgBoxes--wrp .SmallBox--wrp{
+		margin-top:0;
+	}
+}
+
+.TestimonialDetails--wrp{
+	margin-top:auto;
+}

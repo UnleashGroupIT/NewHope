@@ -64,7 +64,7 @@
 .SpeakerCardHighLight{
 	display:flex;
 	flex-basis:100%;
-	margin:1.5em 0;
+	margin-bottom:1.5em;
 
 	.SpeakerCardHighLight--img{
 		@include img-crop--parent($SpeakerCardHighLightedIMG);
@@ -99,6 +99,7 @@
 		> div {
 			margin-right:2em;
 			display:flex;
+			position:relative;
 			
 			span{
 				margin:auto;
@@ -111,7 +112,6 @@
 				color:$white;
 			}
 			&.date{
-				position:relative;
 				&:before{
 					content:url('/storage/Gfx/Events/Speakers/speaker-calendar.svg');
 					position:absolute;
@@ -120,7 +120,6 @@
     			}
 			}
 			&.place{
-				position:relative;
 				&:before{
 					content:url('/storage/Gfx/Events/Speakers/speaker-pin.svg');
 					position:absolute;

@@ -1,0 +1,197 @@
+
+.MainContent--header{
+	position:relative;
+	color:$white;
+	padding:3em 0;
+	@media #{$larg} {
+    	padding:5em 0;
+    }
+
+	&:after{
+		content:'';
+		width:100%;
+		height:150px;
+		background:url("/storage/Gfx/bg-line.png");
+		@include bg-cover-pos;
+		position:absolute;
+		left:0;
+		bottom:0;
+	}
+
+	&.sldr{
+		min-height:600px;
+	}
+	&.nrml{
+		min-height:500px;
+	}
+
+	//SLIDER
+
+	&.slideOne{
+		background: url(/storage/Gfx/slideOne-bgD.jpg);
+    	@include bg-cover-pos;
+	}
+	&.slideTwo{
+		background: url(/storage/Gfx/slideTwo-bgD.jpg);
+    	@include bg-cover-pos;
+	}
+	&.slideThree{
+		background: url(/storage/Gfx/slideThree-bgD.jpg);
+    	@include bg-cover-pos;
+	}
+	//LONDON
+	&.London{
+		background: url(/storage/Gfx/Events/EventsLondon-bgD.jpg);
+    	@include bg-cover-pos;
+	}
+}
+
+.MainContent--header---wrp{
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+	@media #{$larg} {
+    	flex-direction:row;
+    }
+
+	.MainContent--title{
+		flex-basis:100%;
+		margin-bottom:2em;
+		max-width:400px;
+		@media #{$larg} {
+    		flex-basis:55%;
+    		margin-bottom:0;
+    		max-width:none;
+    	}
+		span{
+			margin-bottom:1em;
+		}
+		button{
+			margin-top:2em;
+			position: relative;
+    		z-index: 80;
+		}
+	}
+	.MainContent--highlight{
+		display:flex;
+		justify-content:center;
+		position:absolute;
+		bottom:2em;
+		left:50%;
+		z-index:80;
+		transform: translate(-50%, 0);
+		@media #{$larg} {
+			flex-direction:column;
+			flex-basis:32%;
+			margin-top:0;
+			position:static;
+			transform:none;
+		}
+		.Highlight{
+			background:rgba($black,0.6);
+			width:15px;
+			height:15px;
+			border-radius:25px;
+			cursor:pointer;
+			margin:0 .25em;
+			.Highlight--details{
+				display:none;
+			}
+			@media #{$larg} {
+				width:auto;
+				height:auto;
+				padding:1.5em;
+				margin:1em 0;
+				border-radius:0;
+				h5{margin-top:.5em;}
+				.Highlight--details{
+					display:block;
+				}
+			}
+			.Highlight--category{
+				color:$grey5;
+				a{color:$grey5}
+			}
+
+			&.talk{
+				h5:before{
+					background: url(/storage/Gfx/Talks/play.svg);
+				    background-size: cover;
+				    content: '';
+				    width: 15px;
+				    height: 15px;
+				    display: inline-block;
+				    margin-right: .5em;
+				}
+			}
+			&.Active{
+				background:$white;
+				color:$black;
+				.Highlight--category{
+					color:$black;
+					a{color:$black}
+				}
+				&.talk{
+					h5:before{
+						background: url(/storage/Gfx/Talks/playB.svg);
+				    	background-size: cover;
+				    }
+				}
+			}
+		}
+	}
+}
+
+//NEWS PAGE HEADER
+
+.News{
+	.MainContent--header---wrp{
+		flex-direction:column;
+	}
+	.MainContent--highlight{
+		flex-direction:row;
+		@media #{$larg} {
+			justify-content:space-between;
+			margin-top:2em;
+		}
+		.Highlight{
+			flex-basis:32%;
+		}
+	}
+}
+
+////NEWS PAGE HEADER END
+
+//EVENT HEADER
+
+.Event--name{
+	h5{
+		background:$dark-blue;
+		display:inline-block;
+		padding:.25em .5em;
+		margin-bottom:.5em;
+	}
+}
+.Event--place-and-date{
+	display:flex;
+	margin-bottom:2em;
+	.Event-card-place{
+		margin-right:1em;
+		h6:before{
+			content: url(/storage/Gfx/pinW.svg);
+    		display: inline-block;
+    		margin-right: .5em;
+		}
+	}
+	.Event-card-date{
+		h6:before{
+			content: url(/storage/Gfx/calendarW.svg);
+	    	display: inline-block;
+	    	margin-right: .5em;
+		}
+	}
+}
+
+.Intro-text{
+	margin-top:1em;
+}

@@ -1,24 +1,75 @@
 .IntroBoxes{
 	display:flex;
+	flex-direction:column-reverse;
+	justify-content:space-between;
+	margin:3em 0;
 
-	.ContentBox{
-		flex-basis:40%;
+	@media #{$larg-60} {
+    	flex-direction:row;
+    }
+}
+
+.ContentBox{
+		flex-basis:39%;
+		color:$white;
 		background:$dark-blue;
+		padding:1.5em;
+
+		h2{
+			margin-bottom:.5em;
+		}
+
+		.ContentBox--wrp{
+			margin-bottom:2em;
+		}
 
 		.ContentBox--topics{
 			margin-top:auto;
+			button{
+				margin:0 .5em .5em 0;
+			}
 		}
 	}
 
 	.ImgBoxes--wrp{
 		display:flex;
+		justify-content:space-between;
 		flex-wrap:wrap;
-		flex-basis:60%;
-		.BigBox{
+		flex-basis:59%;
+
+		.BigBox--wrp{
 			flex-basis:100%;
 		}
+		
+		.BigBox{
+			flex-basis:100%;
+			@include img-crop--parent($IntroBoxes-BigBoxIMG);
+			img{
+				@include img-crop;
+			}
+		}
+
+		.SmallBox--wrp{
+			display:flex;
+			justify-content:space-between;
+			margin-top:auto;
+			flex-basis:100%;
+			background:$white;
+
+		}
+
 		.SmallBox{
-			flex-basis:50%;
+			flex-basis:48%;
+			@include img-crop--parent($IntroBoxes-SmallBoxMobileIMG);
+			margin-bottom:1em;
+			@media #{$medium} {
+				height:$IntroBoxes-SmallBoxDesktopIMG;
+			}
+			@media #{$larg-60} {
+				margin-bottom:0;
+			}
+			img{
+				@include img-crop;
+			}
 		}
 	}
-}
