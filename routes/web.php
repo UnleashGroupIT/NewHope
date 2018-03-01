@@ -58,6 +58,18 @@ Route::get('login/twitter/callback', 'Auth\LoginController@urlCallback');
 Route::get('login/linkedin', 'Auth\LoginController@urlRedirect');
 Route::get('login/linkedin/callback', 'Auth\LoginController@urlCallback');
 
+//Admin Routes =================================================================
+Route::get('/adminsite', 'AdminProfileController@index');
+Route::get('/adminsite/home', 'AdminProfileController@index')->name('home');
+
+//Route::get('/adminsite/profile/oauth', 'HomeController@oauth');
+
+//Admin pages
+Route::get('/adminsite/speakers', 'SpeakersController@display')->name('admin.speakers');
+Route::get('/adminsite/sponsors', 'Admin\SubPageController@sponsorUI')->name('admin.sponsors');
+
+Route::get('/adminsite/agenda', 'Admin\SubPageController@agendaUI')->name('admin.agenda');
+
 //React Route ===============================================================================
 
 Route::view('/{path?}', 'home')

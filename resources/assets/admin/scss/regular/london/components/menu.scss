@@ -1,0 +1,44 @@
+$lon : #33cc33;
+
+#desktop-menu .menu-ul li a:hover{
+  color:$lon;
+}
+
+#desktop-menu .spec-menu li a:hover{
+  color:$lon; 
+}
+
+#desktop-menu .menu-ul li.more > a:hover::after{
+    background: url(../../gfx/arrow-down-green.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#desktop-menu .spec-menu{
+  border-color: $lon;
+}
+
+@media (min-width: 75em) {
+  #desktop-menu .spec-menu li:first-child{
+    margin-right: 5em;
+  }
+}
+
+.sub-menu .spec-menu li a:hover{
+  color:$lon;
+}
+
+@media (min-width: 75em){
+  .sub-menu .spec-menu li:hover {
+    border-color:$lon;
+  }
+}
+
+// TAGS COLOR
+
+h2,h4{
+  color: $lon;
+}
+.white-btn{
+  color: $lon;
+}

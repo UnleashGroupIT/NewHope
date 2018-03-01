@@ -1,0 +1,214 @@
+$gold : #bf9948;
+
+.modal-header {
+  	color: #33cc33;
+}
+
+.blue-btn{
+  background-color: #33cc33!important;
+  &:hover{
+    border-color:#33cc33!important;
+    color:#33cc33!important;
+    background-color:#fff!important;
+  }
+}
+
+#reservation{
+	.modal-content{
+		width: 410px;
+		height: auto;
+	}
+	.modal-header{
+		padding-left:2em;
+		padding-right:2em;
+		@media (min-width: 400px) {
+			padding-left:3em;
+			padding-right:3em;
+		}
+
+		.close{
+			font-size: 28px;
+		}
+		p{
+			margin-bottom: .2em;
+			margin-top: 1em;
+			&:first-child{
+				margin-top: 2em;
+			}
+		}
+		span{
+			font-size: 13px;
+			font-weight: bold;
+			a{
+				color: #33cc33;
+				&:nth-child(3){
+					display: none;
+				}
+			}
+		}
+		.green-btn{
+			width: 100%!important;
+			margin-top: 32px;
+			margin-bottom: 1em;
+			font-size: 12px;
+
+		}
+	}
+}
+
+#volunteer .modal-header p{
+	font-size:13px;
+}
+
+#cv{
+	display:flex;
+	flex-direction:column;
+	p{
+		text-align:center;
+	}
+	input{
+		font-size: 13px;
+		width: 175px;
+		margin: 0 auto;
+	}
+}
+
+#holiday{
+	.modal-content{
+		width:100%;
+		height:100%;
+		background:url("../../gfx/holiday-bg.jpg");
+		background-repeat:no-repeat;
+		background-size:cover;
+		background-position: center;
+		padding:2em 1em;
+		display: flex;
+    	flex-direction: column;
+    	margin: auto;
+    	transition: all 1s;
+    	@media (min-width: 450px) {
+    		padding:1em;
+    	}
+
+    	.modal-body{
+    		width: 600px;
+    		max-width: 100%;
+    		margin: 0 auto;
+    		padding:0;
+    		text-align: center;
+    		position: relative;
+
+    		@media (min-width: 450px) {
+    			margin: auto;
+    		}
+    		@media (min-width: 125em) {
+    			width: 32vw;
+    		}
+
+
+
+    		.holiday-pic{
+    			margin:2em 0;
+    		}
+
+    		.trans-btn{
+    			background-color:$gold;
+    			color:#fff;
+    			border-color:$gold;
+    			margin:1em 0;
+    			margin-bottom: 0;
+    			@media (min-width: 450px) {
+    				width: 220px;
+    			}
+    			&:hover{
+    				background-color:transparent;
+    				border-color:$gold;
+    				color: $gold;
+    			}
+    			&.hidden{
+    				display: none;
+    			}
+    		}
+    		.close{
+    			color:$gold;
+    			font-weight:bold;
+    			font-size: 40px;
+    			right: 0;
+    			top: 0;
+    		}
+
+    		h2{
+    			color: $gold;
+    			font-size: 1.5rem;
+    			@media (min-width: 450px) {
+    				font-size: 1.9rem;
+    			}
+    		}
+
+    		p{
+    			font-size: 13px;
+    			@media (min-width: 450px) {
+    				font-size:15px;
+    			}
+    		}
+    		a{
+    			color: $gold;
+    			display: block;
+    			margin-top: 1em;
+    		}
+
+    		.form-wrap{
+    			visibility: hidden;
+    			opacity: 0;
+    			height: 0;
+    			overflow:hidden;
+    			transition:all 1s;
+    			margin-top: .5em;
+
+    			&.opened{
+    				visibility: visible;
+    				opacity: 1;
+    				height: auto;
+    				transition:all 1s;
+    			}
+
+    			.form-input{
+    				padding:.5em;
+    				margin:.5em auto;
+    				border:1px solid $gold;
+    				text-align: center;
+    				width: 100%;
+    				display: block;
+    				&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  						color: $gold;
+					}
+					&::-moz-placeholder { /* Firefox 19+ */
+  						color: $gold;
+					}
+					&:-ms-input-placeholder { /* IE 10+ */
+ 	 					color: $gold;
+					}
+					&:-moz-placeholder { /* Firefox 18- */
+  						color: $gold;
+					}
+					@media (min-width: 450px) {
+    					width: auto;
+    				}
+    			}
+    		}
+
+    		.logo img{
+    			width: 50%;
+    			@media (min-width: 450px) {
+    				width: auto;
+    			}
+    		}
+    		.holiday-pic img{
+    			width: 50%;
+    			@media (min-width: 450px) {
+    				width: auto;
+    			}
+    		}
+    	}
+	}
+}

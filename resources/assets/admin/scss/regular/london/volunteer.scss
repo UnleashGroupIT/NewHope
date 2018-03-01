@@ -1,0 +1,365 @@
+@import 'components/reset';
+@import '../common';
+@import '../menu';
+@import '../inner-menu';
+@import '../footer';
+@import '../popup';
+@import 'components/menu';
+@import 'components/footer';
+@import 'components/popup';
+@import 'components/speakergrid';
+@import 'components/common';
+
+$lon: #33cc33;
+
+header {
+  height: 92vh;
+  min-height: 400px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #fff;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  background: url("../../gfx/london/volunteer-mobile-bg.jpg") no-repeat #000;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (min-width: 40em) {
+  header {
+    height: 55vh;
+    background: url("../../gfx/london/volunteer-bg.jpg") no-repeat #000;
+    background-size: cover;
+    background-position: left 40px;
+  }
+}
+
+.wrp {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+@media (min-width: 120em) {
+  .wrp {
+    max-width: 53vw;
+  }
+}
+
+section.one .wrp {
+  padding: 2em;
+  padding-bottom: 3em;
+  color: #fff;
+}
+
+@media (min-width: 40em) {
+  section.one .wrp {
+    padding: 4em 3em;
+  }
+}
+
+section.one .wrp h2 {
+  color: #33cc33;
+}
+
+section.one .wrp button {
+  margin: 4em 0;
+  margin-bottom: 0;
+}
+
+section.two {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-height: 600px;
+}
+
+section.two .wrppr {
+    width: 100%;
+    min-height: 500px;
+    box-shadow: inset -5px 0px 0px rgba(0, 0, 0, 0.7) }
+    @media (min-width: 75em) {
+      section.two .wrppr {
+        width: 50%; } }
+  section.two .fix-bg {
+    width: 100%;
+    height: 500px;
+    box-shadow: inset 3px 3px 25px rgba(0, 0, 0, 0.7);
+    display: block;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-attachment:scroll;
+    background-position: left center;
+    @media (min-width: 40em) {
+      background-attachment:fixed;
+    }
+    @media (min-width: 75em) {
+      height: 100%;
+      background-size: contain;
+      background-attachment:fixed;
+    }
+    @media (min-width: 110em) {
+      height: 100%;
+      background-size: 50% 100%;
+      background-attachment:fixed;
+    }
+  }
+    section.two .fix-bg.vol-1 {
+      background-image: url("../../gfx/london/volunteer-1-sec-mobile-bg.jpg");
+      background-repeat: no-repeat;
+      background-position: bottom center; }
+      @media (min-width: 40em) {
+        section.two .fix-bg.vol-1 {
+          background-image: url("../../gfx/london/volunteer-1-sec-tablet-bg.jpg");
+          background-attachment: fixed; } }
+      @media (min-width: 75em) {
+        section.two .fix-bg.vol-1 {
+          background-image: url("../../gfx/london/volunteer-1-sec-bg.jpg");
+          background-position: bottom left; } }
+    section.two .fix-bg.vol-2 {
+      background-image: url("../../gfx/london/volunteer-2-sec-mobile-bg.jpg");
+      background-repeat: no-repeat;
+      background-position: top center; }
+      @media (min-width: 40em) {
+        section.two .fix-bg.vol-2 {
+          background-image: url("../../gfx/london/volunteer-2-sec-tablet-bg.jpg");
+          background-attachment: fixed; } }
+      @media (min-width: 75em) {
+        section.two .fix-bg.vol-2 {
+          background-image: url("../../gfx/london/volunteer-2-sec-bg.jpg");
+          background-position: top right; } }
+      section.two .fix-bg.vol-3 {
+      background-image: url("../../gfx/london/volunteer-3-sec-mobile-bg.jpg");
+      background-repeat: no-repeat;
+      background-position: bottom center; }
+      @media (min-width: 40em) {
+        section.two .fix-bg.vol-3 {
+          background-image: url("../../gfx/london/volunteer-3-sec-tablet-bg.jpg");
+          background-attachment: fixed; } }
+      @media (min-width: 75em) {
+        section.two .fix-bg.vol-3 {
+          background-image: url("../../gfx/london/volunteer-3-sec-bg.jpg");
+          background-position: bottom left; } }
+          section.two .fix-bg.vol-4 {
+      background-image: url("../../gfx/london/volunteer-4-sec-mobile-bg.jpg");
+      background-repeat: no-repeat;
+      background-position: top center; }
+      @media (min-width: 40em) {
+        section.two .fix-bg.vol-4 {
+          background-image: url("../../gfx/london/volunteer-4-sec-tablet-bg.jpg");
+          background-attachment: fixed; } }
+      @media (min-width: 75em) {
+        section.two .fix-bg.vol-4 {
+          background-image: url("../../gfx/london/volunteer-4-sec-bg.jpg");
+          background-position: top right; } }
+
+section.two.clients {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+@media (min-width: 75em) {
+  section.two.clients {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+section.two .content {
+  padding: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section.two .content .content-wrap {
+  margin: 2em 0;
+  margin-top: 0;
+  
+  p{
+  	margin: 2em 0;
+  }
+
+  strong{
+  	font-weight: bold;
+  	color:$lon;
+  	line-height: 22px;
+    @media (min-width: 125em) {
+      font-size: .85vw;
+      line-height: 1.2vw;
+    }
+  }
+
+}
+
+@media (min-width: 120em) {
+  section.two .content .content-wrap {
+    margin: 1.68vw 0;
+  }
+}
+
+@media (min-width: 75em) {
+  section.two .content {
+    width: 50%;
+    padding: 2em 4em;
+  }
+}
+
+@media (min-width: 120em) {
+  section.two .content {
+    padding: 1.68vw 3.4vw;
+  }
+}
+
+section.two button,section.two a {
+  margin-top: auto;
+}
+
+section.two a{
+  width: 100%;
+  @media (min-width: 30em) {
+    width: 220px;
+  }
+  @media (min-width: 125em) {
+    width: 11.5vw;
+  }
+
+}
+
+@media (min-width: 75em) {
+  section.two button {
+    margin-bottom: 2em;
+  }
+}
+
+section.one-cntr {
+  background: url("../../gfx/upcoming-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 2em 0;
+}
+
+@media (min-width: 75em) {
+  section.one-cntr {
+    padding: 4em 0;
+  }
+}
+
+section.one-cntr p, section.one-cntr h2 {
+  color: #fff;
+  line-height: 2em;
+}
+
+section.one-cntr h2 {
+  display: inline-block;
+  position: relative;
+  background-color: #33cc33;
+  padding:.5em;
+  font-size: 22px;
+  line-height: 1;
+  @media (min-width: 40em) {
+    padding:.2em .5em;
+    font-size: 1.9rem;
+  }
+}
+
+section.one-cntr h2::before, section.one-cntr h2::after {
+  position: absolute;
+  top: 3px;
+}
+
+section.one-cntr h2::before {
+  content: url("../../gfx/london/left-sign.png");
+  left: -33px;
+}
+
+section.one-cntr h2::after {
+  content: url("../../gfx/london/right-sign.png");
+  right: -33px;
+}
+
+section.one-cntr button {
+  margin: 1em;
+  margin-top: 2em;
+  width: 90%;
+}
+
+@media (min-width: 40em) {
+  section.one-cntr button {
+    width: 205px;
+  }
+}
+
+@media (min-width: 120em) {
+  section.one-cntr button {
+    width: 10.7vw;
+  }
+}
+
+section.one-cntr button:hover {
+  background-color: transparent;
+  color: #fff;
+  border-color: #fff;
+}
+
+#viki{
+  padding:2em 4em;
+	#viki-prof{
+		width:150px;
+		border-radius:100%;
+	}
+	span{
+		font-size: 13px;
+    @media (min-width: 125em) {
+      font-size: .7vw;
+    }
+	}
+	p.testim{
+		margin-top: 1em;
+		position:relative;
+		&::before{
+			content: '';
+			width: 25px;
+			height: 25px;
+			display: block;
+			position:absolute;
+			left: -25px;
+			top: -10px;
+			background-image: url("../../gfx/comawhite.png");
+      		background-repeat: no-repeat;
+      		background-size:contain;
+      		background-position:center;
+		}
+		&::after{
+			content: '';
+			width: 25px;
+			height: 25px;
+			display: block;
+			position:absolute;
+			right: -25px;
+			top: 10px;
+			background-image: url("../../gfx/comawhite.png");
+      		background-repeat: no-repeat;
+      		background-size:contain;
+      		background-position:center;
+		}
+	}
+}

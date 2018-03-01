@@ -1,0 +1,636 @@
+@import 'reset';
+@import '../common';
+@import '../footer';
+@import '../menu';
+@import '../popup';
+@import 'speakergrid';
+
+
+
+.presentations{
+  font-size: 13px!important;
+}
+
+body {
+  position: relative; }
+
+header {
+  min-height: 800px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  transition: all 1s ease-in-out;
+  background: url("../../gfx/amsterdam/header-bg-mobile.jpg") no-repeat #000;
+  background-size: cover;
+  background-position: center; }
+  @media (min-width: 40em) {
+    header {
+      height: 100vh;
+      min-height: 780px;
+      background: url("../../gfx/amsterdam/header-bg-desktop.jpg") no-repeat #000;
+      background-size: cover;
+      background-position: center; } }
+  @media (min-width: 75em) {
+    header {
+      position: relative; } }   
+
+.wrp {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 1em; }
+  @media (min-width: 120em) {
+    .wrp {
+      max-width: 53vw; } }
+
+section.one .wrp {
+  padding: 2em;
+  padding-bottom: 3em;
+  color: #fff;
+
+  p{
+    font-size:14px;
+    @media (min-width: 120em) {
+      font-size:.76vw;
+    }
+  }
+
+  strong{
+    font-weight: bold;
+  }
+}
+  @media (min-width: 40em) {
+    section.one .wrp {
+      padding: 4em 3em; } }
+  section.one .wrp h2 {
+    color: #0090ff; }
+  section.one .wrp button {
+    margin: 2em 0;
+    margin-bottom: 0; }
+@media (min-width: 40em) {
+  section.one.futureofwork {
+    text-align: center; } }
+section.one.mainsponsors {
+  text-align: center;
+  margin-top: auto;
+  @media (min-width: 75em) {
+    margin-bottom: 2em;
+  }
+  span{
+    display: block;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-bottom: .5em;
+    strong{
+      color:#0090ff;
+    }
+  }
+}
+  
+  section.one.mainsponsors .mainsponsors-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    padding: .4em 1em;
+    justify-content: center;
+    @media (min-width: 55em) {
+      padding:1em;
+    }
+  }
+    @media (min-width: 125em) {
+      section.one.mainsponsors .mainsponsors-wrap {
+        padding: 0 1vw;
+        padding-bottom: 1vw;
+      }
+    }
+    section.one.mainsponsors .mainsponsors-wrap > div {
+      margin: 1em .5em;
+      margin-top: auto;
+      flex-grow: 1;
+      text-align: center;
+      visibility: hidden;
+      opacity: 0; }
+      @media (min-width: 75em) {
+        section.one.mainsponsors .mainsponsors-wrap > div {
+          margin: 0 1em;
+          margin-top: auto;
+          flex-grow: 0;
+          padding-bottom: 1em; } }
+      section.one.mainsponsors .mainsponsors-wrap > div.visible {
+        visibility: visible;
+        opacity: 1;
+        transition: all 4s; }
+      section.one.mainsponsors .mainsponsors-wrap > div img {
+        width: 75px; }
+        @media (min-width: 55em) {
+          section.one.mainsponsors .mainsponsors-wrap > div img {
+            width: 100px; } }
+        @media (min-width: 120em) {
+          section.one.mainsponsors .mainsponsors-wrap > div img {
+            width: 5.3vw; } }
+
+      #adp,#ibm{
+        width: 60px;
+        @media (min-width: 55em) {
+          width: 80px;
+        }
+        @media (min-width: 125em) {
+          width: 4.2vw;
+        }
+      }
+      #cornerstone{
+        width: 110px;
+        @media (min-width: 55em) {
+          width: 135px;
+        }
+        @media (min-width: 125em) {
+          width: 7vw;
+        }
+      }
+      #cross{
+        width: 145px;
+        @media (min-width: 55em) {
+          width: 155px;
+        }
+        @media (min-width: 125em) {
+          width: 8vw;
+        }
+      }
+      #nga{
+        width: 70px;
+        @media (min-width: 55em) {
+          width: 85px;
+        }
+        @media (min-width: 125em) {
+          width: 4.4vw;
+        }
+      }
+      #sap{
+        width: 210px;
+        @media (min-width: 125em) {
+          width: 10.7vw;
+        }
+      }
+
+      #ach,#ind{
+        width: 100px;
+        @media (min-width: 55em) {
+          width: 110px;
+        }
+        @media (min-width: 125em) {
+          width: 6.3vw;
+        }
+      }
+
+
+
+      #book{
+        padding:.6em;
+        margin-bottom:.4em;
+        display: none; 
+      }
+
+
+section.two {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 600px; }
+  section.two .wrppr {
+    width: 100%;
+    min-height: 500px;
+    box-shadow: inset -5px 0px 0px rgba(0, 0, 0, 0.7) }
+    @media (min-width: 75em) {
+      section.two .wrppr {
+        width: 50%; } }
+  section.two .fix-bg {
+    width: 100%;
+    height: 500px;
+    box-shadow: inset 3px 3px 25px rgba(0, 0, 0, 0.7);
+    display: block;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-attachment:scroll;
+    background-position: left center;
+    @media (min-width: 40em) {
+      background-attachment:fixed;
+    }
+    @media (min-width: 75em) {
+      height: 100%;
+      background-size: 50% 100%;
+      background-attachment:fixed;
+    }
+  }
+    section.two .fix-bg.arianna {
+      background-image: url("../../gfx/amsterdam/arianna-mobile-bg.jpg");
+      background-repeat: no-repeat; }
+      @media (min-width: 40em) {
+        section.two .fix-bg.arianna {
+          background-image: url("../../gfx/amsterdam/arianna-tablet-bg.jpg");
+            background-attachment:fixed; } }
+      @media (min-width: 75em) {
+        section.two .fix-bg.arianna {
+          background-image: url("../../gfx/amsterdam/arianna-bg.jpg");
+          background-position: left center; } }
+    section.two .fix-bg.expobg {
+      background-image: url("../../gfx/amsterdam/expo-sec-mobile-bg.jpg");
+      background-repeat: no-repeat;
+      background-position: top center; }
+      @media (min-width: 40em) {
+        section.two .fix-bg.expobg {
+          background-image: url("../../gfx/amsterdam/expo-sec-tablet-bg.jpg");
+            background-attachment:fixed; } }
+      @media (min-width: 75em) {
+        section.two .fix-bg.expobg {
+          background-image: url("../../gfx/amsterdam/expo-sec-bg.jpg");
+          background-position: top right; } }
+      @media (min-width: 120em) {
+        section.two .fix-bg.expobg {
+          background-size: 50% 100%; } }
+    section.two .fix-bg.clientsbg {
+      background-image: url("../../gfx/amsterdam/clients-sec-mobile-bg.jpg");
+
+      background-repeat: no-repeat;
+      background-position: top center; }
+      @media (min-width: 40em) {
+        section.two .fix-bg.clientsbg {
+          background-image: url("../../gfx/amsterdam/clients-sec-tablet-bg.jpg");
+            background-attachment:fixed; } }
+      @media (min-width: 75em) {
+        section.two .fix-bg.clientsbg {
+          background-image: url("../../gfx/amsterdam/clients-sec-bg.jpg");
+          background-position: top left; } }
+      @media (min-width: 120em) {
+        section.two .fix-bg.clientsbg {
+          background-size: 50% 100%; } }
+    section.two .fix-bg.startupbg {
+      background-image: url("../../gfx/amsterdam/startup-sec-mobile-bg.jpg");
+      background-repeat: no-repeat;
+      background-position: top center; }
+      @media (min-width: 40em) {
+        section.two .fix-bg.startupbg {
+          background-image: url("../../gfx/amsterdam/startup-sec-tablet-bg.jpg");
+            background-attachment:fixed; } }
+      @media (min-width: 75em) {
+        section.two .fix-bg.startupbg {
+          background-image: url("../../gfx/amsterdam/startup-sec-bg.jpg");
+          background-position: top right; } }
+      @media (min-width: 120em) {
+        section.two .fix-bg.startupbg {
+          background-size: 50% 100%; } }
+    section.two .fix-bg.speakers.right {
+      background-image: url("../../gfx/amsterdam/speakers-sec-mobile-bg.jpg");
+      background-repeat: no-repeat;
+      background-position: bottom center; }
+      @media (min-width: 40em) {
+        section.two .fix-bg.speakers.right {
+          background-image: url("../../gfx/amsterdam/speakers-sec-tablet-bg.jpg");
+            background-attachment:fixed; } }
+      @media (min-width: 75em) {
+        section.two .fix-bg.speakers.right {
+          background-image: url("../../gfx/amsterdam/speakers-sec-bg.jpg");
+          background-position: top right; } }
+      @media (min-width: 120em) {
+        section.two .fix-bg.speakers.right {
+          background-size: 50% 100%; } }
+
+
+          section.two.expo {
+            flex-direction: column-reverse;
+            @media (min-width: 75em) {
+              flex-direction: row;
+            }
+          }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @media (min-width: 75em) {
+    section.two.keynote.arianna .mic-logo{
+      margin-left: 5px;
+    }
+  }
+  section.two.keynote.arianna .content {
+    background-color: #0090ff;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 3em; }
+    @media (min-width: 120em) {
+      section.two.keynote.arianna .content {
+        padding-bottom: 2.55vw; } }
+  section.two.keynote.arianna .h4wrp {
+    display: flex;
+    margin-bottom: 1em; }
+    section.two.keynote.arianna .h4wrp > div {
+      display: flex;
+      margin-left: 2em; }
+      @media (min-width: 75em) {
+        section.two.keynote.arianna .h4wrp > div {
+          margin-left: 3.5em; } }
+    section.two.keynote.arianna .h4wrp .U-logo {
+      margin: auto;
+      margin-right: 2em; }
+      @media (min-width: 75em) {
+        section.two.keynote.arianna .h4wrp .U-logo {
+          margin: auto;
+          margin-right: 4em; } }
+  section.two.keynote.arianna p {
+    color: #fff; }
+  section.two.keynote.arianna h2 {
+    padding: .2em;
+    padding-left: 1em;
+    padding-right: .5em;
+    color: #fff;
+    background-color: #083643;
+    display: inline-block; }
+    @media (min-width: 75em) {
+      section.two.keynote.arianna h2 {
+        padding-left: 2em; } }
+  section.two.keynote.arianna h4 {
+    color: #fff;
+    margin: auto;
+    font-size: 1rem;
+    padding: 0 1em; }
+    @media (min-width: 75em) {
+      section.two.keynote.arianna h4 {
+        font-size: 1.3rem;
+        padding: 0 2em; } }
+  section.two.keynote.arianna .pdg {
+    padding: 0 2em; }
+    @media (min-width: 75em) {
+      section.two.keynote.arianna .pdg {
+        padding: 0 4em; } }
+    @media (min-width: 120em) {
+      section.two.keynote.arianna .pdg {
+        padding: 0 3.1vw; } }
+  section.two.keynote.arianna .strn {
+    display: block;
+    font-weight: 900;
+    margin: .5em 0; }
+  section.two.keynote.arianna .schedule-wrp {
+    width: calc(100% - 4em);
+    margin-left: 2em; }
+    @media (min-width: 75em) {
+      section.two.keynote.arianna .schedule-wrp {
+        margin-top: auto;
+        margin-left: 4em; } }
+    section.two.keynote.arianna .schedule-wrp .schedule {
+      display: flex;
+      margin-bottom: 2em; }
+      section.two.keynote.arianna .schedule-wrp .schedule .clock-logo {
+        margin: auto 0; }
+      section.two.keynote.arianna .schedule-wrp .schedule .date-place {
+        margin-left: 1em;
+        text-transform: uppercase; }
+        section.two.keynote.arianna .schedule-wrp .schedule .date-place strong {
+          font-weight: 600; }
+  section.two.keynote.arianna button {
+    margin-left: 0;
+    color: #0090ff; }
+    section.two.keynote.arianna button:hover {
+      color: #fff; }
+  section.two .content {
+    padding: 2em;
+    display: flex;
+    flex-direction: column; }
+    section.two .content .content-wrap {
+      margin: 2em 0;
+      margin-top: 0; }
+      @media (min-width: 120em) {
+        section.two .content .content-wrap {
+          margin: 1.68vw 0; } }
+    @media (min-width: 75em) {
+      section.two .content {
+        width: 50%;
+        padding: 2em 4em; } }
+    @media (min-width: 120em) {
+      section.two .content {
+        padding: 1.68vw 3.4vw; } }
+  section.two button {
+    margin-top: auto; }
+    @media (min-width: 75em) {
+      section.two button {
+        margin-bottom: 2em; } }
+  section.two.keynote button {
+    margin-bottom: 0; }
+
+section.one-cntr {
+  background: url("../../gfx/amsterdam/one-cntr-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 2em 0; }
+  section.one-cntr.counter {
+    background: url("../../gfx/counter-bg.jpg");
+    background-size: cover;
+    background-position: center; }
+  @media (min-width: 75em) {
+    section.one-cntr {
+      padding: 4em 0; } }
+  section.one-cntr p, section.one-cntr h2 {
+    color: #fff;
+    line-height: 2em; }
+  section.one-cntr h2 {
+    display: inline-block;
+    position: relative;
+    background-color: #0090ff;
+    padding: .2em .5em;
+    line-height: 1; }
+    section.one-cntr h2::before, section.one-cntr h2::after {
+      position: absolute;
+      top: 3px; }
+    section.one-cntr h2::before {
+      content: url("../../gfx/amsterdam/left-sign.png");
+      left: -33px; }
+    section.one-cntr h2::after {
+      content: url("../../gfx/amsterdam/right-sign.png");
+      right: -33px; }
+  section.one-cntr button {
+    margin: 1em;
+    margin-top: 2em;
+    width: 90%; }
+    @media (min-width: 40em) {
+      section.one-cntr button {
+        width: 205px; } }
+    @media (min-width: 120em) {
+      section.one-cntr button {
+        width: 10.7vw; } }
+    section.one-cntr button:hover {
+      background-color: transparent;
+      color: #fff;
+      border-color: #fff; }
+  section.one-cntr.counter .your-clock {
+    display: flex;
+    justify-content: center;
+    margin: 5em 0; }
+    @media (min-width: 120em) {
+      section.one-cntr.counter .your-clock {
+        margin: 2.8vw 0; } }
+    @media (min-width: 45em) {
+      section.one-cntr.counter button {
+        margin: 0 2em;
+        margin-top: 2em } }
+
+.testim {
+  margin: 0 2em;
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  .strn{
+    font-weight: 900;
+  }
+
+}
+  @media (min-width: 75em) {
+    .testim{
+      margin: 3em 4em;
+    }
+  }
+  .testim .coma {
+    width: 30px;
+    margin-top: 1em; }
+  .testim span {
+    display: block;
+    margin: 1em 0;
+    color: #fff;
+    font-weight: 300;
+    line-height: 1.5em; }
+    .testim span.blck {
+      color: #323232; }
+  .testim .quote-logo {
+    width: 100px;
+    margin-left: auto;
+    margin-top: 1em;
+    margin-bottom: 2em }
+  .testim.wdth {
+    margin: 3em 0;
+    span{
+      color: #323232;
+    }
+  }
+
+section.map {
+  background: url("../../gfx/amsterdam/map-mobile-bg.jpg");
+  background-size: cover;
+  background-position: top;
+  min-height: 600px;
+  display: flex;
+  @media (min-width: 600px) {
+    background: url("../../gfx/amsterdam/map-bg.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+}
+  @media (min-width: 65em) {
+    section.map {
+      display: block; } }
+  section.map .content {
+    padding: 0 2em;
+    display: flex;
+    flex-wrap: wrap; }
+    @media (min-width: 65em) {
+      section.map .content {
+        max-width: 950px;
+        flex-wrap: nowrap;
+        padding: 6em 4em; } }
+    @media (min-width: 75em) {
+      section.map .content {
+        max-width: 49.5vw;
+        padding: 5vw 4vw; } }
+  section.map .mapcont-wrp {
+    padding: 2em;
+    background-color: #fff;
+    box-shadow: 3px 3px 15px #999;
+    margin-top: auto;
+    max-width: 400px; }
+    section.map .mapcont-wrp p {
+      margin: 1em 0; }
+    @media (min-width: 95em) {
+      section.map .mapcont-wrp {
+        padding: 3.3vw;
+        max-width: 21vw;
+        width: 50%;
+        padding: 4em; } }
+    section.map .mapcont-wrp button {
+      margin-top: 1em; }
+  section.map .map-pic {
+    width: 100%;
+    background: url("../../gfx/amsterdam/venue.jpg");
+    background-size: cover;
+    background-position: center;
+    box-shadow: 3px 3px 15px #999;
+    display: none; }
+    @media (min-width: 95em) {
+      section.map .map-pic {
+        width: 50%;
+        display: block; } }
+
+section.sponsors {
+  min-height: 300px;
+  background-color: #f2f2f2;
+  text-align: center; }
+  section.sponsors .full-btn {
+    margin-bottom: 3em;
+    width: 95%; }
+  section.sponsors img {
+    margin: auto;
+    width: 130px; }
+    
+    @media (min-width: 120em) {
+      section.sponsors img {
+         } }
+  section.sponsors .sponsors-wrp {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1em; }
+    section.sponsors .sponsors-wrp .sponsor {
+      width: 150px;
+      height: 150px;
+      text-align: center;
+      padding: 2em 1em;
+      opacity: 0;
+      display: flex; }
+
+      section.sponsors .sponsors-wrp .sponsor:last-child{
+        display: none;
+      }
+
+      @media (min-width: 75em) {
+        section.sponsors .sponsors-wrp .sponsor {
+          margin: 2em;
+          padding:0; } }
+      @media (min-width: 130em) {
+        section.sponsors .sponsors-wrp .sponsor {
+          margin: 1.68vw;
+          width: 7vw;
+        } }
+      section.sponsors .sponsors-wrp .sponsor:hover {
+        transition: all 1s;
+        cursor: pointer;
+      }
+      section.sponsors .sponsors-wrp .sponsor:hover img {
+        transform: scale(1.3);
+        opacity: 1;
+        transition: all .1s; }
+
+.come-in {
+  opacity: 0;
+  transform: scale3d(0, 0, 0);
+  animation: come-in 1.5s ease forwards; }
+
+.come-in:nth-child(odd) {
+  animation-duration: 1s; }
+
+@keyframes come-in {
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1); } }

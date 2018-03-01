@@ -81,16 +81,27 @@ Route::middleware(['auth:api', 'hidden'])->post('/session/speaker', 'AgendaSessi
 
 Route::middleware(['auth:api', 'hidden'])->delete('/session/speaker', 'AgendaSessionsController@destroySpeaker');
 
-/* Grid Routes */
-Route::middleware(['auth:api', 'roles', 'checkevent:0'])->get('/grids', 'GridsController@index');
+/* Speaker Grid Routes */
+Route::middleware(['auth:api', 'roles'])->get('/grids/speakers/{gridId}', 'SpeakerGridController@index');
 
-Route::middleware(['auth:api', 'roles'])->post('/grids', 'GridController@store');
+Route::middleware(['auth:api', 'roles'])->post('/grids/speakers/{gridId}', 'SpeakerGridController@store');
 
-Route::middleware(['auth:api', 'roles'])->get('/grid/{gridId}', 'GridController@show');
+Route::middleware(['auth:api', 'roles'])->get('/grid/speakers/{gridId}', 'SpeakerGridController@show');
 
-Route::middleware(['auth:api', 'roles'])->patch('/grid/{gridId}', 'GridController@update');
+Route::middleware(['auth:api', 'roles'])->patch('/grid/speakers/{gridId}', 'SpeakerGridController@update');
 
-Route::middleware(['auth:api', 'roles'])->delete('/grid/{gridId}', 'GridController@destroy');
+Route::middleware(['auth:api', 'roles'])->delete('/grid/speakers{gridId}', 'SpeakerGridController@destroy');
+
+/* Sponsor Routes */
+Route::middleware(['auth:api', 'roles'])->get('/grids/sponsors/{gridId}', 'SponsorGridController@index');
+
+Route::middleware(['auth:api', 'roles'])->post('/grids/sponsors/{gridId}', 'SponsorGridController@store');
+
+Route::middleware(['auth:api', 'roles'])->get('/grid/sponsors/{gridId}', 'SponsorGridController@show');
+
+Route::middleware(['auth:api', 'roles'])->patch('/grid/sponsors/{gridId}', 'SponsorGridController@update');
+
+Route::middleware(['auth:api', 'roles'])->delete('/grid/sponsors{gridId}', 'SponsorGridController@destroy');
 
 
 /* Event Routes */

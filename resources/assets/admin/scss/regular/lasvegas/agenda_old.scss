@@ -1,0 +1,1579 @@
+/* These CSS rules will affect the Agenda page.  */
+.cnt {
+  width: 100%;
+  background-color: #fff;
+}
+
+.fxd {
+  position: fixed;
+  top: 7.3%;
+  z-index: 7000;
+}
+
+@media (min-width: 1920px) {
+  .fxd {
+    top: 3.5vw;
+  }
+}
+
+.opa {
+  opacity: 0;
+  -webkit-transition: opacity .6s;
+  transition: opacity .6s;
+}
+
+@media (min-width: 1000px) {
+  section.agenda {
+    margin-top: 2em;
+    margin-bottom: 4em;
+  }
+}
+
+@media (min-width: 1920px) {
+  section.agenda {
+    margin-top: 2vw;
+  }
+}
+
+/* Navigation Desktop */
+.agendaWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1117px;
+  margin: 0 auto;
+  display: none;
+  position: relative;
+  padding-top: 4em;
+}
+
+@media (min-width: 1000px) {
+  .agendaWrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width: 1920px) {
+  .agendaWrap {
+    max-width: 58vw;
+    padding-top: 3.5vw;
+  }
+}
+
+.arrow {
+  width: 35px;
+  height: 35px;
+  display: block;
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 60%;
+}
+
+@media (max-width: 1000px) {
+  .arrow {
+    display: none;
+  }
+}
+
+@media (min-width: 1920px) {
+  .arrow {
+    width: 2vw;
+    height: 2vw;
+  }
+}
+
+.arrow:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.arrow.prev {
+  left: 10px;
+  background-image: url("../../gfx/lasvegas/agenda/left.svg");
+}
+
+.arrow.next {
+  right: 10px;
+  background-image: url("../../gfx/lasvegas/agenda/right.svg");
+}
+
+#AgendaNavDesktop {
+  width: 100%;
+  text-align: center;
+  font-size: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#AgendaNavMobile {
+  display: none;
+}
+
+#AgendaBottomNavigation {
+  margin: 2em auto;
+  max-width: 1024px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (max-width: 1000px) {
+  #AgendaBottomNavigation {
+    display: none;
+  }
+}
+
+.BreakoutDesktop {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  cursor: pointer;
+  width: auto;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.BreakoutDesktopIcon {
+  display: inline-block;
+  width: 3.125vw;
+  height: 3.125vw;
+  background-size: contain;
+  position: relative;
+  -webkit-transform: scale(0.5, 0.5);
+          transform: scale(0.5, 0.5);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.BreakoutDesktop:hover .BreakoutDesktopIcon, .ActiveBreakoutIcon {
+  -webkit-transform: scale(0.8, 0.8) !important;
+          transform: scale(0.8, 0.8) !important;
+}
+
+.BreakoutDesktopIcon:before {
+  content: '';
+  background-size: contain;
+  position: absolute;
+  width: 3.125vw;
+  height: 3.125vw;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.BreakoutDesktop:hover .BreakoutDesktopIcon:before,
+.BreakoutDesktop:active .BreakoutDesktopIcon:before,
+.BreakoutDesktop:focus .BreakoutDesktopIcon:before,
+.ActiveBreakoutIcon {
+  opacity: 1;
+}
+
+#FutureOfWorkIcon {
+  background: url(../../gfx/lasvegas/agenda/icons/grey/futureofwork.svg) center no-repeat;
+}
+
+#FutureOfWorkIcon:before, #FutureOfWorkIcon.ActiveBreakoutIcon {
+  background: url(../../gfx/lasvegas/agenda/icons/color/futureofwork.svg) center no-repeat;
+}
+
+#HomeIcon {
+  background: url(../../gfx/lasvegas/agenda/icons/grey/home.svg) center no-repeat;
+}
+
+#HomeIcon:before, #HomeIcon.ActiveBreakoutIcon {
+  background: url(../../gfx/lasvegas/agenda/icons/color/home.svg) center no-repeat;
+}
+
+#GoDigitalIcon {
+  background: url(../../gfx/lasvegas/agenda/icons/grey/godigital.svg) center no-repeat;
+}
+
+#GoDigitalIcon:before, #GoDigitalIcon.ActiveBreakoutIcon {
+  background: url(../../gfx/lasvegas/agenda/icons/color/godigital.svg) center no-repeat;
+}
+
+#EmergingTechTrendsIcon {
+  background: url(../../gfx/lasvegas/agenda/icons/grey/emergingtechtrends.svg) center no-repeat;
+}
+
+#EmergingTechTrendsIcon:before, #EmergingTechTrendsIcon.ActiveBreakoutIcon {
+  background: url(../../gfx/lasvegas/agenda/icons/color/emergingtechtrends.svg) center no-repeat;
+}
+
+#iRecruitIcon {
+  background: url(../../gfx/lasvegas/agenda/icons/grey/irecruit.svg) center no-repeat;
+}
+
+#iRecruitIcon:before, #iRecruitIcon.ActiveBreakoutIcon {
+  background: url(../../gfx/lasvegas/agenda/icons/color/irecruit.svg) center no-repeat;
+}
+
+#HRTechIcon {
+  background: url(../../gfx/lasvegas/agenda/icons/grey/hrtechworld.svg) center no-repeat;
+}
+
+#HRTechIcon:before, #HRTechIcon.ActiveBreakoutIcon {
+  background: url(../../gfx/lasvegas/agenda/icons/color/hrtechworld.svg) center no-repeat;
+}
+
+#SmartDataIcon {
+  background: url(../../gfx/lasvegas/agenda/icons/grey/smartdata.svg) center no-repeat;
+}
+
+#SmartDataIcon:before, #SmartDataIcon.ActiveBreakoutIcon {
+  background: url(../../gfx/lasvegas/agenda/icons/color/smartdata.svg) center no-repeat;
+}
+
+#LearningIcon {
+  background: url(../../gfx/lasvegas/agenda/icons/grey/learning.svg) center no-repeat;
+}
+
+#LearningIcon:before, #LearningIcon.ActiveBreakoutIcon {
+  background: url(../../gfx/lasvegas/agenda/icons/color/learning.svg) center no-repeat;
+}
+
+#AdoptionIcon {
+  background: url(../../gfx/lasvegas/agenda/icons/grey/adoption.svg) center no-repeat;
+}
+
+#AdoptionIcon:before, #AdoptionIcon.ActiveBreakoutIcon {
+  background: url(../../gfx/lasvegas/agenda/icons/color/adoption.svg) center no-repeat;
+}
+
+#GovIcon {
+  background: url(../../gfx/lasvegas/agenda/icons/grey/govtech.svg) center no-repeat;
+}
+
+#GovIcon:before, #GovIcon.ActiveBreakoutIcon {
+  background: url(../../gfx/lasvegas/agenda/icons/color/speedconference.svg) center no-repeat;
+}
+
+#ThinkTankIcon {
+  background: url(../../gfx/lasvegas/agenda/icons/grey/thinktank.svg) center no-repeat;
+}
+
+#ThinkTankIcon:before, #ThinkTankIcon.ActiveBreakoutIcon {
+  background: url(../../gfx/lasvegas/agenda/icons/color/thinktank.svg) center no-repeat;
+}
+
+#HRTechAnalystsIcon {
+  background: url(../../gfx/lasvegas/agenda/icons/grey/hrtechanalysts.svg) center no-repeat;
+}
+
+#HRTechAnalystsIcon:before, #HRTechAnalystsIcon.ActiveBreakoutIcon {
+  background: url(../../gfx/lasvegas/agenda/icons/color/analysts.svg) center no-repeat;
+}
+
+#WellbeingAndRewardsIcon {
+  background: url(../../gfx/lasvegas/agenda/icons/grey/wellbeingandrewards.svg) center no-repeat;
+}
+
+#WellbeingAndRewardsIcon:before, #WellbeingAndRewardsIcon.ActiveBreakoutIcon {
+  background: url(../../gfx/lasvegas/agenda/icons/color/wellbeing.svg) center no-repeat;
+}
+
+#disruptHRBetaPitchIcon {
+  background: url(../../gfx/lasvegas/agenda/icons/grey/disrupthr.svg) center no-repeat;
+}
+
+#disruptHRBetaPitchIcon:before, #disruptHRBetaPitchIcon.ActiveBreakoutIcon {
+  background: url(../../gfx/lasvegas/agenda/icons/color/disrupthr.svg) center no-repeat;
+}
+
+#ProductDemosIcon {
+  background: url(../../gfx/lasvegas/agenda/icons/grey/productdemo.svg) center no-repeat;
+}
+
+#ProductDemosIcon:before, #ProductDemosIcon.ActiveBreakoutIcon {
+  background: url(../../gfx/lasvegas/agenda/icons/color/productdemo.svg) center no-repeat;
+}
+
+/* not created yet */
+#TalentManagementIcon {
+  background: url(../../gfx/lasvegas/agenda/icons/grey/talentmanagement.svg) center no-repeat;
+}
+
+#TalentManagementIcon:before, #TalentManagementIcon.ActiveBreakoutIcon {
+  background: url(../../gfx/lasvegas/agenda/icons/color/talentmanagement.svg) center no-repeat;
+}
+
+/* END not created yet */
+#DesktopAgenda {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#AgendaInfoContainer {
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+}
+
+#AgendaDescContainer {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  max-width: 36.45833vw;
+}
+
+@media (max-width: 1920px) {
+  .BreakoutDesktopIcon,
+  .BreakoutDesktopIcon:before {
+    width: 60px;
+    height: 60px;
+  }
+  #AgendaDescContainer {
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .BreakoutDesktopIcon {
+    width: 55px;
+    height: 55px;
+    -webkit-transform: scale(0.5, 0.5);
+            transform: scale(0.5, 0.5);
+  }
+  .BreakoutDesktopIcon:before {
+    width: 55px;
+    height: 55px;
+  }
+  #AgendaDescContainer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* END Navigation */
+/* Tooltip */
+.TooltipContent {
+  position: absolute;
+  /*z-index: 9999;*/
+  width: 10.416vw;
+  padding-top: 0.520vw;
+  left: 50%;
+  margin-left: -5.208vw;
+  bottom: 100%;
+  text-align: center;
+  /*background: #fff; */
+  background: rgba(2, 0, 0, 0.05);
+  margin-bottom: 1.0416vw;
+  cursor: default;
+  pointer-events: none;
+  font-size: 0.625vw;
+  padding-bottom: 0.520vw;
+}
+
+.TooltipContent::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin: 0px 0 0 -0.78125vw;
+  width: 1.5625vw;
+  height: 1.0416vw;
+  background: url(../../gfx/lasvegas/arrow.svg) no-repeat center center;
+  background-size: 100%;
+}
+
+@media (max-width: 1920px) {
+  .TooltipContent {
+    position: absolute;
+    /*z-index: 9999;*/
+    width: 200px;
+    padding-top: 10px;
+    left: 50%;
+    margin-left: -100px;
+    bottom: 100%;
+    text-align: center;
+    /*background: #fff; */
+    background: rgba(2, 0, 0, 0.05);
+    margin-bottom: 20px;
+    cursor: default;
+    pointer-events: none;
+    font-size: 12px;
+    padding-bottom: 10px;
+  }
+  .TooltipContent::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin: 0px 0 0 -15px;
+    width: 30px;
+    height: 20px;
+    background: url(../../gfx/lasvegas/arrow.svg) no-repeat center center;
+    background-size: 100%;
+  }
+}
+
+.BreakoutDesktop {
+  position: relative;
+  z-index: 999;
+}
+
+.BreakoutDesktop .TooltipContent {
+  -webkit-transform: translate3d(0, 10px, 0) rotate3d(0, 1, 0, 90deg);
+  transform: translate3d(0, 10px, 0) rotate3d(0, 1, 0, 90deg);
+  -webkit-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s, -webkit-transform 0.3s;
+}
+
+.BreakoutDesktop:hover .TooltipContent,
+.TooltipContent.ActiveTooltipContent {
+  pointer-events: auto;
+  -webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+}
+
+.BreakoutDesktop:hover .TooltipContent {
+  z-index: 3000;
+  background-color: #f0f0f0;
+}
+
+/* END Tooltip */
+/* Navigation Mobile */
+@media (max-width: 1000px) {
+  #DesktopAgenda {
+    display: none !important;
+  }
+  #AgendaNavDesktop {
+    display: none;
+  }
+  #AgendaNavMobile {
+    display: block;
+    overflow: visible;
+  }
+  .BreakoutMobile {
+    width: 100%;
+  }
+  .BreakoutHeaderMobile {
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    height: 58px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  .BreakoutHeaderMobile.BreakoutHeaderMobileActive {
+    border-bottom: 1px solid transparent;
+  }
+  .MobileStageIcon {
+    margin-top: -3px;
+    width: 49px;
+    height: 62px;
+    -webkit-transform: scale(0.5, 0.5);
+            transform: scale(0.5, 0.5);
+  }
+  .MobileStageName {
+    font-family: 'museo-sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    color: #fff;
+    display: inline;
+    position: absolute;
+    top: 19px;
+    left: 60px;
+  }
+  .BreakoutHeaderMobile .fa {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 18px;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
+  }
+  .BreakoutHeaderMobile .fa.CaretActive {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+  .BreakoutCollapsibleMobile {
+    display: none;
+  }
+  .MobileCloseSession {
+    text-align: center;
+    cursor: pointer;
+    padding: 10px 0;
+  }
+  .MobileCloseSession span {
+    font-family: 'museo-sans', sans-serif;
+    font-size: 13px;
+  }
+  .MobileCloseSession .fa {
+    margin: 0 20px;
+  }
+}
+
+/* END Navigation Mobile */
+/*Track Location*/
+#LocationContainerDesktop {
+  width: 100%;
+  border-bottom: 1px solid;
+  max-width: 53.38541vw;
+  margin: 1vw auto 0 auto;
+  padding-bottom: 1vw;
+}
+
+#LocationLevel, .LocationLevel {
+  display: inline-block;
+}
+
+#LocationRoom {
+  display: inline-block;
+  position: relative;
+  margin-left: 87%;
+  text-align: right;
+}
+
+#LocationLevel {
+  width: 100%;
+  position: relative;
+}
+
+#LocationLevel span {
+  position: absolute;
+  right: 0;
+}
+
+#LevelNum {
+  font-style: normal;
+}
+
+@media (max-width: 1920px) {
+  #LocationContainerDesktop {
+    max-width: 1025px;
+  }
+}
+
+@media (max-width: 1070px) {
+  #LocationContainerDesktop {
+    max-width: 985px;
+  }
+}
+
+@media (min-width: 1920px) {
+  #LevelNum, #RoomData {
+    font-size: .9vw;
+  }
+}
+
+/*Tablet-Mobile*/
+.LocationContainerMobile {
+  width: 100%;
+  border-bottom: 1px solid;
+  max-width: 94vw;
+  margin: 1vw auto 0 auto;
+  padding-bottom: 1vw;
+}
+
+@media (max-width: 640px) {
+  .LocationContainerMobile {
+    max-width: 89vw;
+  }
+}
+
+.LocationLevel {
+  width: 100%;
+  position: relative;
+}
+
+.LocationLevel span {
+  position: absolute;
+  right: 0;
+}
+
+.LocationRoom {
+  display: inline-block;
+  position: relative;
+  margin-left: 77%;
+  text-align: right;
+}
+
+/*END Track Location*/
+/* Agenda Session List Stage Name and Date */
+#AgendaStageTitle, .AgendaDateClass {
+  width: 100%;
+  max-width: 53.38541vw;
+  margin: 0 auto;
+  font-family: 'museo-sans', sans-serif;
+  font-weight: 300;
+}
+
+#AgendaStageTitle {
+  margin-top: 1.3020833vw;
+  margin-bottom: 0.52083vw;
+  font-size: 1.354166vw;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+#CategoryRoom {
+  float: right;
+  font-size: 0.875vw;
+  vertical-align: bottom;
+  position: relative;
+  top: 0.3vw;
+}
+
+.AgendaDateClass {
+  font-size: 1.09375vw;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #000;
+  border-bottom: 1px solid #CCCCCC;
+}
+
+#AgendaDayOne {
+  margin-top: 1.3020833vw;
+  padding-bottom: 0.78125vw;
+}
+
+#AgendaDayTwo {
+  margin-top: 2.604166vw;
+  padding-bottom: 0.78125vw;
+}
+
+.ProductDName {
+  font-family: 'museo-sans', sans-serif;
+  font-weight: 300;
+  font-size: 1.04166vw;
+  padding-left: 1.5625vw;
+}
+
+#SessionsDayTwoMobile .ProductDName {
+  margin-top: 50px;
+}
+
+.AgendaDateDay {
+  float: right;
+}
+
+#SelectedStageText {
+  margin: 0 auto;
+  width: 100%;
+  color: #000;
+  max-width: 53.333333vw;
+  font-size: 0.677083vw;
+  line-height: 180%;
+  font-family: 'museo-sans', sans-serif;
+}
+
+@media (max-width: 1920px) {
+  #AgendaStageTitle, .AgendaDateClass {
+    max-width: 1025px;
+  }
+  #AgendaStageTitle {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 26px;
+  }
+  #CategoryRoom {
+    font-size: 25.2px;
+    top: 0.75vw;
+  }
+  #AgendaDayOne {
+    margin-top: 25px;
+    padding-bottom: 15px;
+  }
+  #AgendaDayTwo {
+    margin-top: 50px;
+    padding-bottom: 15px;
+  }
+  .AgendaDateClass {
+    margin-bottom: 0;
+    font-size: 21px;
+  }
+  .ProductDName {
+    font-size: 20px;
+    padding-left: 30px;
+  }
+  #SelectedStageText {
+    max-width: 1024px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 1070px) {
+  #AgendaStageTitle, .AgendaDateClass {
+    padding-left: 20px;
+  }
+  #SelectedStageText {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .AgendaDateClass {
+    max-width: 980px;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 1000px) {
+  #AgendaStageTitle, .AgendaDateClass {
+    padding-left: 4vw;
+  }
+  #AgendaStageTitle {
+    padding: 4vw 0 3vw 0vw;
+    font-size: 3.3854166vw;
+    max-width: 95vw;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  #CategoryRoom {
+    font-size: 2.1875vw;
+  }
+  .AgendaDateClass {
+    margin-top: 5vw;
+    max-width: 95vw;
+    padding-left: 0;
+    font-size: 2.734375vw;
+  }
+  .AgendaDateDayTwo {
+    margin-top: 6vw;
+  }
+  .ProductDName {
+    font-size: 2.08333vw;
+    padding-left: 1.692708vw;
+  }
+  #SelectedStageText, .StageTextMobile {
+    max-width: 95vw;
+    font-size: 1.6927083vw;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 3vw;
+  }
+}
+
+@media (max-width: 640px) {
+  #AgendaStageTitle {
+    margin-top: 6.25vw;
+    margin-bottom: 3.125vw;
+    font-size: 8.125vw;
+    padding-left: 2.8125vw;
+    padding-right: 2.8125vw;
+  }
+  .AgendaDateDayTwo {
+    margin-top: 10vw;
+  }
+  #CategoryRoom {
+    font-size: 4.6vw;
+    top: 0;
+  }
+  #AgendaDayOne, #AgendaDayTwo {
+    margin-top: 7.8125vw;
+  }
+  #AgendaDayOne {
+    margin-bottom: 0;
+  }
+  .AgendaDateClass {
+    font-size: 4.0625vw;
+    max-width: 89.375vw;
+  }
+  .ProductDName {
+    font-size: 4.375vw;
+    padding-left: 2vw;
+  }
+  #SelectedStageText, .StageTextMobile {
+    max-width: 100%;
+    font-size: 3.52vw;
+    padding: 0 5.625vw;
+    margin: 4vw 0 8vw 0;
+  }
+}
+
+/* END Agenda Session List Stage name and Date */
+/* Session List */
+.BreakoutSponsorLogo {
+  position: relative;
+  bottom: 0;
+  vertical-align: middle;
+}
+
+.BreakoutSponsor, .SessionContent {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.BreakoutSponsorLogo {
+  height: 2.6vw;
+}
+
+#SessionListMobile {
+  margin-top: 2vw;
+}
+
+.EventDayTitle {
+  width: 48.489062vw;
+  margin: 0 auto;
+}
+
+.SessionsList, #SessionCategories {
+  width: 100%;
+  max-width: 53.333333vw;
+  margin: 0vw auto;
+}
+
+.Session {
+  padding: 0.9375vw;
+  border-bottom: 1px solid #CCCCCC;
+}
+
+.SessionTimeContainer, .SessionContent {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.SessionTimeContainer {
+  width: 5.729166vw;
+  vertical-align: middle;
+}
+
+.SessionStartTime, .SessionTitle, .SessionSpeaker {
+  font-family: 'museo-sans', sans-serif;
+  font-weight: 400;
+  margin: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.SessionStartTime, .SessionTitle {
+  font-size: 0.833333vw;
+  vertical-align: middle;
+}
+
+.SessionSpeaker {
+  font-size: 0.6770833vw;
+  line-height: 140%;
+  margin-bottom: 0.364583vw;
+  color: #000;
+  font-weight: 600;
+}
+
+.SessionStartTime {
+  display: inline;
+  color: #000;
+}
+
+.SessionTitle {
+  line-height: 120%;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.SessionToggle .SessionTitle {
+  cursor: pointer;
+}
+
+.SessionTitle .fa {
+  font-weight: 900;
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  margin-left: 5px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.SessionTitle .fa.OpenedSession {
+  -webkit-transform: scale(1.3) rotate(180deg);
+          transform: scale(1.3) rotate(180deg);
+}
+
+.SessionLocation {
+  font-size: 0.833333vw;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #000;
+  margin-bottom: 0.260416vw;
+}
+
+.ExtraSessionType {
+  margin-top: 1.0416vw;
+  margin-bottom: 0.52083vw;
+  font-size: 1.0416vw;
+  font-weight: 400;
+}
+
+.SessionContent {
+  margin-top: 0;
+  width: 100%;
+  max-width: 42vw;
+  vertical-align: middle;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.SessionInfo {
+  display: none;
+  padding-top: 0.78125vw;
+}
+
+.SessionAbstract, .SessionAbstract[style] {
+  margin-top: 0.520833vw !important;
+  font-size: 0.6770833vw !important;
+  font-weight: 300 !important;
+  line-height: 185% !important;
+  color: #000 !important;
+}
+
+.SessionAbstract *[style] {
+  font-size: 0.6770833vw !important;
+  font-weight: 300 !important;
+  line-height: 185% !important;
+  color: #000 !important;
+}
+
+.SessionAbstract, .SessionInfo .SessionSpeaker, .SessionInfoSpeakersGrid {
+  padding-left: 5.8vw;
+}
+
+.SessionInfoSpeakersGrid {
+  width: 100%;
+  font-size: 0;
+  text-align: left;
+  /*margin-top: 0.78125vw;*/
+}
+
+.SessionInfoSpeaker {
+  margin-right: 0.520833vw;
+  /*margin-top: 0.78125vw;*/
+}
+
+.SessionInfoSpeaker img {
+  width: 100%;
+  max-width: 52px;
+  height: auto;
+  display: inline-block;
+}
+
+.SessionInfoSpeakerDetails {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  max-width: 800px;
+  padding-left: 18px;
+}
+
+.SessionInfoSpeaker p {
+  font-size: 0.6770833vw;
+  font-weight: 500;
+  margin-top: 0;
+}
+
+.SessionInfoSpeakerJobtitle {
+  color: #000;
+}
+
+.BreakTextClass {
+  cursor: default !important;
+}
+
+.BreakoutTextColor {
+  color: #747474;
+  font-weight: 300;
+}
+
+.ExtraBreakoutText {
+  float: right;
+  color: #747474;
+}
+
+.ExtraBreakoutQuestionMark {
+  background-color: #747474;
+  color: #fff;
+  font-size: 10px;
+  padding: 1px 3px 0px 4px;
+  vertical-align: middle;
+  margin-right: 7px;
+}
+
+#EventDay2Title {
+  display: inline-block;
+  position: relative;
+  top: 50vw;
+  margin-left: 0;
+  z-index: 10;
+}
+
+#EventDay1Title {
+  width: 25vw;
+  background-color: rgba(116, 116, 116, 0.85);
+  color: #fff;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  position: relative;
+  top: 50vw;
+  margin-left: 0;
+  z-index: 10;
+}
+
+#SessionsDayTwoAnchor, #SessionsDayOneAnchor {
+  position: relative;
+  top: -30vh;
+}
+
+@media (max-width: 1920px) {
+  .BreakoutSponsorLogo {
+    height: 64px;
+  }
+  .BreakoutContent {
+    max-width: 740px !important;
+  }
+  #SessionListMobile {
+    margin-top: 38px;
+  }
+  .SessionContent {
+    max-width: 850px;
+  }
+  .EventDayTitle {
+    width: 939px;
+    margin: 0 auto;
+  }
+  .Session {
+    padding: 18px 0;
+  }
+  .SessionsList, #SessionCategories {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+  .SessionTimeContainer {
+    width: 83px;
+  }
+  .SessionStartTime, .SessionTitle {
+    font-size: 16px;
+  }
+  .SessionLocation {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  .ExtraSessionType {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  .SessionInfo {
+    padding-top: 15px;
+  }
+  .SessionSpeaker {
+    font-size: 13px;
+    margin-bottom: 7px;
+  }
+  .SessionAbstract, .SessionAbstract[style] {
+    font-size: 13px !important;
+    margin-top: 10px !important;
+  }
+  .SessionAbstract *[style] {
+    font-size: 13px !important;
+  }
+  .SessionAbstract, .SessionInfo .SessionSpeaker, .SessionInfoSpeakersGrid {
+    padding-left: 86px;
+  }
+  .SessionInfoSpeaker img {
+    max-width: 52px;
+  }
+  .SessionInfoSpeakerDetails {
+    max-width: 800px;
+    padding-left: 18px;
+  }
+  .SessionInfoSpeaker p {
+    font-size: 13px;
+  }
+  .ExtraBreakoutQuestionMark {
+    background-color: #747474;
+    color: #fff;
+    font-size: 10px;
+    padding: 1px 3px 0px 4px;
+    vertical-align: middle;
+    margin-right: 7px;
+  }
+}
+
+@media (max-width: 1500px) {
+  #SessionListMobile {
+    margin-top: 1vw;
+  }
+}
+
+@media (max-width: 1070px) {
+  .SessionsList {
+    max-width: 980px;
+    margin: 0 auto;
+  }
+  .SessionContent {
+    max-width: 730px;
+  }
+  .BreakoutContent {
+    max-width: 63vw !important;
+  }
+}
+
+@media (max-width: 1000px) {
+  #SessionListMobile {
+    margin-top: 0vw;
+  }
+  .BreakoutSponsorLogo {
+    height: 52px;
+  }
+  .EventDayTitle {
+    font-family: 'museo-sans', sans-serif;
+    font-size: 2.08333vw;
+    color: #747474;
+    background-color: #E0E0E0;
+    width: 100%;
+    max-width: 10.4166vw;
+    text-align: center;
+    margin: 0;
+    padding: 1.04166vw 0;
+  }
+  #EventDay2Title {
+    max-width: 13.02083vw;
+    background-color: rgba(116, 116, 116, 0.85);
+    color: #fff;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  #EventDay2Title .fa-angle-down {
+    font-size: 2.864583vw;
+  }
+  .SessionsList, #SessionCategories {
+    width: 100%;
+    max-width: 95vw;
+    margin: 0 auto;
+  }
+  .Session, .SessionSelector {
+    margin-bottom: 0;
+  }
+  .SessionTimeContainer {
+    width: 10.546875vw;
+  }
+  .SessionStartTime, .SessionTitle, .SessionSpeaker, .SessionInfoSpeakersGrid {
+    font-size: 1.8229166vw;
+    margin: 0;
+  }
+  .SessionStartTime {
+    font-size: 2.0833vw;
+  }
+  .SessionLocation {
+    font-size: 2.0833vw;
+    margin-bottom: 0.6510416vw;
+  }
+  .ExtraSessionType {
+    margin-top: 2.60416vw;
+    margin-bottom: 1.302083vw;
+    font-size: 2.60416vw;
+  }
+  .SessionTitle {
+    font-size: 2.0833vw;
+    /*word-wrap: break-word;*/
+  }
+  .SessionContent {
+    margin-top: 0.130208vw;
+    width: 100%;
+    max-width: 66vw;
+    /* overflow: hidden;*/
+  }
+  .SessionSpeaker {
+    font-size: 1.6927083vw;
+    margin-bottom: 0.9114583vw;
+  }
+  .SessionAbstract, .SessionAbstract[style] {
+    font-size: 1.6927083vw !important;
+    margin-top: 1.302083vw !important;
+  }
+  .SessionAbstract *[style] {
+    font-size: 1.6927083vw !important;
+  }
+  .SessionAbstract, .SessionInfo .SessionSpeaker {
+    padding-left: 11.197916vw;
+  }
+  .SessionInfoSpeaker img {
+    max-width: 6.770833vw;
+  }
+  .SessionInfoSpeakerDetails {
+    max-width: 71.6145833vw;
+    padding-left: 2.34375;
+  }
+  .SessionInfoSpeaker p {
+    font-size: 1.6927083vw;
+  }
+}
+
+@media (max-width: 900px) {
+  .SessionContent, .BreakoutContent {
+    max-width: 63.89vw !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .SessionContent, .BreakoutContent {
+    max-width: 61vw !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .SessionContent, .BreakoutContent {
+    max-width: 65vw !important;
+  }
+  .BreakoutSponsor {
+    font-size: 8px !important;
+  }
+  .BreakoutSponsorLogo {
+    height: 25px;
+  }
+}
+
+@media (max-width: 640px) {
+  #SessionListMobile {
+    margin-top: 0px;
+  }
+  #SessionTitle {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .EventDayTitle {
+    font-size: 5vw;
+    max-width: 25vw;
+    padding: 2.5vw 0;
+  }
+  #EventDay2Title {
+    max-width: 31.25vw;
+  }
+  #EventDay2Title .fa-angle-down {
+    font-size: 6.875vw;
+  }
+  .SessionsList {
+    max-width: 89.375vw;
+    margin: 0 auto;
+  }
+  .Session, .SessionSelector {
+    margin-bottom: 0;
+  }
+  .Session {
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .SessionTimeContainer {
+    width: 16.875vw;
+  }
+  .SessionStartTime, .SessionTitle, .SessionSpeaker {
+    font-size: 3.52vw;
+  }
+  .SessionLocation {
+    font-size: 5vw;
+    margin-bottom: 1.5625vw;
+  }
+  .SessionContent {
+    max-width: 67.5vw;
+  }
+  #SessionCategoriesDesktop {
+    display: none !important;
+  }
+  .ExtraBreakoutText {
+    display: block;
+    float: none;
+  }
+  .ExtraSessionType {
+    margin-top: 6.25vw;
+    margin-bottom: 3.125vw;
+    font-size: 4.375vw;
+  }
+  .SessionInfo {
+    padding-top: 4.6875vw;
+  }
+  .SessionSpeaker {
+    margin-bottom: 6.25vw;
+  }
+  .SessionSpeaker strong {
+    display: block;
+    margin: 0.7vw 0;
+  }
+  .SessionAbstract, .SessionAbstract[style] {
+    font-size: 3.0625vw !important;
+    margin-top: 3.125vw !important;
+  }
+  .SessionAbstract *[style] {
+    font-size: 3.0625vw !important;
+  }
+  .SessionAbstract, .SessionInfo .SessionSpeaker, .SessionInfoSpeakersGrid {
+    padding-left: 20.3125vw;
+  }
+  .SessionInfoSpeaker {
+    margin-bottom: 6.25vw;
+  }
+  .SessionInfoSpeaker img {
+    max-width: 16.25vw;
+  }
+  .SessionInfoSpeakerDetails {
+    max-width: 50vw;
+    padding-left: 3vw;
+  }
+  .SessionInfoSpeaker p {
+    font-size: 2.9vw;
+  }
+}
+
+@media (max-width: 640px) {
+  .BreakoutContent {
+    max-width: 45.5vw !important;
+  }
+  .BreakoutSponsor {
+    font-size: 8px !important;
+  }
+  .BreakoutSponsorLogo {
+    height: 21px;
+  }
+}
+
+/* END Session List */
+/* Go Top Button Agenda customization */
+#GoTopImg {
+  bottom: 50px;
+  z-index: 5000;
+}
+
+@media (max-width: 640px) {
+  .ExtraBreakoutText {
+    display: none;
+  }
+}
+
+.RoomNum {
+  margin-top: 3vw !important;
+}
+
+.invisible {
+  display: none;
+}
+
+/* Colors */
+/*Desktop*/
+.MainStageColor {
+  color: #18a8e1;
+}
+
+.InfluencersColor {
+  color: #39B54A;
+}
+
+.LearningColor {
+  color: #cc6600;
+}
+
+.TalentColor {
+  color: #00cc33;
+}
+
+.AnalysisColor {
+  color: #686baf;
+}
+
+.WellbeingColor {
+  color: #33cccc;
+}
+
+.HRSSColor {
+  color: #809453;
+}
+
+.SmartDataColor {
+  color: #8A5EA4;
+}
+
+.disruptHRColor {
+  color: #CCA82E;
+}
+
+.SpeedConfColor {
+  color: #3476b9;
+}
+
+.ProductDemoColor {
+  color: #E41A52;
+}
+
+.DigitalHRColor {
+  color: #3300cc;
+}
+
+.PayAndRewardsColor {
+  color: #A92A31;
+}
+
+.SocialColor {
+  color: #3B8954;
+}
+
+.HRTechColor {
+  color: #ff9900;
+}
+
+.iRecruitColor {
+  color: #cc00cc;
+}
+
+.LeadershipColor {
+  color: #F15A29;
+}
+
+.DiversityColor {
+  /*color:#ED1C24;*/
+  /* color:#3B8954;*/
+  color: #f15a29;
+}
+
+.AdoptionColor {
+  color: #ff0033;
+}
+
+.ThinkTankColor {
+  color: #3F80C2;
+}
+
+.ThinkTankOneColor {
+  color: #3F80C2;
+}
+
+.ThinkTankTwoColor {
+  color: #3F80C2;
+}
+
+.ThinkTankThreeColor {
+  color: #3F80C2;
+}
+
+.WorkshopColor {
+  color: #FFA000;
+}
+
+/*Mobile*/
+.MainStageBgColor {
+  background-color: #18a8e1;
+}
+
+.InfluencersBgColor {
+  background-color: #39B54A;
+}
+
+.LearningBgColor {
+  background-color: #cc6600;
+}
+
+.TalentBgColor {
+  background-color: #00cc33;
+}
+
+.AnalysisBgColor {
+  background-color: #686baf;
+}
+
+.HRSSBgColor {
+  background-color: #809453;
+}
+
+.SpeedConfBgColor {
+  background-color: #3476b9;
+}
+
+.WellbeingBgColor {
+  backgorund-color: #33cccc;
+}
+
+.SmartDataBgColor {
+  background-color: #8A5EA4;
+}
+
+.disruptHRBgColor {
+  background-color: #CCA82E;
+}
+
+.ProductDemoBgColor {
+  background-color: #E41A52;
+}
+
+.DigitalHRBgColor {
+  background-color: #3300cc;
+}
+
+.PayAndRewardsBgColor {
+  background-color: #A92A31;
+}
+
+.SocialBgColor {
+  background-color: #3B8954;
+}
+
+.HRTechBgColor {
+  background-color: #ff9900;
+}
+
+.iRecruitBgColor {
+  background-color: #cc00cc;
+}
+
+.LeadershipBgColor {
+  background-color: #F15A29;
+}
+
+.DiversityBgColor {
+  /* background-color:#ED1C24;*/
+  background-color: #3B8954;
+}
+
+.AdoptionBgColor {
+  background-color: #ff0033;
+}
+
+.ThinkTankBgColor {
+  color: #3F80C2;
+}
+
+.ThinkTankOneBgColor {
+  background-color: #3F80C2;
+}
+
+.ThinkTankTwoBgColor {
+  background-color: #3F80C2;
+}
+
+.ThinkTankThreeBgColor {
+  background-color: #3F80C2;
+}
+
+.WorkshopBgColor {
+  background-color: #FFA000;
+}
+
+/* END Colors */
+#canvasLoader {
+  position: static;
+  top: 0;
+  /* left: 0; */
+  margin: 0 auto;
+  width: 50px;
+}

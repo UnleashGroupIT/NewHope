@@ -1,0 +1,781 @@
+@import 'components/reset';
+@import '../common';
+@import '../menu';
+@import '../inner-menu';
+@import '../footer';
+@import '../popup';
+@import 'components/menu';
+@import 'components/footer';
+@import 'components/popup';
+@import 'components/common';
+
+body {
+  position: relative; }
+
+header {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  transition: all 1s ease-in-out;
+  background-size: cover;
+  background-position: center; }
+
+.hamb-wrp {
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  z-index: 7000;
+  padding: 0 2em;
+  display: flex; }
+  @media (min-width: 75em) {
+    .hamb-wrp {
+      display: none; } }
+  .hamb-wrp img {
+    display: none; }
+  .hamb-wrp.vanish {
+    background-color: transparent;
+    position: absolute;
+    z-index: 9915; }
+  .hamb-wrp.black {
+    background-color: #000;
+    transition: none; }
+    .hamb-wrp.black #unleash-logo {
+      margin: auto 0; }
+    .hamb-wrp.black img {
+      display: block;
+      width: 150px; }
+    @media (min-width: 40em) {
+      .hamb-wrp.black {
+        transition: background-color 2s; } }
+
+.bar,
+.bar:after,
+.bar:before {
+  width: 35px;
+  height: 5px; }
+
+.bar {
+  position: relative;
+  transform: translateY(26px);
+  background: white;
+  transition: all 0ms 300ms; }
+  .bar.animate {
+    background: rgba(255, 255, 255, 0); }
+
+.bar:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  background: white;
+  transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1); }
+
+.bar:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  background: white;
+  transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1); }
+
+.bar.animate:after {
+  top: 0;
+  transform: rotate(45deg);
+  transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1); }
+
+.bar.animate:before {
+  bottom: 0;
+  transform: rotate(-45deg);
+  transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1); }
+
+.wrp {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 1em; }
+  @media (min-width: 120em) {
+    .wrp {
+      max-width: 53vw; } }
+
+section.one .wrp {
+  padding: 2em;
+  padding-bottom: 3em;
+  color: #fff; }
+  @media (min-width: 40em) {
+    section.one .wrp {
+      padding: 4em 3em; } }
+  section.one .wrp button {
+    margin: 4em 0;
+    margin-bottom: 0; }
+
+/*Header Navigation */
+    #TicketNavigation {
+      margin-top: 50px;
+      background-color: #f9f9f9;
+      -webkit-box-shadow: -1px -4px 28px -3px rgba(0,0,0,0.52);
+      -moz-box-shadow: -1px -4px 28px -3px rgba(0,0,0,0.52);
+      box-shadow: -1px -4px 28px -3px rgba(0,0,0,0.52); 
+    }
+    #TNInnerContainer{
+      width: 100%;
+      padding: 17px 0;
+      margin: 0 auto;
+      text-align: center;
+
+      ul{
+        display: flex;
+        justify-content: center;
+        padding: 0 1em;
+      }
+    }
+
+    .NavMenuLi{
+      color:#ababab;
+      display: inline-block;
+      margin: auto 1em;
+      font-size: 18px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s;
+      position:relative;
+    }
+    .NavMenuLi:hover{
+       color: #e80f42;
+    }
+
+    .NavActive{
+       color:#e80f42; 
+    }
+
+    @media(min-width: 540px){
+      .NavActive:after{
+        content: "";
+        position: absolute;
+        top: 31px;
+        left: calc(50% - 14px);
+        width: 0;
+        height: 0;
+        box-sizing: border-box;
+        border: 10px solid black;
+        border-color: transparent transparent #f9f9f9 #f9f9f9;
+        transform-origin: 0 0;
+        transform: rotate(-45deg);
+        box-shadow: -3px 3px 3px 0 rgba(109, 102, 102, 0.14);
+      }
+  }
+  @media(min-width: 55em ){
+    .NavActive:after{
+      top: 34px;
+    }
+  }
+  @media(min-width: 75em ){
+    .NavActive:after{
+      top: 42px;
+    }
+  }
+  @media(min-width: 125em ){
+    .NavActive:after{
+      top: 2vw;
+    }
+  }
+
+
+
+@media(min-width: 75em){ 
+    #TicketNavigation {
+        margin-top: 100px;
+    }  
+    #TNInnerContainer{
+          width: 100%;
+          padding: 25px 0;
+           margin: 0 auto;
+       
+    }
+
+    .NavMenuLi{
+        margin: 0 50px;
+        font-size: 18px;
+    font-weight: 300;
+    }
+  .NavActive{
+    font-weight: 900;
+    
+  }
+
+    .BigIcon{
+        width: 15px;
+    }
+
+    .SmallIcon{
+        width: 25px;
+    }
+
+
+}
+
+@media(min-width: 125em){
+  #TNInnerContainer{
+    padding:1.3vw 0;
+  }
+  #TicketNavigation {
+    margin-top: 4.1vw;
+  }
+}
+
+@media(max-width: 1200px){
+  .NavMenuLi{
+    font-weight: 300;
+  }
+}
+
+
+@media(max-width: 800px){
+    #TNInnerContainer{
+         width: 100%;
+         max-width: 100%; 
+    }    
+    .NavMenuLi{
+      font-size: 14px;       
+    }
+    .NavIcon{
+        margin:0 10px;
+        padding-bottom: 4px;
+    }
+    .NavIconMobileBR{
+       display:block;
+    }
+}
+  @media(max-width: 380px){
+.NavMenuLi{
+  font-size: 12px;
+}
+  
+}
+#TimelineOther{
+    display:none;
+}
+
+.TimelineContainer{
+    width: 100%;
+    max-width: 52.083vw;
+    margin: 0 auto;
+    text-align: center;
+}
+
+@media(min-width: 640px){
+  #TimelineList{
+    padding-top:40px;
+  }
+}
+@media(min-width: 75em){
+  #TimelineList{
+    padding-bottom:20px;
+  }
+}
+
+#TimelineList li{
+    display:inline-block;
+    font-size: 0.9375vw;
+    color:rgba(232, 15, 66, 0.4);
+    vertical-align: middle;
+
+}
+  #UntilSummer{
+  display: inline-block; 
+  margin-left:3px;
+  line-height:10px; 
+  position: relative; 
+  top: 3px;
+  text-align: left;   
+    
+  } 
+
+#TimelineList .TimeLineActive{
+     color: #e80f42;
+     font-weight: 900;
+}
+  .TimelineIcon{
+    position: relative;
+    top:3px;
+
+    
+  }
+  
+.SlashClassActive{
+    font-size: 1.822916vw;
+     color: #e80f42;
+     font-weight: 900;
+    vertical-align: middle;
+}
+.SlashClassActive, .SlashClass{
+    margin: 0 0.260416vw;
+}
+
+.OtherTimeline{
+    color: #000 !important;
+    font-weight: 500;
+}
+.OtherTimelineActive{
+    color: #ee1e3a;
+    font-weight: 800;
+}
+/*Box Container*/
+    
+  
+#BoxContainer{
+    font-family: "museo-sans", sans-serif;
+     width: 100%;
+    /*max-width: 80%;*/
+    margin: 0 auto;
+    text-align: center;
+    transition: all 0.3s;
+   overflow: hidden;
+}
+  
+@media (max-width:1580px){
+#TicketContainer, #BoxContainer{
+max-width: 800px; 
+  margin:0 auto;    
+}
+
+#GovSector.showp{
+    margin-top:90px
+}
+#ExpoOnly .show{
+    margin-bottom: 95px;
+}
+    
+  } 
+#ButtonContainer{
+        text-align: center;
+    width: 330px;
+    max-width: 100%;
+    margin: 75px auto;
+}
+
+.ticket-spons{
+    display: block;
+    position: static;
+}
+
+#glint {
+    margin-top: 1vw;
+}
+#leathwaite, #glint{
+    top: 0;
+    /*margin-top: 10vw;*/
+}
+@media(min-width: 1920px){
+#glint {
+    margin-top: 15px;
+}
+}
+   
+ @media(min-width: 1000px){
+    #leathwaite{   
+       /* margin-top: 6.5vw;*/
+    }
+}
+.ticket-spons-img{
+    width: 175px;
+}
+
+.SoldOutSpan{    
+    font-size: 0.57291vw;
+    padding:0.2083vw;
+    color: #fff;
+    vertical-align: middle;
+  font-weight: 900;
+  position: relative;
+  top:-2px;
+}
+.SummerSaverUntil{
+    font-weight: 500;
+    color: #000;
+}
+.SummerSaverDate{
+    color: #e80f42;
+}
+
+@media(min-width: 125em){
+  .SummerSaverUntil,.SummerSaverDate{
+    font-size: .7vw;
+    line-height: .6vw;
+  }
+}
+
+/*TIMELINE*/
+
+#TicketSponsorContainer{
+  margin: 2.6041vw auto 0 auto;
+    text-align: center;
+  width: 100%;
+    max-width: 12vw;
+} 
+
+@media(max-width: 1920px){
+    #TimelineOther{
+        display:none;
+    }
+
+    .TimelineContainer{
+        padding: 25px 0;
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    #TimelineList li{
+        display:inline-block;
+        font-size: 18px;
+        vertical-align: middle;
+
+    }
+
+    .SlashClassActive{
+        font-size: 35px;
+         color: #e80f42;
+         font-weight: 900;
+        vertical-align: middle;
+    }
+    .SlashClassActive, .SlashClass{
+        margin: 0 5px;
+    }
+
+    .OtherTimeline{
+        color: #000;
+        font-weight: 500;
+    }
+    .OtherTimelineActive{
+        color: #ee1e3a;
+        font-weight: 800;
+    }
+    /*Box Container*/
+    #BoxContainer{
+           font-family: "museo-sans", sans-serif;
+            width: 100%;
+        /*max-width: 80%;*/
+        margin: 0 auto;
+        text-align: center;
+        transition: all 0.3s;
+       
+    }
+  
+#TicketSponsorContainer{
+  margin: 50px auto 0 auto;
+    text-align: center;
+  max-width: 350px;
+} 
+    .SoldOutSpan{    
+        font-size: 11px;
+        padding: 4px;
+        background-color: rgba(51, 204, 51, 0.4);
+        color: #fff;
+        vertical-align: middle;
+    }
+    .SummerSaverUntil{
+        font-size: 12px;
+        font-weight: 500;
+        color: #000;
+    }
+    .SummerSaverDate{
+        font-size: 14px;
+        color: #e80f42;
+    }
+}
+@media(max-width: 640px){
+    #TimelineList li {
+        width: 100%;
+        margin: 5px 0;
+    }
+   .SlashClassActive, .SlashClass{
+        display:none;
+   } 
+}
+/*Box*/
+  
+  
+.TicketBox, .PopularTicketBox{
+    width: 100%;
+    max-width: 380px;
+   /* display: inline-block;*/
+   /* vertical-align: top;*/
+       background: #f8f8f8;
+    margin-right: 12px; 
+    -webkit-box-shadow: -1px 6px 8px 1px rgba(0,0,0,0.10);
+    -moz-box-shadow: -1px 6px 8px 1px rgba(0,0,0,0.10);
+    box-shadow: -1px 6px 8px 1px rgba(0,0,0,0.10);
+    cursor:pointer;
+    
+   
+}
+
+.AlaCarteText{
+    font-size: 16px;
+    color: #999999;
+    font-weight: 400;
+    padding: 18px 10px 10px 0px;
+    margin: 0 auto;
+  margin-bottom: -43px;
+  line-height: 1.25em;
+    width: 281px;
+  text-align: left;
+}
+.TicketBox{
+    margin-top: 53px;
+    position: relative;
+}
+
+.TicketBox.Group.TicketOne::before,.PopularTicketBox.Group.TicketTwo::before,.TicketBox.Group.TicketThree::before{
+    content: '';
+    display: block;
+    width: 175px;
+    height: 175px;
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    z-index: 5;
+    background: url(../img/tickets/expired-smll.png);
+    background-size: cover;
+}
+.TicketBox.Group.TicketOne::after,.PopularTicketBox.Group.TicketTwo::after,.TicketBox.Group.TicketThree::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: calc(100% - 60px);
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 4;
+    
+}
+
+.PopularTicketBox{
+     margin-top: 20px;
+}
+  
+
+.BoxInnerConent {
+ /* padding-left: 1em;*/
+ /* overflow: hidden;
+  display: none;*/
+}
+
+.BoxInner {
+  /*margin: .5em 0;*/
+}
+
+.TicketBoxHeader:hover {
+ /*background: rgba(0, 0, 0, 0.9);*/
+}
+.TicketBoxHeaderInner{
+    text-align: center;
+    padding: 25px 0;
+    margin-bottom: 25px;   
+}
+  #Discount .TicketBoxHeaderInner{
+     margin-bottom: 0px;
+    
+  }
+  
+  .PopularTicketBox .TicketBoxHeader {
+  width: 100%;
+  display: block;
+  background: #f8f8f8;
+  color: #00a7e1;
+  transition: background .3s ease;
+  &::after{
+    content:'';
+    display: block;
+    width: 180px;
+    height: 180px;
+    background:url("../../gfx/lasvegas/ribbon.png");
+    background-size:contain;
+    background-repeat:no-repeat;
+    position:absolute;
+    right: -10px;
+    top: -10px; 
+  }
+}
+  
+.TicketButton{
+    height: 60px;
+    width: 100%;
+    font-size: 17px;
+    font-weight: 900;
+    background-color:#e80f42;
+    color: #fff;
+
+}
+.PopularTicketHeadline{
+    font-size: 20px;
+    margin-bottom: 10px;
+    color:#ee1e3a;
+}
+.TicketHeadline{
+  font-size: 17px;
+  margin-bottom: 15px;
+  font-weight: 900;
+  color:#999;
+}
+.TicketPrice{
+    font-size: 60px;
+    margin-bottom: 7px;
+  font-weight: 700;
+}
+.TicketSmallText{
+    font-size: 14px;
+    color: #999999;
+    margin-bottom: 7px;
+  font-weight: 300;
+}
+  
+  
+.TicketDeadline{
+    font-size: 18px;
+  font-weight: 500;
+  color: #999;
+}
+
+.PopularHeader{
+        padding: 50px 0 80px 0;
+}
+
+.IsoBox {
+    visibility: hidden;
+}
+
+@media(max-width: 640px){
+    .TicketBox, .PopularTicketBox{
+       margin: 23px auto;
+       margin-top: 0;
+       max-width: 330px;
+    }
+
+
+}
+  .hide {
+    overflow: hidden;
+    height: 0 !important;
+    padding-bottom: 0 !important;
+}
+  
+.pTicket{    
+    margin: -18px 0 23px 0;
+    font-size: 14px;
+}
+/*Sponsors*/
+#TicketSponsors{
+    
+    width: 100%;
+    max-width: 1200px;
+    margin: 82px auto 53px auto;
+    text-align: center;
+    color: #cccccc;
+}
+#SponsorGrid{
+    margin-top: 30px;
+}
+.SponsorLogo{
+    width: 108px;
+    height: 53px;
+    margin: 14px 21px;
+}
+
+  
+
+.BoxInnerConent{
+    font-size: 14px;
+    padding: 25px 77px;
+    text-align: left;
+  overflow: hidden;
+}
+
+  
+  
+  .PopularTicketBox   .BoxInnerConent{
+    margin-top:-55px;
+    
+      
+  }
+  
+    
+ .PopularTicketBox .show{
+    margin-top:-85px;
+        margin-bottom: 40px;
+  }
+  
+#ExpoOnly .show{
+    margin-top:0px;
+    margin-bottom: 73px;
+}
+#ExpoOnly .TicketBoxHeader{
+    padding-bottom: 20px;
+}
+#GovSector .BoxInnerConent{
+    margin-bottom:2px;
+    margin-top: -2px;
+} 
+  
+  @media (max-width:800px){
+    
+  #ExpoOnly .show{
+    margin-top:-30px;
+    margin-bottom: 0px;
+
+  }   
+    #GovSector .show{
+      margin-top:-30px;
+      
+    } 
+    .mobilemargin-up .show {
+      
+      margin-top:-30px;
+    }
+  } 
+  .TicketTwo  .show {
+    margin-top:-85px;
+    margin-bottom:3px;
+  
+  }
+  
+  
+.TicketTwo .PopularHeader {
+    padding: 50px 0 80px 0;
+  
+  }
+  
+.BoxInnerConent h3{
+    font-size: 13px;
+    margin-left: -17px;
+    color: #e80f42;
+}
+.BenefitUL{
+    margin-bottom: 20px;
+}
+.DiscountInput{
+  width: 88%;
+  text-align: center; 
+  font-size: 14px;
+  height:30px;
+  border:1px solid #e80f42;
+  
+}
+
+@media(max-width: 640px){
+    .BoxInnerContent{
+       padding: 20px 63px;
+    }
+}
+
+
+.BoxInnerConent{
+font-size: 14px;
+    padding: 0 77px 0 77px;
+    text-align: left;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+   
+}

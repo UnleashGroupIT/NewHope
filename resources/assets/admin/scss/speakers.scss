@@ -1,0 +1,269 @@
+@charset "utf-8";
+/* These CSS rules will affect the Speakers page.  */
+
+$gridItemWidth_4k: 12.5vw;
+$gridItemWidth_1920: 240px;
+$gridItemWidth_1300: 22.135416vw;
+$gridItemWidth_640: 100%;
+
+
+/* Speakers */
+.SpeakersGrid {
+    width: 67.70833vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+.GridItem {
+    width: $gridItemWidth_4k;
+    height: 12.5vw;
+}
+.GridOverlay {
+    width: 12.5vw;
+    margin-top: 12.5vw;
+    height: 3.125vw;
+    background-color: transparent;
+    color:#000;
+}
+.GridOverlay > .SliphoverHeadline {
+    font-size: 0.78125vw;
+    margin-top: 0.260416vw;
+   /* text-shadow: 0 0 9px rgba(150,149,150,1);*/
+    color: #14a6df;
+}
+.GridOverlay > .SmallParagraph {
+    font-size: 0.572916vw;
+    /*text-shadow: 0 0 9px rgba(150,149,150,1);*/
+}
+.GridImageContainer {
+    margin-bottom: 0;
+}
+.SpeakerName {
+    font-size: 0.78125vw;
+    margin: 0.4vw 0 0 0.5vw;
+    font-weight: 600;
+}
+.SpeakerData {
+    font-size: 0.572916vw;
+    margin: 0 0 0 0.5vw;
+    line-height: 145%;
+}
+.SpeakerInfo {
+    font-size: 0.56vw;
+    margin: 0.5vw 0.98958vw 0 0.5vw;
+    line-height: 140%;
+}
+.SpeakerHoverLinks {
+    position: absolute;
+    bottom: 0.5vw;
+    left:  0.7vw;
+}
+.SpeakerHoverLinks a {
+    color: #fff;
+    font-size: 0.885416vw;
+    margin-right: 1vw;
+}
+.CompanyName{
+font-weight: 900;
+}
+
+.GridContainer ul li {
+
+        vertical-align: top;
+
+    }
+@media (max-width: 1920px) {
+    .SpeakersGrid {
+        width: 1300px;
+    }
+    .GridItem {
+        width: $gridItemWidth_1920;
+        height: 240px;
+    }
+    .GridOverlay {
+        width: 240px;
+        margin-top: 240px;
+        height: 60px;
+    }
+    .GridOverlay > .SliphoverHeadline {
+        font-size: 15px;
+        margin-top: 5px;
+    }
+    .GridOverlay > .SmallParagraph {
+        font-size: 11px;
+    }
+    .SpeakerName {
+        font-size: 15px;
+        margin: 7px 0 0 10px;
+    }
+    .SpeakerData {
+        font-size: 11px;
+        margin: 0 0 0 10px;
+    }
+    .SpeakerInfo {
+        font-size: 11px;
+        margin: 10px 19px 0 10px;
+    }
+    .SpeakerHoverLinks {
+        bottom: 10px;
+        left:  13px;
+    }
+    .SpeakerHoverLinks a {
+        font-size: 17px;
+        margin-right: 19px;
+    }
+    .GridContainer ul li {
+        margin: 0 0 70px 0;
+        vertical-align: top;
+
+    }
+}
+@media (max-width: 1300px) {
+    .SpeakersGrid {
+        width: 100%;
+    }
+    .GridItem {
+        width: $gridItemWidth_1300;
+        height: 22.135416vw;
+    }
+    .GridImageContainer{
+        margin: 0.5vw;
+    }
+    .GridOverlay {
+        margin-top: 22.40625vw;
+        height: 5.729166vw;
+        width: 22.135416vw;
+    }
+    .GridOverlay > .SliphoverHeadline {
+        font-size: 1.5vw;
+    }
+    .GridOverlay > .SmallParagraph {
+        font-size: 1.04166vw;
+    }
+    .sliphover-overlay {
+        display: none !important;
+    }
+}
+@media (max-width: 640px) {
+    .GridContainer > ul > li {
+        width: 46.875%;
+        margin: 0 1% 14% 1%;
+    }
+    .GridImageContainer{
+        width: 100%;
+        position: relative;
+    }
+    .GridItem {
+        width: $gridItemWidth_640;
+        height: 46.875%;
+    }
+    .GridOverlay {
+        position: absolute;
+        bottom: 0vw;
+        left: 0;
+        height: 0vw;
+        width: 100%;
+    }
+    .GridOverlay > .SliphoverHeadline{
+        margin-top: 0.625vw;
+        font-size: 3.125vw;
+    }
+    .GridOverlay > .SmallParagraph {
+        font-size: 2.5vw;
+    }
+}
+
+/* END Speakers */
+
+
+
+
+.fa-plus-square{
+    color: rgb(45, 189, 0);
+}
+.fa-times-circle{
+    color: #e45555;
+}
+
+
+.GridImageContainer{
+    position:relative;
+}
+
+.GridImageContainer:hover > .IconContainer{
+   opacity: 1;
+}
+
+
+.IconContainer{
+    transition: all 0.3s;
+    position: absolute; 
+    font-size: 1.3541vw;
+    width: 3.125vw;
+    opacity: 0;
+    right: 0;
+    height: 100%;
+    background-color: rgba(42, 49, 49, 0.4196078431372549);
+}
+.AddToGrid, .RemoveFromGrid, .EditSpeakerGlobal{
+    text-align: right;
+    padding: 15px;
+    margin: 5px 0;
+    text-shadow: 1px 1px 11px rgba(0, 0, 0, 0.96);
+    cursor: pointer;
+    width: 53px;
+    transition: all 0.3s;
+
+}
+
+.EditSpeakerGlobal{
+    color: #f3b353;
+}
+
+.DeleteItem{
+    padding: 15px;
+    color: #e45353;
+    text-shadow: 1px 1px 1px rgba(14, 5, 5, 0.82);
+    cursor: pointer;
+    width: 53px;
+   text-align: left; 
+   transition: all 0.3s;
+}
+
+.AddToGrid:hover, .RemoveFromGrid:hover, .DeleteItem:hover, .EditSpeakerGlobal:hover{
+    transform: scale(1.2,1.2);
+}
+
+@media (max-width: 1920px) {
+    .IconContainer{
+    font-size: 26px;
+    width: 60px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .IconContainer{
+    font-size: 19px;
+    width: 60px;
+    }
+}
+
+@media (max-width: 640px) {
+    .IconContainer{
+    font-size: 27px;
+    width: 60px;
+    }
+}
+
+
+
+#PageContainer{
+    text-align: center;
+}
+
+.SectionHeader{
+    margin: 2vw;
+}
+
+.SearchContainer{
+    margin: 1vw;
+}

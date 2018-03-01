@@ -1,0 +1,646 @@
+@import 'components/reset';
+@import '../common';
+@import '../menu';
+@import '../inner-menu';
+@import '../footer';
+@import '../popup';
+@import 'components/menu';
+@import 'components/footer';
+@import 'components/popup';
+@import 'components/speakergrid';
+@import 'components/common';
+
+$lon:#33cc33;
+
+$main-stage : #18a8e1; 
+$hrtech-stage : #ff9900; 
+$Leadership : #cc00cc; 
+$smartdata : #8A5EA4; 
+$learn-dev : #cc6600; 
+$adoption : #ff0033; 
+$think-tank : #5FA6DF; 
+$hrtech-analyst : #686baf; 
+$rewards : #33cccc; 
+$startup-stage : #CCA82E; 
+$product-stage : #E41A52; 
+$futureofwork : #5FA6DF; 
+$digital : #3300cc; 
+$hrss-payroll : #809453; 
+$talent : #00cc33; 
+$speed-I : #3476b9; 
+$speed-II : #3476b9;
+
+
+.agenda{
+	margin-top:5.5em;
+	@media (min-width: 75em) {
+		margin-top:8.5em;
+	}
+
+	h1{
+		font-size:4rem;
+		font-weight:bold;
+		text-align:center;
+		text-transform:uppercase;
+		@media (min-width: 125em) {
+			font-size: 3.3vw;
+		}
+	}
+}
+
+.contents-bg{
+	background: #f7f7f7;
+    padding: 2em 0;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+    @media (min-width: 30em) {
+    	padding:2em;
+    }
+    @media (min-width: 125em) {
+    	padding:2vw;
+    }
+}
+.contents-wrp{
+	width:1170px;
+	max-width:100%;
+	margin:0 auto;
+	@media (min-width: 125em) {
+		width: 61vw;
+	}
+}
+
+.title-section{
+	margin:2.5em 3em;
+	@media (min-width: 125em) {
+		margin:2.5vw 3vw;
+		margin-top: 7vw;
+	}
+
+	h4{
+		text-align: center;
+	}
+}
+
+.tabContent{
+	visibility:visible;
+	opacity:1;
+	height:auto;
+	transition: all 1s;
+	&.hide{
+		visibility:hidden;
+		opacity:0;
+		height: 0;
+		overflow:hidden;
+		transition: all 1s;
+	}
+}
+
+.tabs-wrp{
+	background:#fff;
+	margin:0 2em;
+	margin-bottom:2em;
+	@media (min-width: 30em) {
+		margin: 0;
+		margin-bottom:2em;
+	}
+	@media (min-width: 125em) {
+		margin-bottom: 2vw;
+	}
+
+	.tabs{
+		display: flex;
+		box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+
+		.tab{
+			width: 50%;
+			padding: 1em;
+   			text-align: center;
+    		text-transform: uppercase;
+    		color:#ccc;
+    		font-weight: bold;
+    		cursor: pointer;
+
+    		@media (min-width: 125em) {
+    			padding:1vw;
+    			font-size: .83vw;
+    		}
+
+			&.active{
+				background: $lon;
+				color: #fff;
+			}
+		}
+	}
+}
+
+.cnt-wrp{
+	display:flex;
+	flex-wrap:wrap;
+	background:#fff;
+	margin-bottom:2em;
+	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+
+	@media (min-width: 65em) {
+		flex-wrap: nowrap;
+	}
+	@media (min-width: 125em) {
+		margin-bottom: 2vw;
+	}
+
+	.left-side{
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		padding:2em;
+		padding-right:2em;
+		position:relative;
+
+		@media (min-width: 65em) {
+    		width: 225px;
+    		padding:2em 1em;
+    		padding-right:2em;
+  		}
+  		@media (min-width: 125em) {
+			width: 25%;
+			padding:1.7vw .85vw;
+		}
+
+		&::after{
+			content: '';
+			display: block;
+			width: 100%;
+			height: 20px;
+			bottom:0;
+			left: 0;
+			position:absolute;
+			background: repeating-linear-gradient(-45deg,rgba(0,0,0,.3),rgba(0,0,0,.3) 3px,rgba(0,0,0,0) 3px,rgba(0,0,0,0) 6px);
+			@media (min-width: 65em) {
+    			width: 20px;
+				height: 100%;
+				top: 0;
+				right: 0;
+				bottom:unset;
+				left:unset;
+  			}
+  			@media (min-width: 125em) {
+  				width:1.1vw;
+  			}
+		} 
+
+		*{
+			color: #fff;
+		}
+
+		h2{
+			margin:0;
+		}
+
+		h3{
+			font-weight: normal;
+			line-height: 1.5em;
+			@media (min-width: 125em) {
+  				font-size:1.1vw;
+  			}
+		}
+		h4{
+			text-transform: none;
+		}
+
+		.shares{
+			margin-top: auto;
+			display: flex;
+			img{
+				height: 20px;
+				margin-right: 1em;
+				@media (min-width: 125em) {
+					height: 1vw;
+					margin-right: 1vw;
+				}
+			}
+		}
+		.time{
+			margin:1em 0;
+		}
+	}
+	.right-side{
+		width: 920px;
+		padding:2em;
+
+		@media (min-width: 125em) {
+			width: 75%;
+			padding:1.7vw;
+		}
+
+		h2{
+			color:#000;
+			font-size: 1.5rem;
+			text-transform: none;
+			@media (min-width: 125em) {
+				font-size: 1.25vw;
+			}
+		}
+		h4{
+			text-transform: none;
+		}
+		.header{
+			display: flex;
+			margin-bottom: 1em;
+			margin-left: 1.4em;
+			.place{
+				margin-right: 4em;
+				position:relative;
+				@media (min-width: 125em) {
+					margin-right: 3.5vw;
+				}
+				&::before{
+					content:'';
+					display: block;
+					width: 20px;
+					height: 20px;
+					position: absolute;
+					left: -25px;
+					@media (min-width: 125em) {
+						width: 1vw;
+						height: 1vw;
+						left: -1.3vw;
+					}
+				}
+			}
+			.duration{
+				position:relative;
+				&::before{
+					content:'';
+					display: block;
+					width: 18px;
+					height: 18px;
+					position: absolute;
+					left: -25px;
+					@media (min-width: 125em) {
+						width: 1vw;
+						height: 1vw;
+						left: -1.3vw;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+/*COLORS*/
+
+.main-stage{
+	.left-side{
+		background:$main-stage;
+	}
+	.right-side{
+		h4{
+			color:$main-stage;
+		}
+		.header{
+			.place::before{
+				background:url("../../gfx/london/agenda/pin-main.svg");
+				background-size:contain;
+				background-repeat:no-repeat;
+			}
+			.duration::before{
+				background:url("../../gfx/london/agenda/clock-main.svg");
+				background-size:contain;
+				background-repeat:no-repeat;
+			}
+		}
+	}
+}
+
+.adoption{
+	.left-side{
+		background:$adoption;
+	}
+	.right-side{
+		h4{
+			color:$adoption;
+		}
+		.header{
+			.place::before{
+				background:url("../../gfx/london/agenda/pin-adoption.svg");
+				background-size:contain;
+				background-repeat:no-repeat;
+			}
+			.duration::before{
+				background:url("../../gfx/london/agenda/clock-adoption.svg");
+				background-size:contain;
+				background-repeat:no-repeat;
+			}
+		}	
+	}
+}
+
+.digital{
+	.left-side{
+		background:$digital;
+	}
+	.right-side{
+		h4{
+			color:$digital;
+		}
+		.header{
+			.place::before{
+				background:url("../../gfx/london/agenda/pin-digital.svg");
+				background-size:contain;
+				background-repeat:no-repeat;
+			}
+			.duration::before{
+				background:url("../../gfx/london/agenda/clock-digital.svg");
+				background-size:contain;
+				background-repeat:no-repeat;
+			}
+		}
+	}
+}
+
+.smartdata{
+	.left-side{
+		background:$smartdata;
+	}
+	.right-side{
+		h4{
+			color:$smartdata;
+		}
+		.header{
+			.place::before{
+				background:url("../../gfx/london/agenda/pin-smartdata.svg");
+				background-size:contain;
+				background-repeat:no-repeat;
+			}
+			.duration::before{
+				background:url("../../gfx/london/agenda/clock-smartdata.svg");
+				background-size:contain;
+				background-repeat:no-repeat;
+			}
+		}
+	}
+}
+
+.think-tank{
+	.left-side{
+		background:$think-tank;
+	}
+	.right-side{
+		h4{
+			color:$think-tank;
+		}
+		.header{
+			.place::before{
+				background:url("../../gfx/london/agenda/pin-thinktank.svg");
+				background-size:contain;
+				background-repeat:no-repeat;
+			}
+			.duration::before{
+				background:url("../../gfx/london/agenda/clock-thinktank.svg");
+				background-size:contain;
+				background-repeat:no-repeat;
+			}
+		}
+	}
+}
+
+.HR-Payroll{
+	.left-side{
+		background:$hrss-payroll;
+	}
+	.right-side{
+		h4{
+			color:$hrss-payroll;
+		}
+		.header{
+			.place::before{
+				background:url("../../gfx/london/agenda/pin-hrpayroll.svg");
+				background-size:contain;
+				background-repeat:no-repeat;
+			}
+			.duration::before{
+				background:url("../../gfx/london/agenda/clock-hrpayroll.svg");
+				background-size:contain;
+				background-repeat:no-repeat;
+			}
+		}
+	}
+}
+
+
+.hr-tech{
+	.left-side{
+		background:$hrtech-stage;
+	}
+	.right-side{
+		h4{
+			color:$hrtech-stage;
+		}
+		.header{
+			.place::before{
+				background:url("../../gfx/london/agenda/pin-thinktank.svg");
+				background-size:contain;
+				background-repeat:no-repeat;
+			}
+			.duration::before{
+				background:url("../../gfx/london/agenda/clock-thinktank.svg");
+				background-size:contain;
+				background-repeat:no-repeat;
+			}
+		}
+	}
+}
+
+.talent{
+	.left-side{
+		background:$talent;
+	}
+	.right-side{
+		h4{
+			color:$talent;
+		}
+		.header{
+			.place::before{
+				background:url("../../gfx/london/agenda/pin-thinktank.svg");
+				background-size:contain;
+				background-repeat:no-repeat;
+			}
+			.duration::before{
+				background:url("../../gfx/london/agenda/clock-thinktank.svg");
+				background-size:contain;
+				background-repeat:no-repeat;
+			}
+		}
+	}
+}
+
+
+.learning{
+	.left-side{
+		background:$learn-dev;
+	}
+	.right-side{
+		h4{
+			color:$learn-dev;
+		}
+		.header{
+			.place::before{
+				background:url("../../gfx/london/agenda/pin-thinktank.svg");
+				background-size:contain;
+				background-repeat:no-repeat;
+			}
+			.duration::before{
+				background:url("../../gfx/london/agenda/clock-thinktank.svg");
+				background-size:contain;
+				background-repeat:no-repeat;
+			}
+		}
+	}
+}
+
+
+.wellbeing{
+	.left-side{
+		background:$rewards;
+	}
+	.right-side{
+		h4{
+			color:$rewards;
+		}
+		.header{
+			.place::before{
+				background:url("../../gfx/london/agenda/pin-thinktank.svg");
+				background-size:contain;
+				background-repeat:no-repeat;
+			}
+			.duration::before{
+				background:url("../../gfx/london/agenda/clock-thinktank.svg");
+				background-size:contain;
+				background-repeat:no-repeat;
+			}
+		}
+	}
+}
+
+
+.analytst{
+	.left-side{
+		background:$hrtech-analyst
+	}
+	.right-side{
+		h4{
+			color:$hrtech-analyst;
+		}
+		.header{
+			.place::before{
+				background:url("../../gfx/london/agenda/pin-thinktank.svg");
+				background-size:contain;
+				background-repeat:no-repeat;
+			}
+			.duration::before{
+				background:url("../../gfx/london/agenda/clock-thinktank.svg");
+				background-size:contain;
+				background-repeat:no-repeat;
+			}
+		}
+	}
+}
+
+
+.productdemo{
+	.left-side{
+		background:$product-stage;
+	}
+	.right-side{
+		h4{
+			color:$product-stage;
+		}
+		.header{
+			.place::before{
+				background:url("../../gfx/london/agenda/pin-thinktank.svg");
+				background-size:contain;
+				background-repeat:no-repeat;
+			}
+			.duration::before{
+				background:url("../../gfx/london/agenda/clock-thinktank.svg");
+				background-size:contain;
+				background-repeat:no-repeat;
+			}
+		}
+	}
+}
+
+
+.startup-stage{
+	.left-side{
+		background:$startup-stage;
+	}
+	.right-side{
+		h4{
+			color:$startup-stage;
+		}
+		.header{
+			.place::before{
+				background:url("../../gfx/london/agenda/pin-thinktank.svg");
+				background-size:contain;
+				background-repeat:no-repeat;
+			}
+			.duration::before{
+				background:url("../../gfx/london/agenda/clock-thinktank.svg");
+				background-size:contain;
+				background-repeat:no-repeat;
+			}
+		}
+	}
+}
+
+
+.leadership{
+	.left-side{
+		background:$Leadership;
+	}
+	.right-side{
+		h4{
+			color:$Leadership;
+		}
+		.header{
+			.place::before{
+				background:url("../../gfx/london/agenda/pin-thinktank.svg");
+				background-size:contain;
+				background-repeat:no-repeat;
+			}
+			.duration::before{
+				background:url("../../gfx/london/agenda/clock-thinktank.svg");
+				background-size:contain;
+				background-repeat:no-repeat;
+			}
+		}
+	}
+}
+
+
+.hrss{
+	.left-side{
+		background:$hrss-payroll;
+	}
+	.right-side{
+		h4{
+			color:$hrss-payroll;
+		}
+		.header{
+			.place::before{
+				background:url("../../gfx/london/agenda/pin-thinktank.svg");
+				background-size:contain;
+				background-repeat:no-repeat;
+			}
+			.duration::before{
+				background:url("../../gfx/london/agenda/clock-thinktank.svg");
+				background-size:contain;
+				background-repeat:no-repeat;
+			}
+		}
+	}
+}
+
+
+

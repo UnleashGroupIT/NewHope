@@ -1,0 +1,40 @@
+$las : #e80f42;
+
+#desktop-menu .menu-ul li a:hover{
+  color:$las;
+}
+
+#desktop-menu .spec-menu li a:hover{
+  color:$las; 
+}
+
+#desktop-menu .menu-ul li.more > a:hover::after{
+    background: url(../../gfx/arrow-down-red.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#desktop-menu .spec-menu{
+  border-color: $las;
+}
+
+
+@media (min-width: 75em) {
+  #desktop-menu .spec-menu li:first-child{
+    margin-right: 6em;
+  }
+}
+
+.sub-menu .spec-menu li a:hover{
+  color:$las;
+}
+
+@media (min-width: 75em){
+  .sub-menu .spec-menu li:hover {
+    border-color:$las;
+  }
+}
+
+h2,h4{
+  color:$las;
+}

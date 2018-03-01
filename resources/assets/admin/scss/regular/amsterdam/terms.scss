@@ -1,0 +1,1175 @@
+@import 'reset';
+@import '../common';
+@import '../footer';
+@import '../menu';
+@import '../inner-menu';
+@import '../popup';
+
+
+@charset "utf-8";
+/* These CSS rules will affect the Terms & Conditions and Cookie Policy pages.  */
+
+/* Display Versions */
+.Block { display: block; }
+.InlineBlock {
+    display: inline-block;
+    vertical-align: top;
+}
+.Inline { display: inline; }
+.FullWidth { width: 100%; }
+@media (max-width: 1000px) {
+    .FullWidthTablet {	width: 100%;	}
+    .BlockTablet {	display: block;	}
+    .InlineBlockTablet {
+        display: inline-block;
+        vertical-align: top;
+    }
+    .InlineTablet { display: inline; }
+}
+@media (max-width: 640px) {
+    .FullWidthMobile {	width: 100%;	}
+    .BlockMobile {	display: block;	}
+    .InlineBlockMobile {
+        display: inline-block;
+        vertical-align: top;
+    }
+    .InlineMobile { display: inline; }
+}
+/* END Display Versions */
+
+
+/* Positioning */
+.RelativeParent, .Relative { position: relative; }
+.AbsoluteChildren, .Absolute { position: absolute; }
+.Static { position: static; }
+@media (max-width: 1000px) {
+    .RelativeParentTablet, .RelativeTablet { position: relative; }
+    .AbsoluteChildrenTablet, .AbsoluteTablet { position: absolute; }
+    .StaticTablet { position: static; }
+}
+@media (max-width: 640px) {
+    .RelativeParentMobile, .RelativeMobile { position: relative; }
+    .AbsoluteChildrenMobile, .AbsoluteMobile { position: absolute; }
+    .StaticMobile { position: static; }
+}
+/* END Positioning */
+
+
+
+
+/* Alignments */
+.TextCenter { text-align: center; }
+.TextLeft { text-align: left; }
+.TextRight { text-align: right; }
+.TextJustify { text-align: justify; }
+.BlockCenter {	margin: 0 auto;	}
+.BRDesktop {
+    display: block;
+}
+.BRMobile, .BRTablet {
+    display: none;
+}
+@media (max-width: 1000px) {
+    .TextCenterTablet { text-align: center; }
+    .TextLeftTablet { text-align: left; }
+    .TextRightTablet { text-align: right; }
+    .TextJustifyTablet { text-align: justify; }
+    .BlockCenterTablet { margin: 0 auto; }
+    .BRDesktop, .BRMobile {
+        display: none;
+    }
+    .BRTablet {
+        display: block;
+    }
+}
+@media (max-width: 640px) {
+    .TextCenterMobile { text-align: center; }
+    .TextLeftMobile { text-align: left; }
+    .TextRightMobile { text-align: right; }
+    .TextJustifyMobile { text-align: justify; }
+    .BlockCenterMobile { margin: 0 auto; }
+    .BRDesktop, .BRTablet {
+        display: none;
+    }
+    .BRMobile {
+        display: block;
+    }
+}
+/* END Alignments */
+
+/* Texts */
+.BoldText {
+    font-weight: 900 !important;
+}
+.FontWeight600 {
+    font-weight: 600 !important;
+}
+.InvisibleHeadline { /* Use this class if the section doesn't have visible headline.
+Just add this class to a <h2> tag. This keep the markup W3C valid. */
+    position: absolute;
+    opacity: 0;
+    left: -300vw;
+}
+.Headline {
+    font-family: 'proxima-nova', sans-serif;
+    font-size: 2.29166vw;
+    letter-spacing: -0.104166vw;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+.SectionHeadline { /*New*/
+    font-family: 'proxima-nova', sans-serif;
+    font-size: 1.5625vw;
+    letter-spacing: -0.05vw;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+.SliphoverHeadline{ /*New*/
+    font-size: 0.93vw;
+    font-family: 'proxima-nova', sans-serif;
+    font-weight: 600;
+    line-height: 130%;
+}
+.SubHeadline {
+    font-family: 'proxima-nova', sans-serif;
+    font-size: 0.78125vw;
+    font-weight: 400;
+    line-height: 160%;
+    text-transform: uppercase;
+}
+.HeaderBigSubheadline {
+    font-family: 'proxima-nova', sans-serif;
+    font-size: 1.5625vw;
+    font-weight: 300;
+}
+.FormHeadline { /*New*/
+    font-size: 1.25vw;
+    font-family: 'proxima-nova', sans-serif;
+    font-weight: 400;
+    line-height: 130%;
+}
+.Testimonial,
+.HRNIconTitle {
+    font-family: 'proxima-nova', sans-serif;
+    font-size: 0.83333vw;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.Testimonial .NoCaps { font-family: 'proxima-nova', sans-serif; }
+
+.Paragraph {
+    font-size: 0.729166vw;
+    line-height: 192%;
+    font-weight: 300;
+}
+.MediumParagraph{ /*New*/
+    font-family: 'proxima-nova', sans-serif;
+    font-size: 0.679166vw;
+    line-height: 160%;
+    font-weight: 300;
+}
+.SmallParagraph {
+    font-family: 'proxima-nova', sans-serif;
+    font-size: 0.625vw;
+    font-weight: 300;
+}
+.ListItem {
+    font-size: 0.72916vw;
+    font-weight: 300;
+}
+.ListIconInside {
+    list-style-position: inside;
+}
+.Code {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.83333vw;
+    color: lightgreen;
+    background-color: #000;
+    margin: 0 0.260416vw;
+}
+@media (max-width: 1920px) {
+    .Headline {
+        font-size: 44px;
+        letter-spacing: -2px;
+    }
+    .SectionHeadline { /*New*/
+        font-size: 30px;
+        letter-spacing: -1px;
+    }
+
+    .FormHeadline {
+        font-size: 24px;
+    }
+    .SliphoverHeadline{
+        font-size: 18px;
+    }
+    .SubHeadline {
+        font-size: 15px;
+        font-weight: 400;
+    }
+    .HeaderBigSubheadline {
+        font-size: 30px;
+    }
+    .Testimonial,
+    .HRNIconTitle {
+        font-size: 16px;
+    }
+    .Paragraph {
+        font-size: 14px;
+    }
+    .MediumParagraph{
+        font-size: 13px;
+    }
+    .SmallParagraph {
+        font-size: 12px;
+    }
+    .ListItem {
+        font-size: 14px;
+    }
+    .Code {
+        font-size: 16px;
+        margin: 0 5px;
+    }
+}
+@media (max-width: 640px) {
+    header .Headline {
+        font-size: 25px;
+    }
+    .SectionHeadline { /*New*/
+        font-size: 22px;
+    }
+    .HeaderBigSubheadline {
+        font-size: 17px;
+    }
+    .SliphoverHeadline{
+        font-size: 13px;
+    }
+}
+/* END Texts*/
+
+
+/* Text Transformations */
+.Caps, .TextUpper { text-transform: uppercase; }
+.NoCaps { text-transform: none !important; }
+/* Text Transformations */
+
+
+/* Distances
+Big: 75px - Opening a section, Closing a section, Gives attention to graphic elements. Turns to Medium at mobile.
+Medium: 35px - Space after header, Closing, Borders
+Small: 18px - Tiny spaces, Space between icons and their titles
+*/
+.MarginTopBig   { margin-top: 3.90625vw; }
+.MarginRightBig { margin-right: 3.90625vw; }
+.MarginBottomBig { margin-bottom: 3.90625vw; }
+.MarginLeftBig { margin-left: 3.90625vw; }
+
+.MarginTopMedium   { margin-top: 1.822916vw; }
+.MarginRightMedium { margin-right: 1.822916vw; }
+.MarginBottomMedium { margin-bottom: 1.822916vw; }
+.MarginLeftMedium { margin-left: 1.822916vw; }
+
+.MarginTopSmall   { margin-top: 0.9375vw; }
+.MarginRightSmall { margin-right: 0.9375vw; }
+.MarginBottomSmall { margin-bottom: 0.9375vw; }
+.MarginLeftSmall { margin-left: 0.9375vw; }
+
+.PaddingTopBig   { padding-top: 3.90625vw; }
+.PaddingRightBig { padding-right: 3.90625vw; }
+.PaddingBottomBig { padding-bottom: 3.90625vw; }
+.PaddingLeftBig { padding-left: 3.90625vw; }
+
+.PaddingTopMedium   { padding-top: 1.822916vw; }
+.PaddingRightMedium { padding-right: 1.822916vw; }
+.PaddingBottomMedium { padding-bottom: 1.822916vw; }
+.PaddingLeftMedium { padding-left: 1.822916vw; }
+
+.PaddingTopSmall   { padding-top: 0.9375vw; }
+.PaddingRightSmall { padding-right: 0.9375vw; }
+.PaddingBottomSmall { padding-bottom: 0.9375vw; }
+.PaddingLeftSmall { padding-left: 0.9375vw; }
+
+.TopBig   { top: 3.90625vw; }
+.RightBig { right: 3.90625vw; }
+.BottomBig { bottom: 3.90625vw; }
+.LeftBig { left: 3.90625vw; }
+
+.TopMedium   { top: 1.822916vw; }
+.RightMedium { right: 1.822916vw; }
+.BottomMedium { bottom: 1.822916vw; }
+.LeftMedium { left: 1.822916vw; }
+
+.TopSmall   { top: 0.9375vw; }
+.RightSmall { right: 0.9375vw; }
+.BottomSmall { bottom: 0.9375vw; }
+.LeftSmall { left: 0.9375vw; }
+
+.Top0 { top: 0; }
+.Right0 { right: 0; }
+.Bottom0 { bottom: 0; }
+.Left0 { left: 0; }
+
+/*
+Text-text distances
+Use these if you'd like to add distances between texts and block elements OR texts (e.g.Headlines) and texts (e.g.Paragraphs) */
+.MarginTopBigTexts   { margin-top: 3.385416vw; }
+.MarginRightBigTexts { margin-right: 3.385416vw; }
+.MarginBottomBigTexts { margin-bottom: 3.385416vw; }
+.MarginLeftBigTexts { margin-left: 3.385416vw; }
+
+.MarginTopMediumTexts   { margin-top: 1.302083vw; }
+.MarginRightMediumTexts { margin-right: 1.302083vw; }
+.MarginBottomMediumTexts { margin-bottom: 1.302083vw; }
+.MarginLeftMediumTexts { margin-left: 1.302083vw; }
+
+.MarginTopSmallTexts   { margin-top: 0.4166vw; }
+.MarginRightSmallTexts { margin-right: 0.4166vw; }
+.MarginBottomSmallTexts { margin-bottom: 0.4166vw; }
+.MarginLeftSmallTexts { margin-left: 0.4166vw; }
+
+.PaddingTopBigTexts  { padding-top: 3.385416vw; }
+.PaddingRightBigTexts { padding-right: 3.385416vw; }
+.PaddingBottomBigTexts { padding-bottom: 3.385416vw; }
+.PaddingLeftBigTexts { padding-left: 3.385416vw; }
+
+.PaddingTopMediumTexts   { padding-top: 1.302083vw; }
+.PaddingRightMediumTexts { padding-right: 1.302083vw; }
+.PaddingBottomMediumTexts { padding-bottom: 1.302083vw; }
+.PaddingLeftMediumTexts { padding-left: 1.302083vw; }
+
+.PaddingTopSmallTexts   { padding-top: 0.4166vw; }
+.PaddingRightSmallTexts { padding-right: 0.4166vw; }
+.PaddingBottomSmallTexts { padding-bottom: 0.4166vw; }
+.PaddingLeftSmallTexts { padding-left: 0.4166vw; }
+/* END Text-text distances */
+
+@media (max-width: 1920px) {
+    .MarginTopBig   { margin-top: 75px; }
+    .MarginRightBig { margin-right: 75px; }
+    .MarginBottomBig { margin-bottom: 75px; }
+    .MarginLeftBig { margin-left: 75px; }
+
+    .MarginTopMedium   { margin-top: 35px; }
+    .MarginRightMedium { margin-right: 35px; }
+    .MarginBottomMedium { margin-bottom: 35px; }
+    .MarginLeftMedium { margin-left: 35px; }
+
+    .MarginTopSmall   { margin-top: 18px; }
+    .MarginRightSmall { margin-right: 18px; }
+    .MarginBottomSmall { margin-bottom: 18px; }
+    .MarginLeftSmall { margin-left: 18px; }
+
+    .PaddingTopBig   { padding-top: 75px; }
+    .PaddingRightBig { padding-right: 75px; }
+    .PaddingBottomBig { padding-bottom: 75px; }
+    .PaddingLeftBig { padding-left: 75px; }
+
+    .PaddingTopMedium   { padding-top: 35px; }
+    .PaddingRightMedium { padding-right: 35px; }
+    .PaddingBottomMedium { padding-bottom: 35px; }
+    .PaddingLeftMedium { padding-left: 35px; }
+
+    .PaddingTopSmall   { padding-top: 18px; }
+    .PaddingRightSmall { padding-right: 18px; }
+    .PaddingBottomSmall { padding-bottom: 18px; }
+    .PaddingLeftSmall { padding-left: 18px; }
+
+    .TopBig   { top: 75px; }
+    .RightBig { right: 75px; }
+    .BottomBig { bottom: 75px; }
+    .LeftBig { left: 75px; }
+
+    .TopMedium   { top: 35px; }
+    .RightMedium { right: 35px; }
+    .BottomMedium { bottom: 35px; }
+    .LeftMedium { left: 35px; }
+
+    .TopSmall   { top: 18px; }
+    .RightSmall { right: 18px; }
+    .BottomSmall { bottom: 18px; }
+    .LeftSmall { left: 18px; }
+
+    /* Text-text distances */
+    .MarginTopBigTexts   { margin-top: 65px; }
+    .MarginRightBigTexts { margin-right: 65px; }
+    .MarginBottomBigTexts { margin-bottom: 65px; }
+    .MarginLeftBigTexts { margin-left: 65px; }
+
+    .MarginTopMediumTexts   { margin-top: 25px; }
+    .MarginRightMediumTexts { margin-right: 25px; }
+    .MarginBottomMediumTexts { margin-bottom: 25px; }
+    .MarginLeftMediumTexts { margin-left: 25px; }
+
+    .MarginTopSmallTexts   { margin-top: 8px; }
+    .MarginRightSmallTexts { margin-right: 8px; }
+    .MarginBottomSmallTexts { margin-bottom: 8px; }
+    .MarginLeftSmallTexts { margin-left: 8px; }
+
+    .PaddingTopBigTexts  { padding-top: 65px; }
+    .PaddingRightBigTexts { padding-right: 65px; }
+    .PaddingBottomBigTexts { padding-bottom: 65px; }
+    .PaddingLeftBigTexts { padding-left: 65px; }
+
+    .PaddingTopMediumTexts   { padding-top: 25px; }
+    .PaddingRightMediumTexts { padding-right: 25px; }
+    .PaddingBottomMediumTexts { padding-bottom: 25px; }
+    .PaddingLeftMediumTexts { padding-left: 25px; }
+
+    .PaddingTopSmallTexts   { padding-top: 8px; }
+    .PaddingRightSmallTexts { padding-right: 8px; }
+    .PaddingBottomSmallTexts { padding-bottom: 8px; }
+    .PaddingLeftSmallTexts { padding-left: 8px; }
+    /* END Text-text distances */
+}
+@media (max-width: 1000px) {
+    .MarginTopMediumTablet   { margin-top: 35px; }
+    .MarginRightMediumTablet { margin-right: 35px; }
+    .MarginBottomMediumTablet { margin-bottom: 35px; }
+    .MarginLeftMediumTablet { margin-left: 35px; }
+
+    .MarginTopSmallTablet   { margin-top: 18px; }
+    .MarginRightSmallTablet { margin-right: 18px; }
+    .MarginBottomSmallTablet { margin-bottom: 18px; }
+    .MarginLeftSmallTablet { margin-left: 18px; }
+
+    .MarginTop0Tablet   { margin-top: 0; }
+    .MarginRight0Tablet { margin-right: 0; }
+    .MarginBottom0Tablet { margin-bottom: 0; }
+    .MarginLeft0Tablet { margin-left: 0; }
+
+    .PaddingTopMediumTablet   { padding-top: 35px; }
+    .PaddingRightMediumTablet { padding-right: 35px; }
+    .PaddingBottomMediumTablet { padding-bottom: 35px; }
+    .PaddingLeftMediumTablet { padding-left: 35px; }
+
+    .PaddingTopSmallTablet   { padding-top: 18px; }
+    .PaddingRightSmallTablet { padding-right: 18px; }
+    .PaddingBottomSmallTablet { padding-bottom: 18px; }
+    .PaddingLeftSmallTablet { padding-left: 18px; }
+
+    .PaddingTop0Tablet   { padding-top: 0; }
+    .PaddingRight0Tablet { padding-right: 0; }
+    .PaddingBottom0Tablet { padding-bottom: 0; }
+    .PaddingLeft0Tablet { padding-left: 0; }
+
+    .TopMediumTablet   { top: 35px; }
+    .RightMediumTablet { right: 35px; }
+    .BottomMediumTablet { bottom: 35px; }
+    .LeftMediumTablet { left: 35px; }
+
+    .TopSmallTablet   { top: 18px; }
+    .RightSmallTablet { right: 18px; }
+    .BottomSmallTablet { bottom: 18px; }
+    .LeftSmallTablet { left: 18px; }
+
+    .Top0Tablet { top: 0; }
+    .Right0Tablet { right: 0; }
+    .Bottom0Tablet { bottom: 0; }
+    .Left0Tablet { left: 0; }
+
+    .MarginLeftAutoTablet { margin-left: auto; }
+    .MarginRightAutoTablet { margin-right: auto; }
+    .MarginLeft0Tablet { margin-left: 0; }
+    .MarginRight0Tablet { margin-right: 0; }
+
+    /* Text-text distances */
+    .MarginTopMediumTextsTablet   { margin-top: 25px; }
+    .MarginRightMediumTextsTablet { margin-right: 25px; }
+    .MarginBottomMediumTextsTablet { margin-bottom: 25px; }
+    .MarginLeftMediumTextsTablet { margin-left: 25px; }
+
+    .MarginTopSmallTextsTablet   { margin-top: 8px; }
+    .MarginRightSmallTextsTablet { margin-right: 8px; }
+    .MarginBottomSmallTextsTablet { margin-bottom: 8px; }
+    .MarginLeftSmallTextsTablet { margin-left: 8px; }
+
+    .PaddingTopMediumTextsTablet   { padding-top: 25px; }
+    .PaddingRightMediumTextsTablet { padding-right: 25px; }
+    .PaddingBottomMediumTextsTablet { padding-bottom: 25px; }
+    .PaddingLeftMediumTextsTablet { padding-left: 25px; }
+
+    .PaddingTopSmallTextsTablet   { padding-top: 8px; }
+    .PaddingRightSmallTextsTablet { padding-right: 8px; }
+    .PaddingBottomSmallTextsTablet { padding-bottom: 8px; }
+    .PaddingLeftSmallTextsTablet { padding-left: 8px; }
+    /* END Text-text distances */
+}
+@media (max-width: 640px) {
+    /* Big distances turns to medium on mobile */
+    .MarginTopBig   { margin-top: 35px; }
+    .MarginRightBig { margin-right: 35px; }
+    .MarginBottomBig { margin-bottom: 35px; }
+    .MarginLeftBig { margin-left: 35px; }
+
+    .PaddingTopBig   { padding-top: 35px; }
+    .PaddingRightBig { padding-right: 35px; }
+    .PaddingBottomBig { padding-bottom: 35px; }
+    .PaddingLeftBig { padding-left: 35px; }
+
+    .TopBig   { top: 35px; }
+    .RightBig { right: 35px; }
+    .BottomBig { bottom: 35px; }
+    .LeftBig { left: 35px; }
+
+    .MarginTopBigTexts   { margin-top: 25px; } /* was 35 */
+    .MarginRightBigTexts { margin-right: 25px; } /* was 35 */
+    .MarginBottomBigTexts { margin-bottom: 25px; } /* was 35 */
+    .MarginLeftBigTexts { margin-left: 25px; } /* was 35 */
+
+    .PaddingTopBigTexts   { padding-top: 25px; } /* was 35 */
+    .PaddingRightBigTexts { padding-right: 25px; } /* was 35 */
+    .PaddingBottomBigTexts { padding-bottom: 25px; } /* was 35 */
+    .PaddingLeftBigTexts { padding-left: 25px; }	 /* was 35 */
+    /* end big distances turns to medium on mobile */
+
+    .MarginTopBigMobile   { margin-top: 75px; }
+    .MarginRightBigMobile { margin-right: 75px; }
+    .MarginBottomBigMobile { margin-bottom: 75px; }
+    .MarginLeftBigMobile { margin-left: 75px; }
+
+    .MarginTopMediumMobile   { margin-top: 35px; }
+    .MarginRightMediumMobile { margin-right: 35px; }
+    .MarginBottomMediumMobile { margin-bottom: 35px; }
+    .MarginLeftMediumMobile { margin-left: 35px; }
+
+    .MarginTopSmallMobile   { margin-top: 18px; }
+    .MarginRightSmallMobile { margin-right: 18px; }
+    .MarginBottomSmallMobile { margin-bottom: 18px; }
+    .MarginLeftSmallMobile { margin-left: 18px; }
+
+    .MarginTop0Mobile   { margin-top: 0; }
+    .MarginRight0Mobile { margin-right: 0; }
+    .MarginBottom0Mobile { margin-bottom: 0; }
+    .MarginLeft0Mobile { margin-left: 0; }
+
+    .PaddingTopBigMobile   { padding-top: 75px; }
+    .PaddingRightBigMobile { padding-right: 75px; }
+    .PaddingBottomBigMobile { padding-bottom: 75px; }
+    .PaddingLeftBigMobile { padding-left: 75px; }
+
+    .PaddingTopMediumMobile   { padding-top: 35px; }
+    .PaddingRightMediumMobile { padding-right: 35px; }
+    .PaddingBottomMediumMobile { padding-bottom: 35px; }
+    .PaddingLeftMediumMobile { padding-left: 35px; }
+
+    .PaddingTopSmallMobile   { padding-top: 18px; }
+    .PaddingRightSmallMobile { padding-right: 18px; }
+    .PaddingBottomSmallMobile { padding-bottom: 18px; }
+    .PaddingLeftSmallMobile { padding-left: 18px; }
+
+    .PaddingTop0Mobile   { padding-top: 0; }
+    .PaddingRight0Mobile { padding-right: 0; }
+    .PaddingBottom0Mobile { padding-bottom: 0; }
+    .PaddingLeft0Mobile { padding-left: 0; }
+
+    .TopBigMobile   { top: 75px; }
+    .RightBigMobile { right: 75px; }
+    .BottomBigMobile { bottom: 75px; }
+    .LeftBigMobile { left: 75px; }
+
+    .TopMediumMobile   { top: 35px; }
+    .RightMediumMobile { right: 35px; }
+    .BottomMediumMobile { bottom: 35px; }
+    .LeftMediumMobile { left: 35px; }
+
+    .TopSmallMobile   { top: 18px; }
+    .RightSmallMobile { right: 18px; }
+    .BottomSmallMobile { bottom: 18px; }
+    .LeftSmallMobile { left: 18px; }
+
+    .Top0Mobile { top: 0; }
+    .Right0Mobile { right: 0; }
+    .Bottom0Mobile { bottom: 0; }
+    .Left0Mobile { left: 0; }
+
+    .MarginLeftAutoMobile { margin-left: auto; }
+    .MarginRightAutoMobile { margin-right: auto; }
+    .MarginLeft0Mobile { margin-left: 0; }
+    .MarginRight0Mobile { margin-right: 0; }
+
+    /* Text-text distances */
+    .MarginTopBigTextsMobile   { margin-top: 65px; }
+    .MarginRightBigTextsMobile { margin-right: 65px; }
+    .MarginBottomBigTextsMobile { margin-bottom: 65px; }
+    .MarginLeftBigTextsMobile { margin-left: 65px; }
+
+    .MarginTopMediumTextsMobile   { margin-top: 25px; }
+    .MarginRightMediumTextsMobile { margin-right: 25px; }
+    .MarginBottomMediumTextsMobile { margin-bottom: 25px; }
+    .MarginLeftMediumTextsMobile { margin-left: 25px; }
+
+    .MarginTopSmallTextsMobile   { margin-top: 8px; }
+    .MarginRightSmallTextsMobile { margin-right: 8px; }
+    .MarginBottomSmallTextsMobile { margin-bottom: 8px; }
+    .MarginLeftSmallTextsMobile { margin-left: 8px; }
+
+    .PaddingTopBigTextsMobile   { padding-top: 65px; }
+    .PaddingRightBigTextsMobile { padding-right: 65px; }
+    .PaddingBottomBigTextsMobile { padding-bottom: 65px; }
+    .PaddingLeftBigTextsMobile { padding-left: 65px; }
+
+    .PaddingTopMediumTextsMobile   { padding-top: 25px; }
+    .PaddingRightMediumTextsMobile { padding-right: 25px; }
+    .PaddingBottomMediumTextsMobile { padding-bottom: 25px; }
+    .PaddingLeftMediumTextsMobile { padding-left: 25px; }
+
+    .PaddingTopSmallTextsMobile   { padding-top: 8px; }
+    .PaddingRightSmallTextsMobile { padding-right: 8px; }
+    .PaddingBottomSmallTextsMobile { padding-bottom: 8px; }
+    .PaddingLeftSmallTextsMobile { padding-left: 8px; }
+    /* END Text-text distances */
+
+}
+/* END Distances */
+
+/*Colors*/
+.ParisColor { color: #00a8e2; }
+.LondonColor { color: #99cc00; }
+.AmericasColor { color: #e80f42; }
+.AmsterdamColor { color: #00a7e1; }
+.YellowColor { color: #d3b409; }
+.PinkColor { color: #ff00ae; }
+.GreyColor { color: #949494; }
+.WhiteColor { color: #fff; }
+.BlackColor { color: #000; }
+.HRNColor { color: #070920; }
+
+.ParisBgColor { background-color: #00a8e2; }
+.LondonBgColor { background-color: #99cc00; }
+.AmsterdamBgColor { background-color: #00a7e1; }
+.AmericasBgColor { background-color: #e80f42; }
+.PinkBgColor { background-color: #ff00ae; }
+.YellowBgColor { background-color: #d3b409; }
+.GreyBgColor { background-color: #949494; }
+.WhiteBgColor { background-color: #fff; }
+.BlackBgColor { background-color: #000; }
+.HRNBgColor { background-color: #070920; }
+
+/* Border colors will be specified in the future if it is necessery. */
+/*END Colors*/
+/* Main Content */
+
+#MainContent ul{
+	
+    padding: 30px auto !important;
+}
+#MainContent ul li{
+	
+    list-style-position: outside;
+padding-left:2em;
+		text-indent: -0.7em;
+	font-family: "museo-sans", sans-serif;
+		
+}
+
+
+#MainContent {
+	width: 100%;
+	max-width: 768px;	
+	margin: 0 auto;
+	padding-top: 75px;
+}
+.RightsContainer .Paragraph {
+	font-family: "museo-sans", sans-serif;
+	line-height: 130%;	
+}
+.RightsContainer ul {
+	list-style-type: none;
+}
+.RightsContainer ul li::before {
+	content:'•';
+	margin-right: 5px;
+}
+.RightsContainer a {
+	color: #00a8e2;	
+	transition: all 0.3s;
+}
+.RightsContainer a:hover {
+	color: #000;	
+}
+@media (max-width: 640px) {
+#MainContent .Headline {
+	font-size: 23px;	
+}	
+}
+/* END Main Content */
+
+strong {
+	font-weight: 600;	
+}
+.RedColor {
+	color: rgb(255, 0, 0);	
+}
+
+.btn, .full-btn, .pink-btn, .black-btn, .amsblue-btn, .blue-btn, .white-btn, .trans-btn {
+  padding: .8em;
+  margin: .5em;
+  width: 100%;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 1px solid transparent; }
+  @media (min-width: 30em) {
+    .btn, .full-btn, .pink-btn, .black-btn, .amsblue-btn, .blue-btn, .white-btn, .trans-btn {
+      margin: 0 1em;
+      width: 205px; } }
+  @media (min-width: 120em) {
+    .btn, .full-btn, .pink-btn, .black-btn, .blue-btn, .amsblue-btn, .white-btn, .trans-btn {
+      width: 11vw;
+      font-size: .8vw; } }
+  .btn:hover, .full-btn:hover, .pink-btn:hover, .black-btn:hover, .amsblue-btn, .blue-btn:hover, .white-btn:hover, .trans-btn:hover {
+    transition: all .3s;
+    cursor: pointer; }
+
+.full-btn {
+  width: 100%;
+  background-color: #0090ff;
+  margin: 0 auto;
+  color: #fff;
+  border-color: #0090ff; }
+  .full-btn:hover {
+    color: #0090ff;
+    border-color: #0090ff;
+    background-color: #fff; }
+
+.pink-btn {
+  background-color: #f2385a;
+  color: #fff;
+  padding: .6em; }
+  @media (min-width: 120em) {
+    .pink-btn {
+      width: 9vw; } }
+  .pink-btn:hover {
+    color: #f2385a;
+    background-color: #fff; }
+
+    .amsblue-btn {
+  background-color: #0090ff;
+  color: #fff;
+  margin: 0; }
+  .amsblue-btn:hover {
+    color: #0090ff;
+    background-color: #fff;
+    border-color: #0090ff; }
+
+.black-btn {
+  background-color: #000;
+  color: #fff;
+  border-color: #fff;
+  padding: .6em; }
+  @media (min-width: 120em) {
+    .black-btn {
+      width: 9vw; } }
+  .black-btn:hover {
+    color: #000;
+    background-color: #fff; }
+
+.blue-btn {
+  background-color: #0090ff;
+  color: #fff;
+  margin: 0; }
+  .blue-btn:hover {
+    color: #0090ff;
+    background-color: #fff;
+    border-color: #0090ff; }
+
+.white-btn {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #fff; }
+  .white-btn:hover {
+    color: #fff;
+    background-color: transparent; }
+
+.trans-btn {
+  margin: 2em 0;
+  margin-bottom: 0;
+  background-color: transparent;
+  color: #0090ff;
+  border-color: #0090ff;
+  width: 100%; }
+  @media (min-width: 40em) {
+    .trans-btn {
+      width: 205px; } }
+  .trans-btn:hover {
+    color: #fff;
+    background-color: #0090ff; }
+
+#book {
+  margin: 2em auto;
+  margin-top: auto;
+  font-weight: bold;
+  width: 80%;
+  color: #fff;
+  background-color: #f2385a;
+  border-color: #f2385a; }
+  #book:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-color: #fff; }
+  @media (min-width: 40em) {
+    #book {
+      margin: 0 auto;
+      margin-bottom: 8em;
+      width: 205px; } }
+  @media (min-width: 120em) {
+    #book {
+      width: 10.7vw; } }
+
+
+section.one .wrp {
+  padding: 2em;
+  padding-bottom: 3em;
+  color: #fff; 
+  max-width: 1024px;
+    margin: 0 auto;}
+  @media (min-width: 40em) {
+    section.one .wrp {
+      padding: 4em 3em; } }
+  section.one .wrp h2 {
+    color: #0090ff; }
+  section.one .wrp button {
+    margin: 4em 0;
+    margin-bottom: 0; }
+@media (min-width: 40em) {
+  section.one.futureofwork {
+    text-align: center; } }
+section.one.futureofwork .wrp {
+  padding-top: 2em; }
+section.one.mainsponsors {
+  text-align: center; }
+  section.one.mainsponsors h4 {
+    display: inline-block;
+    background-color: #083643;
+    color: #fff;
+    padding: 1em 0;
+    font-size: 1em; }
+    @media (min-width: 40em) {
+      section.one.mainsponsors h4 {
+        padding: .3em 1em;
+        margin-bottom: 2em; } }
+    @media (min-width: 120em) {
+      section.one.mainsponsors h4 {
+        font-size: .84vw; } }
+  section.one.mainsponsors .mainsponsors-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 2em;
+    justify-content: space-between; }
+    @media (min-width: 40em) {
+      section.one.mainsponsors .mainsponsors-wrap {
+        justify-content: center; } }
+    @media (min-width: 55em) {
+      section.one.mainsponsors .mainsponsors-wrap {
+        padding: 0 8em; } }
+    section.one.mainsponsors .mainsponsors-wrap > div {
+      margin: 0 .5em;
+      margin-top: auto;
+      padding-bottom: 2em;
+      flex-grow: 1;
+      text-align: center;
+      visibility: hidden;
+      opacity: 0; }
+      @media (min-width: 75em) {
+        section.one.mainsponsors .mainsponsors-wrap > div {
+          margin: 0 2em;
+          margin-top: auto;
+          flex-grow: 0; } }
+      section.one.mainsponsors .mainsponsors-wrap > div.visible {
+        visibility: visible;
+        opacity: 1;
+        transition: all 4s; }
+      section.one.mainsponsors .mainsponsors-wrap > div img {
+        width: 60px; }
+        @media (min-width: 40em) {
+          section.one.mainsponsors .mainsponsors-wrap > div img {
+            width: auto; } }
+        @media (min-width: 120em) {
+          section.one.mainsponsors .mainsponsors-wrap > div img {
+            width: 5.85vw; } }
+
+section.two {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 600px; }
+  section.two.expo {
+    flex-direction: column-reverse; }
+    @media (min-width: 75em) {
+      section.two.expo {
+        flex-direction: row; } }
+  section.two .fix-bg {
+    width: 100%;
+    min-height: 500px;
+    box-shadow: inset 3px 3px 25px rgba(0, 0, 0, 0.7); }
+    @media (min-width: 75em) {
+      section.two .fix-bg {
+        width: 50%; } }
+  section.two.testimonial {
+    flex-direction: column-reverse; }
+    @media (min-width: 75em) {
+      section.two.testimonial {
+        flex-direction: row; } }
+  section.two.keynote.arianna .content {
+    background-color: #f2385a;
+    padding-left: 0;
+    padding-right: 0; }
+  section.two.keynote.arianna .h4wrp {
+    display: flex;
+    margin-bottom: 1em; }
+    section.two.keynote.arianna .h4wrp > div {
+      display: flex;
+      margin-left: 4em; }
+    section.two.keynote.arianna .h4wrp .U-logo {
+      margin: auto;
+      margin-right: 4em; }
+  section.two.keynote.arianna p {
+    color: #fff; }
+  section.two.keynote.arianna h2 {
+    padding: .2em;
+    padding-left: 2em;
+    padding-right: .5em;
+    color: #fff;
+    background-color: #083643;
+    display: inline-block; }
+  section.two.keynote.arianna h4 {
+    color: #fff;
+    margin: auto; }
+  section.two.keynote.arianna h3 {
+    color: #fff;
+    margin-left: 3em;
+    margin-top: 2em; }
+  section.two.keynote.arianna .pdg {
+    padding: 0 2em; }
+    @media (min-width: 75em) {
+      section.two.keynote.arianna .pdg {
+        padding: 0 4em; } }
+    @media (min-width: 120em) {
+      section.two.keynote.arianna .pdg {
+        padding: 0 3.4vw; } }
+  section.two.keynote.arianna .strn {
+    display: block;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin: .5em 0; }
+  section.two.keynote.arianna .schedule-wrp {
+    margin-top: auto;
+    margin-left: 4em; }
+    section.two.keynote.arianna .schedule-wrp .schedule {
+      display: flex;
+      margin-bottom: 1em; }
+      section.two.keynote.arianna .schedule-wrp .schedule .clock-logo {
+        margin: auto 0; }
+      section.two.keynote.arianna .schedule-wrp .schedule .date-place {
+        margin-left: 1em;
+        text-transform: uppercase; }
+        section.two.keynote.arianna .schedule-wrp .schedule .date-place strong {
+          font-weight: 600; }
+  section.two.keynote.arianna button {
+    margin-left: 0;
+    color: #f2385a; }
+    section.two.keynote.arianna button:hover {
+      color: #fff; }
+  section.two.keynote.second {
+    flex-direction: column-reverse; }
+    @media (min-width: 75em) {
+      section.two.keynote.second {
+        flex-direction: row; } }
+  section.two .content {
+    padding: 2em;
+    display: flex;
+    flex-direction: column; }
+    section.two .content .content-wrap {
+      margin: 2em 0;
+      margin-top: 0; }
+      @media (min-width: 120em) {
+        section.two .content .content-wrap {
+          margin: 1.68vw 0; } }
+    @media (min-width: 75em) {
+      section.two .content {
+        width: 50%;
+        padding: 2em 4em; } }
+    @media (min-width: 120em) {
+      section.two .content {
+        padding: 1.68vw 3.4vw; } }
+  section.two button {
+    margin-top: auto; }
+    @media (min-width: 75em) {
+      section.two button {
+        margin-bottom: 2em; } }
+  section.two.keynote button {
+    margin-bottom: 0; }
+
+section.one-cntr {
+  background: url("../../gfx/amsterdam/one-cntr-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 2em 0; }
+  section.one-cntr.counter {
+    background: url("../../gfx/amsterdam/counter-bg.jpg");
+    background-size: cover;
+    background-position: center; }
+  @media (min-width: 75em) {
+    section.one-cntr {
+      padding: 4em 0; } }
+  section.one-cntr p, section.one-cntr h2 {
+    color: #fff;
+    line-height: 2em; }
+  section.one-cntr h2 {
+    display: inline-block;
+    position: relative;
+    background-color: #f2385a;
+    padding: .2em .5em;
+    line-height: 1; }
+    section.one-cntr h2::before, section.one-cntr h2::after {
+      position: absolute;
+      top: 3px; }
+    section.one-cntr h2::before {
+      content: url("../../gfx/amsterdam/left-sign.png");
+      left: -33px; }
+    section.one-cntr h2::after {
+      content: url("../../gfx/amsterdam/right-sign.png");
+      right: -33px; }
+  section.one-cntr button {
+    margin: 1em;
+    margin-top: 2em;
+    width: 90%; }
+    @media (min-width: 40em) {
+      section.one-cntr button {
+        width: 205px; } }
+    @media (min-width: 120em) {
+      section.one-cntr button {
+        width: 10.7vw; } }
+    section.one-cntr button:hover {
+      background-color: transparent;
+      color: #fff;
+      border-color: #fff; }
+  section.one-cntr.counter .your-clock {
+    display: flex;
+    justify-content: center;
+    margin: 5em 0; }
+    @media (min-width: 120em) {
+      section.one-cntr.counter .your-clock {
+        margin: 2.8vw 0; } }
+  section.one-cntr.counter button {
+    margin-top: 0; }
+    @media (min-width: 45em) {
+      section.one-cntr.counter button {
+        margin: 0 2em; } }
+  section.one-cntr.counter .flip-clock-wrapper ul:nth-of-type(1n+5) {
+    display: none; }
+  @media (min-width: 45em) {
+    section.one-cntr.counter .flip-clock-wrapper ul:nth-of-type(1n+5) {
+      display: block; } }
+  section.one-cntr.counter .flip-clock-divider.minutes, section.one-cntr.counter .flip-clock-divider.seconds {
+    display: none; }
+    @media (min-width: 45em) {
+      section.one-cntr.counter .flip-clock-divider.minutes, section.one-cntr.counter .flip-clock-divider.seconds {
+        display: block; } }
+		
+.come-in {
+  opacity: 0;
+  transform: scale3d(0, 0, 0);
+  animation: come-in 1.5s ease forwards; }
+
+.come-in:nth-child(odd) {
+  animation-duration: 1s; }
+
+@keyframes come-in {
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1); } }
+footer {
+  background-color: #000;
+  margin-top: auto; }
+  footer p {
+    color: #fff;
+    font-size: .9em;
+    line-height: 1.5em; }
+    @media (min-width: 120em) {
+      footer p {
+        font-size: .8vw; } }
+  footer .footer-logo {
+    width: 90%; }
+    @media (min-width: 23em) {
+      footer .footer-logo {
+        width: auto; } }
+    @media (min-width: 120em) {
+      footer .footer-logo img {
+        width: 8.9vw; } }
+  footer .wrp {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    @media (min-width: 48em) {
+      footer .wrp {
+        flex-direction: row; } }
+    footer .wrp .left {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      margin-bottom: 2em; }
+      @media (min-width: 48em) {
+        footer .wrp .left {
+          width: auto;
+          display: block; } }
+      footer .wrp .left .footer-btns {
+        display: flex;
+        flex-direction: column; }
+        footer .wrp .left .footer-btns button {
+          margin: 0; }
+          footer .wrp .left .footer-btns button.black-btn {
+            margin-top: auto; }
+            @media (min-width: 48em) {
+              footer .wrp .left .footer-btns button.black-btn {
+                margin-top: 1em; } }
+          @media (min-width: 48em) {
+            footer .wrp .left .footer-btns button {
+              width: 95%;
+              margin-top: 1em; } }
+  footer .footer-menu {
+    margin-bottom: 1.5em; }
+    footer .footer-menu ul {
+      display: flex;
+      flex-wrap: wrap; }
+      footer .footer-menu ul li {
+        margin: .3em 0;
+        margin-right: 2vw; }
+        @media (min-width: 48em) {
+          footer .footer-menu ul li {
+            margin-top: 0;
+            margin-bottom: 0; } }
+        footer .footer-menu ul li a {
+          color: #ededed; }
+          footer .footer-menu ul li a:hover {
+            color: #0090ff;
+            transition: color .5s; }
+          @media (min-width: 120em) {
+            footer .footer-menu ul li a {
+              font-size: .83vw; } }
+    footer .footer-menu .upper {
+      margin-top: 1.5em; }
+      footer .footer-menu .upper li {
+        text-transform: uppercase;
+        font-size: .9em; }
+        @media (min-width: 58em) {
+          footer .footer-menu .upper li {
+            font-size: 1em; } }
+  footer .social-icons {
+    display: flex;
+    margin-top: 1em; }
+    footer .social-icons > div {
+      margin-right: .65em; }
+      @media (min-width: 120em) {
+        footer .social-icons > div {
+          margin-right: .55vw; } }
+      footer .social-icons > div img {
+        width: 35px; }
+        footer .social-icons > div img:hover {
+          cursor: pointer; }
+        @media (min-width: 120em) {
+          footer .social-icons > div img {
+            width: 1.83vw; } }
+
+.parallax-mirror {
+  transition: none; }		

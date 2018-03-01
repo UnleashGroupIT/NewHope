@@ -1,0 +1,89 @@
+@import 'elements/global/modal';
+@import 'elements/global/loader';
+
+
+#AllSpeakerSection{
+  min-height: 1000px;
+  margin-bottom: 100px;
+}
+
+   
+#NewGridContainer{
+  display:none;
+    margin: 0px auto 30px auto;
+    background-color: rgba(0, 0, 0, 0.07058823529411765);
+    padding: 50px;
+    width: 100%;
+    max-width: 500px; 
+    -webkit-box-shadow: inset 2px 2px 12px 1px rgba(0, 0, 0, 0.26);
+    -moz-box-shadow: inset 2px 2px 12px 1px rgba(0, 0, 0, 0.26);
+    box-shadow: inset 2px 2px 12px 1px rgba(0, 0, 0, 0.26);    
+}
+
+
+#NewGridHeadline{
+    background-color: rgba(0, 0, 0, 0.7294117647058823);
+    width: 100%;
+    max-width: 320px;
+    margin: 25px auto;
+    padding: 10px;
+    color: #ffffff;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#GridSection{
+  background-color: rgba(95, 65, 22, 0.050980392156862744);
+    padding: 50px 0 85px 0;
+    -webkit-box-shadow: inset 2px -5px 20px 0px rgba(0, 0, 0, 0.26);
+    -moz-box-shadow: inset 2px -5px 20px 0px rgba(0, 0, 0, 0.26);
+    box-shadow: inset 2px -5px 20px 0px rgba(0, 0, 0, 0.26);
+}
+
+#CustomSpeakerGrid{
+    display:none;
+    -webkit-box-shadow: 0px -1px 18px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -1px 18px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px -1px 18px 0px rgba(0,0,0,0.75);
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 25px;
+
+}
+
+#PageContainer{
+    text-align: center;
+}
+
+
+#CustomSpeakerLoading{
+  display:none;
+}
+.CustomSpeakerContainer{
+  min-height: 0;
+}
+.form-control{
+    margin: 10px 0px;
+    display: inline-block;
+    width: 100%;
+}
+#bio {
+    width: 87%;
+    height: 90px;
+    border: 1px solid rgba(0, 0, 0, 0.1803921568627451);
+    margin-bottom: 25px;
+}
+#first_name{
+    width: 28%;
+}
+#last_name{
+  width: 43%;
+}
+#prefix{
+    width: 15%;
+}
+#GridLabelContainer{
+  margin: 0 28%;
+    width: 170px;
+}

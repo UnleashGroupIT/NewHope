@@ -1,0 +1,48 @@
+$lon : #33cc33;
+
+#unleash-logo{
+  &.show{
+    @media (min-width: 75em) {
+      background-color:$lon;
+    }
+  }
+  &:hover{
+    @media (min-width: 75em) {
+      background-color:$lon;
+    }
+  }
+}
+
+#desktop-menu .menu-ul li a:hover{
+  color:$lon;
+}
+
+#desktop-menu .spec-menu li a:hover{
+  color:$lon; 
+}
+
+#desktop-menu .menu-ul li.more > a:hover::after{
+    background: url(../../gfx/arrow-down-green.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#desktop-menu .spec-menu{
+  border-color: $lon;
+}
+
+@media (min-width: 75em) {
+  #desktop-menu .spec-menu li:first-child{
+    margin-right: 5em;
+  }
+}
+
+
+// TAGS COLOR
+
+h2,h4{
+  color: $lon;
+}
+.white-btn{
+  color: $lon;
+}

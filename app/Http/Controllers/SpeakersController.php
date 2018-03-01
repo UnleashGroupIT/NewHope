@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Speakers;
 use Illuminate\Support\Facades\Storage;
+use App\Unleashevents;
+use App\User;
 
 class SpeakersController extends Controller
 {
@@ -51,6 +53,23 @@ class SpeakersController extends Controller
     public function create()
     {
 
+    }
+
+    public function display(Request $request, User $user){
+
+
+    
+     $grids = new SpeakerGridController;
+     $speakerGrids =  $grids->index($request);
+
+     $events = Unleashevents::all();
+
+    return view('admin.pages.speakers', [
+                  'grids' => $speakerGrids,
+                  'events' => $events
+                             
+                            ]);
+                                  
     }
 
     /**
