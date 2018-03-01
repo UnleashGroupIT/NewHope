@@ -56,7 +56,7 @@
   	margin:1.5em 0;
 
   	h6{
-  		margin-right:.25em;
+  		margin-right:.5em;
   	}
 
   	.ModalContent--changer{
@@ -70,9 +70,34 @@
   		height:40px;
   		background-color:$white;
   		display:flex;
+  		position:relative;
   		margin-bottom:1em;
+  		&:before{
+  			position:absolute;
+  			left:10px;
+  			top:5px;
+  		}
+
+  		&.socialLogin--linkedin{
+  			&:before{
+  				content:url("/storage/Gfx/Global/Login/login-linkedin.svg");
+  			}
+  		}
+  		&.socialLogin--google{
+  			&:before{
+  				content:url("/storage/Gfx/Global/Login/login-google.svg");
+  			}
+  		}
+  		&.socialLogin--facebook{
+  			&:before{
+  				content:url("/storage/Gfx/Global/Login/login-facebook.svg");
+  			}
+  		}
+
   		a{
   			margin:auto;
+  			font-size:.875em;
+  			font-weight:bold;
   			text-transform:uppercase;
   		}
   	}
