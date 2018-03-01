@@ -31,35 +31,38 @@ Route::get('/agenda/search', 'AgendaSessionsController@search');
 
 /* Speaker Routes */
 
-Route::middleware(['auth:api', 'roles'])->get('/speakers', 'SpeakersController@index');
+Route::get('/speakers', 'SpeakersController@index');
 
 Route::middleware(['auth:api', 'roles'])->post('/speakers', 'SpeakersController@store');
 
-Route::middleware(['auth:api', 'roles'])->get('/speaker/{id}', 'SpeakersController@show');
+Route::get('/speaker/{id}', 'SpeakersController@show');
 
-Route::middleware(['auth:api', 'roles'])->get('/speaker/slug/{slug}', 'SpeakersController@find');
+Route::get('/speaker/slug/{slug}', 'SpeakersController@find');
 
 Route::middleware(['auth:api', 'roles'])->patch('/speaker/{id}', 'SpeakersController@update');
 
 Route::middleware(['auth:api', 'roles'])->delete('/speaker/{id}', 'SpeakersController@destroy');
 
+
 /* Sponsor Routes */
-Route::middleware(['auth:api', 'hidden'])->get('/sponsors', 'SponsorsController@index');
+Route::get('/sponsors', 'SponsorsController@index');
 
 Route::middleware(['auth:api', 'hidden'])->post('/sponsors', 'SponsorsController@store');
 
-Route::middleware(['auth:api', 'hidden'])->get('/sponsor/{sponsorId}', 'SponsorsController@show');
+Route::get('/sponsor/{sponsorId}', 'SponsorsController@show');
+
+Route::get('/sponsor/slug/{slug}', 'SponsorsController@find');
 
 Route::middleware(['auth:api', 'hidden'])->patch('/sponsor/{sponsorId}', 'SponsorsController@update');
 
 Route::middleware(['auth:api', 'hidden'])->delete('/sponsor/{sponsorId}', 'SponsorsController@destroy');
 
 /* Agenda Track Routes */
-Route::middleware(['auth:api', 'hidden'])->get('/tracks', 'AgendaTracksController@index');
+Route::get('/tracks', 'AgendaTracksController@index');
 
 Route::middleware(['auth:api', 'hidden'])->post('/tracks', 'AgendaTracksController@store');
 
-Route::middleware(['auth:api', 'hidden'])->get('/track/{trackId}', 'AgendaTracksController@show');
+Route::get('/track/{trackId}', 'AgendaTracksController@show');
 
 Route::middleware(['auth:api', 'hidden'])->patch('/track/{trackId}', 'AgendaTracksController@update');
 
@@ -67,7 +70,7 @@ Route::middleware(['auth:api', 'hidden'])->delete('/track/{trackId}', 'AgendaTra
 
 
 /* Agenda Session Routes */
-Route::middleware(['auth:api', 'hidden'])->get('/sessions', 'AgendaSessionsController@index');
+Route::get('/sessions', 'AgendaSessionsController@index');
 
 Route::middleware(['auth:api', 'hidden'])->post('/session', 'AgendaSessionsController@store');
 
@@ -82,7 +85,7 @@ Route::middleware(['auth:api', 'hidden'])->post('/session/speaker', 'AgendaSessi
 Route::middleware(['auth:api', 'hidden'])->delete('/session/speaker', 'AgendaSessionsController@destroySpeaker');
 
 /* Speaker Grid Routes */
-Route::middleware(['auth:api', 'roles'])->get('/grids/speakers/{gridId}', 'SpeakerGridController@index');
+Route::get('/grids/speakers/{gridId}', 'SpeakerGridController@index');
 
 Route::middleware(['auth:api', 'roles'])->get('/grids/speakers', 'SpeakerGridController@list');
 
@@ -95,7 +98,7 @@ Route::middleware(['auth:api', 'roles'])->patch('/grid/speakers/{gridId}/{speake
 Route::middleware(['auth:api', 'roles'])->delete('/grid/speakers{gridId}/{speakerId}', 'SpeakerGridController@detach');
 
 /* Sponsor Routes */
-Route::middleware(['auth:api', 'roles'])->get('/grids/sponsors/{gridId}', 'SponsorGridController@index');
+Route::get('/grids/sponsors/{gridId}', 'SponsorGridController@index');
 
 Route::middleware(['auth:api', 'roles'])->get('/grids/sponsors', 'SponsorGridController@list');
 
@@ -126,9 +129,9 @@ Route::get('/articles', 'ArticlesController@index');
 
 Route::middleware(['auth:api', 'roles'])->post('/articles', 'ArticlesController@store');
 
-Route::middleware(['auth:api', 'roles'])->get('/article/{id}', 'ArticlesController@show');
+Route::get('/article/{id}', 'ArticlesController@show');
 
-Route::middleware(['auth:api', 'roles'])->get('/article/slug/{slug}', 'ArticlesController@find');
+Route::get('/article/slug/{slug}', 'ArticlesController@find');
 
 Route::middleware(['auth:api', 'roles'])->patch('/article/{id}', 'ArticlesController@update');
 
@@ -136,13 +139,13 @@ Route::middleware(['auth:api', 'roles'])->delete('/article/{id}', 'ArticlesContr
 
 /* Talks */
 
-Route::middleware(['auth:api', 'roles'])->get('/talks', 'TalksController@index');
+Route::get('/talks', 'TalksController@index');
 
 Route::middleware(['auth:api', 'roles'])->post('/talks', 'TalksController@store');
 
-Route::middleware(['auth:api', 'roles'])->get('/talk/{id}', 'TalksController@show');
+Route::get('/talk/{id}', 'TalksController@show');
 
-Route::middleware(['auth:api', 'roles'])->get('/talk/slug/{slug}', 'TalksController@find');
+Route::get('/talk/slug/{slug}', 'TalksController@find');
 
 Route::middleware(['auth:api', 'roles'])->patch('/talk/{id}', 'TalksController@update');
 

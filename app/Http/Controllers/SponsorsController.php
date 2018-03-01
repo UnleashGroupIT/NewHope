@@ -12,9 +12,35 @@ class SponsorsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+
+        $sponsorIds = [];
+
+         $sponsors = (new Sponsors)->newQuery();
+
+        if ($request->has('exlude')){
+
+         /*   $grid = SponsorGrid::where('grid_id',$request->exlude)->get();
+            foreach ($grid as $key => $value) {
+               array_push($sponsorIds, $value->sponsor_id);
+            }
+            $sponsors->whereNotIn('id', $sponsorIds);*/
+
+        }
+
+         if ($request->has('search')){
+            $sponsors->where('company_name','like', '%'.$request->search.'%');
+        }     
+
+         if ($request->has('limit')){
+            $limit = $request->limit;
+        }else {
+            $limit = 30;
+        }              
+       
+       // return $sponsors->get();
+        return $sponsors->paginate($limit);  
     }
 
     /**
@@ -44,10 +70,15 @@ class SponsorsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($sponsorId)
     {
-        //
+        return Sponsors::find($sponsorId);
     }
+
+    public function find($slug)
+    {
+       return Sponsors::where('slug',$slug)->get();
+    }      
 
     /**
      * Show the form for editing the specified resource.
