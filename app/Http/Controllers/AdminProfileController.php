@@ -25,4 +25,10 @@ class AdminProfileController extends Controller
     {
        return view('admin.pages.home');
     }
+
+    public function oauth()
+    {
+        return view('admin.auth.pages.oauth');
+    }
+        
 }

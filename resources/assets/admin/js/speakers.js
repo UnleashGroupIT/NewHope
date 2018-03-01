@@ -28,7 +28,7 @@ var spVue = new Vue({
 		speakerAll: '',
 		event: null,
 		editSpeakerData: {},
-		GridType: 1,
+		GridType: 'speakers',
 		sortableOptions: {
 			animation: 150,
 			forceFallback: false,
@@ -103,7 +103,7 @@ var spVue = new Vue({
 				}
 
 
-			axios.get('/api/speakergrid/'+this.selected).then(response => this.speakers = response.data);
+			axios.get('/api/grids/speakers/'+this.selected).then(response => this.speakers = response.data);
 	       
 	       this.speakerAll = this.$refs.allSpeakerGrid;
 	       this.speakerAll.filterSpeakers(this.selected, this.speakerSearch);
@@ -129,7 +129,7 @@ var spVue = new Vue({
               });
          } else {
 
-			axios.post('/api/speakergrid/'+this.selected, {
+			axios.post('/api/grids/speakers/'+this.selected, {
 			    speaker_id: speakerId
 			  })
 			  .then(function (response) {
@@ -162,7 +162,7 @@ var spVue = new Vue({
          	alert('No Grid is selected!');
          } else {
 
-			axios.delete('/api/speakergriditem/'+this.selected+'/'+speakerId, {
+			axios.delete('/api/grids/speakers/'+this.selected+'/'+speakerId, {
 			  })
 			  .then(function (response) {
 			    spVue.showGrid('');

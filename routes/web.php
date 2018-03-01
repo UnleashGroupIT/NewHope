@@ -62,7 +62,7 @@ Route::get('login/linkedin/callback', 'Auth\LoginController@urlCallback');
 Route::get('/adminsite', 'AdminProfileController@index');
 Route::get('/adminsite/home', 'AdminProfileController@index')->name('home');
 
-//Route::get('/adminsite/profile/oauth', 'HomeController@oauth');
+Route::get('/adminsite/oauth', 'AdminProfileController@oauth');
 
 //Admin pages
 Route::get('/adminsite/speakers', 'SpeakersController@display')->name('admin.speakers');
@@ -71,6 +71,7 @@ Route::get('/adminsite/sponsors', 'Admin\SubPageController@sponsorUI')->name('ad
 Route::get('/adminsite/agenda', 'Admin\SubPageController@agendaUI')->name('admin.agenda');
 
 //React Route ===============================================================================
+
 
 Route::view('/{path?}', 'home')
      ->where('path', '.*')

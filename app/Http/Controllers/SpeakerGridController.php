@@ -21,6 +21,10 @@ class SpeakerGridController extends Controller
                      ->get();
     }
 
+    public function list(){
+        return Grids::where('speakers_ids', 'exists', true)->with('unleashevents')->get();
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -109,7 +113,7 @@ class SpeakerGridController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($gridId, $speakerId)
+    public function detach($gridId, $speakerId)
     {
         $grid = Grids::find($gridId);
         return $grid->speakers()->detach($speakerId);

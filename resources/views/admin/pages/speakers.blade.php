@@ -40,18 +40,18 @@
 
     <div class="GridContainer CustomSpeakerContainer">
         <ul class="SpeakersGrid" id="CustomSpeakerGrid" v-sortable="sortableOptions">
-             <li v-for="speaker in speakers" :id=speaker.id :data-speakerid=speaker.id class="sortable">
+             <li v-for="speaker in speakers" :id=speaker._id :data-speakerid=speaker._id class="sortable">
                             <div class="GridImageContainer">
                               <div class="IconContainer">
-                               <div title="Remove from selected grid" class="RemoveFromGrid" v-on:click="removeFromGrid(speaker.id)"><i class="fa fa-times-circle" aria-hidden="true"></i></div>
-                                <div title="Edit Speaker across all events" class="EditSpeakerGlobal" v-on:click="editFilteredSpeaker(speaker.id)"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></div>
+                               <div title="Remove from selected grid" class="RemoveFromGrid" v-on:click="removeFromGrid(speaker._id)"><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+                                <div title="Edit Speaker across all events" class="EditSpeakerGlobal" v-on:click="editFilteredSpeaker(speaker._id)"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></div>
                               </div>
                                 <div class="GridOverlay">
                                     <h2 class="SliphoverHeadline">@{{ speaker.full_name }}</h2>
                                    <h3 class="SmallParagraph">@{{ speaker.job_title }}</h3>
                                     <h3 class="SmallParagraph CompanyName">@{{ speaker.company }}</h3>
                                 </div>
-                                <img class="Square GridItem" :alt="speaker.full_name" :src="'/storage/speakers/'+speaker.img_url">
+                                <img class="Square GridItem" :alt="speaker.full_name" :src="'/storage/speakers/'+speaker.img_url" onerror="this.src='/storage/speakers/person-placeholder.jpg'">
                             </div>              
             </li>
 

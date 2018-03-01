@@ -34,6 +34,7 @@ class FullSeeder extends Seeder
      factory(App\User::class, 16)->create();
      factory(App\Tags::class, 10)->create();
      factory(App\NewsCategories::class, 5)->create();
+     factory(App\Unleashevents::class, 5)->create();
      factory(App\Articles::class, 20)->create()->each(function($articles){
 
 
@@ -86,10 +87,10 @@ class FullSeeder extends Seeder
 
                 if($type == 1){
                    
-                         for ($i=0; $i < mt_rand(3,5); $i++) { 
+                 for ($i=0; $i < mt_rand(2,5); $i++) { 
 
-                            $grids->speakers()->create($this->fillWithRandom('App\Speakers'));
-                        }
+                    $grids->speakers()->save(App\Speakers::take(1)->skip(mt_rand(0,App\Speakers::count()-1))->first());
+                }
 
                 }
 
@@ -97,11 +98,11 @@ class FullSeeder extends Seeder
                     
                          for ($i=0; $i < mt_rand(3,5); $i++) { 
 
-                            $grids->sponsors()->create($this->fillWithRandom('App\Sponsors'));
+                            $grids->sponsors()->save(App\Sponsors::take(1)->skip(mt_rand(0,App\Sponsors::count()-1))->first());
                         }
 
                 }
-
+        $grids->unleashevents()->save(App\Unleashevents::take(1)->skip(mt_rand(0,App\Unleashevents::count()-1))->first());
      
      }); 
 
@@ -129,7 +130,7 @@ class FullSeeder extends Seeder
                     $bookmarks->talks()->save(App\Talks::take(1)->skip(mt_rand(0,App\Talks::count()-1))->first());
                 }
 
- 
+                
 
      
      }); 

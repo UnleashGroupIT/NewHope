@@ -7,6 +7,7 @@ use App\Speakers;
 use Illuminate\Support\Facades\Storage;
 use App\Unleashevents;
 use App\User;
+use App\Grids;
 
 class SpeakersController extends Controller
 {
@@ -57,18 +58,9 @@ class SpeakersController extends Controller
 
     public function display(Request $request, User $user){
 
+      $this->authorize('AdminSubSiteAccess', $user);
 
-    
-     $grids = new SpeakerGridController;
-     $speakerGrids =  $grids->index($request);
-
-     $events = Unleashevents::all();
-
-    return view('admin.pages.speakers', [
-                  'grids' => $speakerGrids,
-                  'events' => $events
-                             
-                            ]);
+        return view('admin.pages.speakers');
                                   
     }
 

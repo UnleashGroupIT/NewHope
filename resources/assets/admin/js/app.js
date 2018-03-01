@@ -5,6 +5,7 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
+window._ = require('lodash');
 
 try {
 	global.$ = global.jQuery = require('jquery');

@@ -3,9 +3,9 @@
 namespace App;
 
 use Moloquent;
-use Speakers;
-use Sponsors;
-use Unleashevents;
+use App\Speakers;
+use App\Sponsors;
+use App\Unleashevents;
 
 class Grids extends Moloquent
 {
@@ -19,17 +19,17 @@ class Grids extends Moloquent
 
     public function speakers()
     {
-        return $this->embedsMany('App\Speakers');
+        return $this->belongsToMany(Speakers::class);
     }
 
     public function sponsors()
     {
-        return $this->embedsMany('App\Sponsors');
+        return $this->belongsToMany(Sponsors::class);
     } 
 
-    public function event()
+    public function unleashevents()
     {
-        return $this->hasOne('App\Unleashevents');
+        return $this->belongsToMany(Unleashevents::class);
     }
        
 }

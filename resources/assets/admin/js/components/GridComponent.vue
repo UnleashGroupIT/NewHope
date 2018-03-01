@@ -21,8 +21,8 @@
 <p>Please select an existing grid for editing</p>
     <div id="GridSelectContainer">
         <select name="GridSelect" id="SelectSpeakerGrid" v-model="selectedGrid" v-on:change="prepareGrid">
-          <option v-for="grid in grids" v-bind:value="grid.id">
-          {{ grid.events[0].event_name }} - {{ grid.grid_name }}
+          <option v-for="grid in grids" v-bind:value="grid._id">
+          {{ grid.unleashevents[0].name }} - {{ grid.title }}
           </option>
 
         </select>
@@ -90,10 +90,9 @@ export default {
     saveGrid(){
       var self = this;
       if(this.seletedevent && this.NewGridName){
-            axios.post('/api/grids', {
+            axios.post(`/api/grids/${this.gridtype}`, {
               eventId: this.seletedevent,
               grid_name: this.NewGridName,
-              type: this.gridtype
             })
             .then(function (response) {
               self.NewGridName = '';
@@ -136,9 +135,9 @@ export default {
 
    displayGrid(){
 
-    axios.get('/api/grids?category='+this.gridtype).then(response => {
+    axios.get(`/api/grids/${this.gridtype}`).then(response => {
       this.grids = response.data;
-
+      console.log(response.data);
     });
    }
 

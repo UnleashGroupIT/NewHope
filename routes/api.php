@@ -84,24 +84,28 @@ Route::middleware(['auth:api', 'hidden'])->delete('/session/speaker', 'AgendaSes
 /* Speaker Grid Routes */
 Route::middleware(['auth:api', 'roles'])->get('/grids/speakers/{gridId}', 'SpeakerGridController@index');
 
+Route::middleware(['auth:api', 'roles'])->get('/grids/speakers', 'SpeakerGridController@list');
+
 Route::middleware(['auth:api', 'roles'])->post('/grids/speakers/{gridId}', 'SpeakerGridController@store');
 
-Route::middleware(['auth:api', 'roles'])->get('/grid/speakers/{gridId}', 'SpeakerGridController@show');
+Route::middleware(['auth:api', 'roles'])->get('/grid/speakers/{gridId}/{speakerId}', 'SpeakerGridController@show');
 
-Route::middleware(['auth:api', 'roles'])->patch('/grid/speakers/{gridId}', 'SpeakerGridController@update');
+Route::middleware(['auth:api', 'roles'])->patch('/grid/speakers/{gridId}/{speakerId}', 'SpeakerGridController@update');
 
-Route::middleware(['auth:api', 'roles'])->delete('/grid/speakers{gridId}', 'SpeakerGridController@destroy');
+Route::middleware(['auth:api', 'roles'])->delete('/grid/speakers{gridId}/{speakerId}', 'SpeakerGridController@detach');
 
 /* Sponsor Routes */
 Route::middleware(['auth:api', 'roles'])->get('/grids/sponsors/{gridId}', 'SponsorGridController@index');
 
+Route::middleware(['auth:api', 'roles'])->get('/grids/sponsors', 'SponsorGridController@list');
+
 Route::middleware(['auth:api', 'roles'])->post('/grids/sponsors/{gridId}', 'SponsorGridController@store');
 
-Route::middleware(['auth:api', 'roles'])->get('/grid/sponsors/{gridId}', 'SponsorGridController@show');
+Route::middleware(['auth:api', 'roles'])->get('/grid/sponsor/{gridId}/{sponsorId}', 'SponsorGridController@show');
 
-Route::middleware(['auth:api', 'roles'])->patch('/grid/sponsors/{gridId}', 'SponsorGridController@update');
+Route::middleware(['auth:api', 'roles'])->patch('/grid/sponsors/{gridId}/{sponsorId}', 'SponsorGridController@update');
 
-Route::middleware(['auth:api', 'roles'])->delete('/grid/sponsors{gridId}', 'SponsorGridController@destroy');
+Route::middleware(['auth:api', 'roles'])->delete('/grid/sponsors/{gridId}/{sponsorId}', 'SponsorGridController@detach');
 
 
 /* Event Routes */

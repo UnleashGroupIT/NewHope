@@ -1,11 +1,11 @@
 <template>
   <ul class="SpeakersGrid">
-					<li v-for="speaker in speakers" :id=speaker.id :data-speakerId=speaker.id>
+					<li v-for="speaker in speakers" :id=speaker._id :data-speakerId=speaker._id>
                         <div class="GridImageContainer">
                           <div class="IconContainer">
-                           <div title="Add To Current Grid" class="AddToGrid" @click="addSpeakerToGrid(speaker.id)"><i class="fa fa-plus-square" aria-hidden="true"></i></div>
-                           <div title="Edit speaker across events" class="EditSpeakerGlobal" @click="editSpeaker(speaker.id)"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></div>                           
-                           <div title="Delete from Database" class="DeleteItem"  @click="deleteFromDatabase(speaker.id)"><i class="fa fa-trash" aria-hidden="true"></i></div>
+                           <div title="Add To Current Grid" class="AddToGrid" @click="addSpeakerToGrid(speaker._id)"><i class="fa fa-plus-square" aria-hidden="true"></i></div>
+                           <div title="Edit speaker across events" class="EditSpeakerGlobal" @click="editSpeaker(speaker._id)"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></div>                           
+                           <div title="Delete from Database" class="DeleteItem"  @click="deleteFromDatabase(speaker._id)"><i class="fa fa-trash" aria-hidden="true"></i></div>
                           </div>
                             <div class="GridOverlay">
                                 <h2 class="SliphoverHeadline">{{ speaker.full_name }}</h2>
@@ -13,7 +13,7 @@
                                 <h3 class="SmallParagraph CompanyName">{{ speaker.company }}</h3>
                             </div>
 
-                            <img class="Square GridItem" :alt="speaker.full_name" :src="'/storage/speakers/'+speaker.img_url+'?id='+generateHash(10)">
+                            <img class="Square GridItem" :alt="speaker.full_name" :src="`/storage/speakers/${speaker.img_url}`" onerror="this.src='/storage/speakers/person-placeholder.jpg'">
                         </div>
                     </li>
  
@@ -188,7 +188,8 @@ if (this.speakerPageData.current_page != this.speakerPageData.max + 1) {
 
 }
 
-  },  
+  },
+
 
   },
 
