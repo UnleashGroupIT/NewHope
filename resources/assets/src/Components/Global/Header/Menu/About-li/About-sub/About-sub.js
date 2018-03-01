@@ -41,8 +41,8 @@ const AboutSub = () => (
 				<h3>Corporate posts</h3>
 			</div>
 			<ul className="App-header--subul">
-				<li className="App-header--subli"><Link to="#"><NewsCard src="/storage/Gfx/news-previewHL.png" /></Link></li>
-				<li className="App-header--subli"><Link to="#"><NewsCard src="/storage/Gfx/news-previewHL2.png" /></Link></li>
+				<li className="App-header--subli"><Link to="#"><NewsCard src="/storage/Gfx/News/news-previewHL.png" /></Link></li>
+				<li className="App-header--subli"><Link to="#"><NewsCard src="/storage/Gfx/News/news-previewHL2.png" /></Link></li>
 			</ul>
 		</div>
 	</div>
