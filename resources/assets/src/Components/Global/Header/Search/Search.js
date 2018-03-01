@@ -33,20 +33,14 @@ class Search extends Component {
 				<div className={this.state.addClass ? 'Search--wrp show' : 'Search--wrp' }>
 					<form id="Search--form" className="Search--form">
 						<div className="Search--input-and-results">
-							<input className="Search--input" type="search" />
+							<input className="Search--input" type="search" placeholder="SEARCH UNLEASH"/>
 							<div className="Search--results">
+								<h5>DISCOVER UNLEASH</h5>
 								<p>UNLEASH Conference & Expo London 2018</p>
 								<p>Fashion Companies Need to Rethink Their Lonesome HR Function</p>
 								<p>Lonesome HR</p>
+								<p>About UNLEASH</p>
 								<p>Stewart Brand: The Long Now</p>
-								<p>UNLEASH Conference & Expo London 2018</p>
-								<p>Fashion Companies Need to Rethink Their Lonesome HR Function</p>
-								<p>Lonesome HR</p>
-								<p>Stewart Brand: The Long Now</p>
-								<p>UNLEASH Conference & Expo London 2018</p>
-								<p>Fashion Companies Need to Rethink Their Lonesome HR Function</p>
-								<p>Lonesome HR</p>
-
 							</div>
 						</div>
 					</form>

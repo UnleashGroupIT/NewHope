@@ -3,7 +3,11 @@
 	margin-left:.75em;
 	font-weight:bold;
 
-	&:after{
-		content:url("/storage/Gfx/Global/Header/user-login.svg");
+	.Login-btn{
+		background:none;
+		border:none;
+		&:after{
+			content:url("/storage/Gfx/Global/Header/user-login.svg");
+		}
 	}
 }
