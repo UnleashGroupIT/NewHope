@@ -29,8 +29,10 @@
 
 .News-card--preview{
 	display:flex;
+	@include img-crop--parent($NewsCardHeight);
+	width:80px;
 	img{
-		width:80px;
+		@include img-crop;
 	}
 }
 

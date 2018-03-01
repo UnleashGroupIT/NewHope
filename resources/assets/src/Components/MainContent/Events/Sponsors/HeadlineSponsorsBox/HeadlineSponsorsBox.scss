@@ -1,7 +1,10 @@
 .HeadlineSponsorsBox{
-	position: absolute;
-    right: 0;
-    top: -65px;
+
+    @media #{$larg-60} {
+    	position: absolute;
+	    right: 0;
+	    top: -65px;
+    }
 
     h2{
     	margin-bottom:.75em;
@@ -10,7 +13,9 @@
     .HeadlineSponsorsBox--wrp{
     	background:$grey5;
 		padding:1.5em;
-		width:$HeadlineSponsorsBoxWidth;
+		@media #{$larg-60} {
+			width:$HeadlineSponsorsBoxWidth;
+		}
     }
 
     .linear-BG{
@@ -25,10 +30,13 @@
 
 	.SponsorImgBox{
 		height:60px;
-		width:100px;
+		width:48%;
 		background:$white;
 		display:flex;
 		margin:.5em 0;
+		@media #{$medium} {
+			width:100px;
+		}
 		img{
 			margin:auto;
 		}

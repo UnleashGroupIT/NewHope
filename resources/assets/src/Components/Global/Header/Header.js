@@ -13,22 +13,24 @@ class Header extends Component {
 
 	render(){
 		return(
-			<header className={this.props.direction ? "App-header sticky" : "App-header"} >
-				<div className="Layout-width">
-					<div className="App-header--menu">
-						<div className="App-header--logo-_-menu">
-							<div className="App-header--logo">
-		    					<Link to="/"><img src="/storage/Gfx/Global/Header/unleash-logoB.svg" alt="UNLEASH" /></Link>
-		    				</div>
-							<Menu />
-						</div>
-						<div className="App-header--search-_-login">
-							<Search />
-							<Login />
+			<div className="App-header--placeholder">
+				<header className={this.props.direction ? "App-header sticky" : "App-header"} >
+					<div className="Layout-width">
+						<div className="App-header--menu">
+							<div className="App-header--logo-_-menu">
+								<div className="App-header--logo">
+			    					<Link to="/"><img src="/storage/Gfx/Global/Header/unleash-logoB.svg" alt="UNLEASH" /></Link>
+			    				</div>
+								<Menu />
+							</div>
+							<div className="App-header--search-_-login">
+								<Search />
+								<Login />
+							</div>
 						</div>
 					</div>
-				</div>
-			</header>
+				</header>
+			</div>
 		)
 	}
 }

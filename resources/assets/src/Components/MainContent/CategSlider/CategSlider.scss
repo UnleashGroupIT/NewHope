@@ -8,12 +8,14 @@
         width:100%;
         top:0;
         z-index:90;
+        transition:all .5s;
     }
     &.stickywM{
         position:fixed;
         width:100%;
         top:60px;
         z-index:90;
+        transition:all .5s;
     }
 }
 

@@ -1,0 +1,16 @@
+.TravelBanner{
+	background:url("/storage/Gfx/Travel/travelBanner-bgD.jpg");
+	@include bg-cover-pos;
+	display:flex;
+	margin:1.5em 0;
+}
+
+.TravelBanner--wrp{
+	margin:auto;
+	padding:4em 0;
+	text-align:center;
+
+	h2{
+		margin-bottom:.75em;
+	}
+}

@@ -1,0 +1,28 @@
+.PromoBoxes--wrp{
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
+}
+
+.PromoBox{
+	flex-basis:100%;
+	margin-top:1em;
+	color:$white;
+	@include img-crop--parent(230px);
+	@media #{$larg} {
+    	flex-basis:32%;
+    }
+
+    img{
+    	@include img-crop;
+    }
+}
+
+.PromoBoxDetails--wrp{
+	position: absolute;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+
+}

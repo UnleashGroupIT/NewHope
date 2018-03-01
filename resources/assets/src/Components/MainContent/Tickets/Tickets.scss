@@ -1,0 +1,142 @@
+.Tickets--wrp{
+	background:$light-blue;
+	position:relative;
+	margin-bottom:-18px;
+	padding:4em 0;
+	@media #{$extra-larg} {
+    	&:before{
+			content: '';
+		    width: 60px;
+		    height: 100%;
+		    background: repeating-linear-gradient(-45deg, rgba($black, 0.4), rgba($black, 0.4) 2px, transparent 2px, transparent 4px);
+		    position: absolute;
+		    left: 0;
+		    top: 0;
+		}
+    }
+}
+
+.TicketCard{
+	width:300px;
+	height:415px;
+	background:$white;
+	padding: 1em;
+	margin-right:1.5em;
+	position:relative;
+	display:flex;
+	flex-direction:column;
+
+	&:before,&:after{
+		content: '';
+	    width: 15px;
+	    height: 30px;
+	    background: #4AD9D9;
+	    position: absolute;
+	    top: 50%;
+	    transform: translate(0, -50%);
+	    z-index:2;
+	}
+
+	&:before{
+		left:0;
+		border-bottom-right-radius: 30px;
+  		border-top-right-radius: 30px;
+	}
+	&:after{
+		right:0;
+		border-bottom-left-radius: 30px;
+  		border-top-left-radius: 30px;
+	}
+}
+
+.TicketCard--category{
+	display:flex;
+	color:$red;
+	span{
+		margin:auto 0;
+		font-weight:bold;
+	}
+
+	.TicketCard--category---BG{
+		padding:.25em .5em;
+		background:$red;
+		color:$white;
+		margin-right:.5em;
+	}
+}
+
+.TicketCard--name{
+	border-top:1px solid $grey1;
+	border-bottom:1px solid $grey1;
+	font-family:'Anton';
+	padding:.5em 0;
+	margin:1em 0;
+}
+
+.TicketCardPrice--wrp{
+	margin-bottom:2em;
+	span{
+		color:$grey3;
+		&:after{
+			content:'';
+			width:300px;
+			height:1px;
+			border-bottom:1px solid $grey4;
+			position:absolute;
+			top:50%;
+			left:0;
+			transform: translate(0, -50%);
+		}
+	}
+}
+
+.TicketCard--price{
+	display:flex;
+	margin-bottom:.5em;
+	h2{
+		margin:auto 0;
+	}
+}
+
+.TicketCardDetails--wrp{
+	padding-bottom:1em;
+	h6{
+		text-transform:uppercase;
+		color:$light-blue;
+		margin-bottom:.5em;
+	}
+
+	.TicketCard--details{
+		display:flex;
+		flex-wrap:wrap;
+		jusity-content:space-between;
+		span{
+			flex-basis:48%;
+			margin:.25em 0;
+		}
+	}
+}
+
+.TicketCard--apply{
+	padding-top:1em;
+	position:relative;
+	margin-top:auto;
+	display:flex;
+	justify-content:space-between;
+	input{
+		width:140px;
+		padding-left:.5em;
+		border:1px solid $grey4;
+		@include placeholder($grey3);
+	}
+
+	&:after{
+		content:'';
+		width:300px;
+		height:1px;
+		border-bottom:1px solid $grey4;
+		position:absolute;
+		top:0;
+		left:-1em;
+	}
+}

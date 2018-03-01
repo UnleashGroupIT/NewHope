@@ -58,6 +58,12 @@
 	color:$white;
 }
 
+.btn-fw{
+	@extend %btn;
+	color:$black;
+	background:$white;
+}
+
 .btn-b{
 	@extend %btn;
 	background:$black;

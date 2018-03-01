@@ -18,7 +18,7 @@ const IntroHeader = props => (
 	        		</div>
 	        		<h1>Future of work goes to London!</h1>
 	        		<div className="Intro-text"><p>Unleash your people on our next conference and see where the world of HR is going.</p></div>
-	        		<button className="btn-w">Read now</button>
+	        		<button className="btn-fw">Book now</button>
 	    		</div>
 	    	</div>
 	    </div>

@@ -9,18 +9,6 @@
 }
 
 .Talks--title{
-	background:repeating-linear-gradient(-45deg, $red, $red 3px, transparent 3px, transparent 6px);
-	display:flex;
-	flex-basis:75%;
-	@media #{$medium} {
-    	flex-basis:80%;
-    }
-	@media #{$larg} {
-    	flex-basis:85%;
-    }
-    @media #{$extra-larg} {
-    	flex-basis:90%;
-    }
 	h2{
 		background:$white;
 		padding-right:.5em;

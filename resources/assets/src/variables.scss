@@ -34,6 +34,7 @@ $anton :'Anton';
 //MEDIA QUERIES
 
 $medium: "screen and (min-width : 30em)";
+$medium-40: "screen and (min-width : 40em)";
 $larg: "screen and (min-width : 48em)";
 $larg-60: "screen and (min-width : 60em)";
 $extra-larg: "screen and (min-width : 75em)";
@@ -49,6 +50,21 @@ $extra-larg: "screen and (min-width : 75em)";
  background-size: contain;
  background-position: center;
  background-repeat:no-repeat;
+}
+
+@mixin placeholder($color) {
+    &::-webkit-input-placeholder {
+        color: $color;
+    }
+    &::-moz-placeholder {
+        color: $color;
+    }
+    &:-ms-input-placeholder {
+        color: $color;
+    }
+    &:-moz-placeholder {
+        color: $color;
+    }
 }
 
 @mixin img-crop--parent($height) {

@@ -1,6 +1,10 @@
 .Speakers--wrp{
+	margin:3em 0;
+}
+
+.SpeakerCards--wrp{
 	display:flex;
 	flex-wrap:wrap;
 	justify-content:space-between;
-	margin:1.5em 0;
+	margin-bottom:2em;
 }

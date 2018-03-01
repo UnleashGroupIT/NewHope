@@ -2,7 +2,17 @@
 	display:flex;
 	flex-wrap:wrap;
 	justify-content:space-between;
-	margin:1.5em 0;
+	margin:3em 0;
+
+	.drag{
+		@media #{$extra-larg} {
+    		flex-wrap:wrap;
+    		justify-content:space-between;
+    		> div {
+    			flex-basis:48%;
+    		}
+    	}
+	}
 }
 
 .AgendaSessionCard--wrp{
@@ -41,10 +51,15 @@
 }
 
 .AgendaSessionCard{
-	flex-basis:48%;
+	min-width:400px;
 	padding:1em;
 	border:1px solid $grey4;
 	margin-bottom:2em;
+	margin-right:2em;
+	@media #{$extra-larg} {
+    	flex-basis:48%;
+    	margin-right:0;
+    }
 
 	h5{
 		margin-top:1em;

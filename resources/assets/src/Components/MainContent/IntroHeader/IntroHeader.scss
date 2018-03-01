@@ -19,7 +19,7 @@
 	}
 
 	&.sldr{
-		min-height:600px;
+		height:650px;
 	}
 	&.nrml{
 		min-height:500px;
@@ -43,6 +43,19 @@
 	&.London{
 		background: url(/storage/Gfx/Events/EventsLondon-bgD.jpg);
     	@include bg-cover-pos;
+    	position:relative;
+    	&:after{
+    		content:'';
+    		height:100%;
+    		width:100%;
+    		position:absolute;
+    		top:0;
+    		left:0;
+    		background: linear-gradient(to right, $purple, rgba($purple,0));
+    		@media #{$larg} {
+    			background: linear-gradient(to right, $purple, rgba($purple,0) 60%);
+    		}
+    	}
 	}
 }
 
@@ -56,6 +69,7 @@
 
 	.MainContent--title{
 		flex-basis:100%;
+		z-index:80;
 		margin-bottom:2em;
 		max-width:400px;
 		@media #{$larg} {
@@ -166,7 +180,7 @@
 
 .Event--name{
 	h5{
-		background:$dark-blue;
+		background:$light-blue;
 		display:inline-block;
 		padding:.25em .5em;
 		margin-bottom:.5em;

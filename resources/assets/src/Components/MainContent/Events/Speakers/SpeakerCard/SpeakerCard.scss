@@ -1,7 +1,13 @@
 .SpeakerCard{
-	flex-basis:23%;
+	flex-basis:48%;
 	position:relative;
 	margin:.75em 0;
+	@media #{$medium-40} {
+		flex-basis:32%;
+	}
+	@media #{$larg} {
+		flex-basis:23%;
+	}
 
 	.SpeakerCard--details{
 		position: absolute;
@@ -23,18 +29,26 @@
 	}
 
 	.SpeakerCard--img{
-		@include img-crop--parent($SpeakerCardHeight);
+		@include img-crop--parent(260px);
+		@media #{$medium} {
+			height: $SpeakerCardHeight
+		}
 		img{
 			@include img-crop;
 		}
 	}
 
 	&.BecomeSpeaker{
-		padding:3em 1.5em 1.5em 1.5em;
+		padding:1em;
 		border:1px solid $black;
 		position:relative;
 		display:flex;
 		flex-direction:column;
+
+		@media #{$extra-larg} {
+			padding:3em 1.5em 1.5em 1.5em;
+		}
+
 		&:before,&:after{
 			content: '';
 		    width: 30px;
@@ -51,8 +65,19 @@
 		    top: -3px;
 		}
 
+		h2{
+			font-size:1.5em;
+			@media #{$medium-40} {
+				font-size:2em;
+			}
+		}
+
 		h5{
 			margin-top:auto;
+			font-size: .875em;
+			@media #{$medium-40} {
+				font-size:1em;
+			}
 		}
 	}
 }
@@ -63,32 +88,65 @@
 
 .SpeakerCardHighLight{
 	display:flex;
+	flex-direction:column;
 	flex-basis:100%;
 	margin-bottom:1.5em;
+	@media #{$larg} {
+		flex-direction:row;
+	}
 
 	.SpeakerCardHighLight--img{
-		@include img-crop--parent($SpeakerCardHighLightedIMG);
-		flex-basis:35%;
+		position:relative;
 		img{
-			@include img-crop;
+			width:100%;
+		}
+		@media #{$larg} {
+			@include img-crop--parent(auto);
+			flex-basis:50%;
+			img{
+				@include img-crop;
+				width:auto;
+			}
+		}
+		@media #{$extra-larg} {
+			flex-basis:30%;
 		}
 	}
 
 	.SpeakerCardHighLight--details{
-		display:flex;
+		display:none;
 		flex-direction:column;
 		flex-basis:65%;
-		padding:0 1.5em;
+		padding-left:1.5em;
+		@media #{$larg} {
+			display:flex;
+		}
 	}
 
 	.SpeakerCardHighLight--name-and-social{
 		display:flex;
+		flex-direction:column;
 		justify-content: space-between;
 
+		@media #{$extra-larg} {
+			flex-direction:row;
+		}
+
 		.SpeakerCardHighLight--social{
-			margin:auto 0;
+			margin-top:1em;
+			@media #{$extra-larg} {
+				margin:auto 0;
+			}
+
 			img{
-				margin-left:2em;
+				margin-right:1em;
+				padding: .5em;
+    			border-radius: 100%;
+    			border: 1px solid $grey4;
+    			@media #{$extra-larg} {
+					margin-left:1em;
+					margin-right:0;
+				}
 			}
 		}
 	}
@@ -141,6 +199,7 @@
 		position:relative;
 		color:$grey2;
 		padding-top:1em;
+		margin-top:1em;
 		&:before{
 			content:'';
 			width:80px;
@@ -148,6 +207,25 @@
 			position:absolute;
 			top:0;
 			border-top:2px solid $grey3;
+		}
+	}
+
+	.SpeakerCardHighLight--shortIno{
+		color:$white;
+		@media #{$larg} {
+			display:none;
+		}
+
+		.SpeakerCardHighLight--categ-date-place{
+			position:absolute;
+			top:30px;
+			left:30px;
+		}
+
+		.SpeakerCardHighLight--shortName{
+			position:absolute;
+			bottom:30px;
+			left:30px;
 		}
 	}
 }

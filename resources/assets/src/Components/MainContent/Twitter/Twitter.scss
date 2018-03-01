@@ -1,0 +1,53 @@
+.TwitterCard{
+	padding:1em;
+	position:relative;
+	background:$white;
+	border:1px solid $grey4;
+	flex-basis:100%;
+	margin-bottom:1em;
+	z-index:1;
+	
+	@media #{$medium-40} {
+    	flex-basis:48%;
+    }
+
+	@media #{$larg-60} {
+    	flex-basis:32%;
+    }
+	
+	span{
+		color:$grey2;
+		margin-top: .25em;
+	}
+	&:after{
+		content:url("/storage/Gfx/Twitter/twitter.svg");
+		position:absolute;
+		right: 15px;
+    	top: 15px;
+
+	}
+	&:before{
+		content:url("/storage/Gfx/Twitter/twitter-retweet.svg");
+		position:absolute;
+		right: 45px;
+    	top: 15px;
+	}
+}
+
+.TwitterCard-IMG{
+	margin-right:.5em;
+}
+
+.TwitterCard--wrp{
+	display:flex;
+}
+
+.Twitter--wrp{
+	display:flex;
+	justify-content:space-between;
+	flex-wrap:wrap;
+}
+
+.TwitterCard--Content{
+	margin:1em 0;
+}

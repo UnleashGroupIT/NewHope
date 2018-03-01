@@ -3,6 +3,10 @@
     to {transform: translateY(0);}
 }
 
+.App-header--placeholder{
+	height:61px;
+}
+
 .App-header{
 	background:$white;
 	&.sticky{

@@ -26,14 +26,18 @@
 	background:repeating-linear-gradient(-45deg, $grey4, $grey4 3px, transparent 3px, transparent 6px);
 	min-height:1em;
 	@media #{$larg-60} {
-		height:100%;
+		height:80%;
 	}
 }
 
 .Intro--wrp{
 	display: flex;
+	flex-direction:column;
     position: relative;
-    margin-bottom:5em;
+    @media #{$larg-60} {
+    	flex-direction:row;
+    	margin-bottom:5em;
+    }
 
     .IntroText{
     	flex-basis:50%;
@@ -43,4 +47,46 @@
     		margin-bottom:.75em;
     	}
     }
+}
+
+.Talks-and-Twitter--wrp{
+	background:url("/storage/Gfx/Twitter/twitter-bgD.jpg");
+	@include bg-cover-pos;
+	padding:3em 0;
+	position:relative;
+	&:after{
+		content: '';
+	    width: 100%;
+	    height: 150px;
+	    background: url(/storage/Gfx/bg-line.png);
+	    background-size: cover;
+	    background-position: center;
+	    position: absolute;
+	    left: 0;
+	    bottom: 0;
+	}
+}
+
+.Headline-wBG{
+	flex-basis:100%;
+
+	h2{
+		color:$white;
+	}
+}
+
+.Session--more{
+	flex-basis:100%;
+	text-align:center;
+}
+
+.drag{
+	display:flex;
+	&::-webkit-scrollbar { 
+		display: none; 
+	}
+	.Layout-width{
+		margin:2em auto;
+		display:flex;
+	}
 }

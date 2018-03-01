@@ -5,6 +5,17 @@ const SpeakerCardHighLight = props => (
 	<div className="SpeakerCardHighLight">
 		<div className="SpeakerCardHighLight--img">
      		<img src="/storage/Gfx/Events/Speakers/elon.png" alt="UNLEASH Speaker"/>
+     		<div className="SpeakerCardHighLight--shortIno">
+     			{/*<div className="SpeakerCardHighLight--categ-date-place">
+					<div className="categ"><span>Future of Work</span></div>
+					<div className="date"><span>Day 01 &middot; 14:30</span></div>
+					<div className="place"><span>Main Stage</span></div>
+				</div>*/}
+				<div className="SpeakerCardHighLight--shortName">
+					<h1>Elon<br />Musk</h1>
+					<span>Space X  &middot; CEO</span>
+				</div>
+     		</div>
     	</div>
 		<div className="SpeakerCardHighLight--details">
 			<div className="SpeakerCardHighLight--wrp">
