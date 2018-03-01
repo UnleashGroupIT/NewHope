@@ -39,7 +39,7 @@ class LoginModal extends Component {
 				<input type="password" placeholder="Password" />
 				<input type="password" placeholder="Confirm Password" />
 				<div className="ModalContent--submit-wrp">
-					<a href="#">Forgot password?</a>
+					<a href="#">Term &amp; Conditions</a>
 					<button type="submit" className="btn-b">Sign Up With Email</button>
 				</div>
 			</form>
@@ -49,11 +49,11 @@ class LoginModal extends Component {
 			<section className={this.state.hasAccount ? "ModalContent" : "ModalContent signup"}>
 				<div className="ModalContent--headline">
 					<h2>{this.state.hasAccount ? "Login" : "Sign Up"}</h2>
-					<span className="ModalContent--close">&times;</span>
+					<span onClick={this.props.handleCloseModal} className="ModalContent--close">&times;</span>
 				</div>
 				<div className="ModalContent--decider">
 					<h6>{this.state.hasAccount ? "No account?" : "Already have an account?"}</h6>
-					<h6 className="ModalContent--changer">{this.state.hasAccount ? "Sign up" : "Log in"}</h6>
+					<h6 onClick={this.toggleState} className="ModalContent--changer">{this.state.hasAccount ? "Sign up" : "Log in"}</h6>
 				</div>
 				<div className="ModalContent--socialLogin">
 					<div className="socialLogin--linkedin"><a href="login/linkedin">Log in with linkedin</a></div>
@@ -65,12 +65,7 @@ class LoginModal extends Component {
 				</div>
 				<div className="ModalContent--from">
 					{this.state.hasAccount ? LoginForm : SignupForm}
-				</div>
-
-
-
-				<button onClick={this.toggleState}>change State</button>
-				<button onClick={this.props.handleCloseModal}>close</button>
+				</div>	
 			</section>
 		)
 	}

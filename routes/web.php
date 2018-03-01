@@ -60,7 +60,7 @@ Route::get('login/linkedin/callback', 'Auth\LoginController@urlCallback');
 
 //Admin Routes =================================================================
 Route::get('/adminsite', 'AdminProfileController@index');
-Route::get('/adminsite/home', 'AdminProfileController@index')->name('home');
+Route::get('/adminsite/home', 'AdminProfileController@index');
 
 Route::get('/adminsite/oauth', 'AdminProfileController@oauth');
 
