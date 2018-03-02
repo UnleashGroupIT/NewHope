@@ -24,7 +24,7 @@ class Grids extends Moloquent
 
     public function sponsors()
     {
-        return $this->belongsToMany(Sponsors::class);
+        return $this->embedsMany(Sponsors::class);
     } 
 
     public function unleashevents()

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Grids;
+use App\Sponsors;
 
 class SponsorGridController extends Controller
 {
@@ -13,11 +14,33 @@ class SponsorGridController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($gridId)
+    public function index(Request $request, $gridId)
     {
-        $grid = Grids::find($gridId);
 
-        return $sponsors = $grid->sponsors()->get();
+
+    $validatedData = $request->validate([
+        'limit' => 'numeric',
+        'category' => 'numeric'
+        ]);
+
+        $grid = Grids::where('_id',$gridId)->first();
+        $result = [];
+
+        $var = 0;
+        foreach ($grid->sponsors as $key => $value) {
+        	  if (($request->has('category') && $request->category == $value->category) || !$request->has('category')){
+        	  
+        	  		     array_push($result, $value);
+        	
+			        	$SponsorData = Sponsors::find($result[$var]->_id);
+			        	$result[$var]->data = $SponsorData;
+			        	$var++;
+
+
+            }
+		}
+        return $result;
+
     }
 
 

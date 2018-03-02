@@ -97,8 +97,13 @@ class FullSeeder extends Seeder
                 if($type == 2){
                     
                          for ($i=0; $i < mt_rand(3,5); $i++) { 
+                           $content =  $this->fillWithRandom('App\Sponsors');
+                      
+                           $content['category'] = mt_rand(1,8);
+                           $content['alacarte'] = mt_rand(0,1);
+                           $content['alacarte_text'] = '';
 
-                            $grids->sponsors()->save(App\Sponsors::take(1)->skip(mt_rand(0,App\Sponsors::count()-1))->first());
+                               $grids->sponsors()->create($content);
                         }
 
                 }

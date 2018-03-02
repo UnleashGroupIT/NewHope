@@ -12,7 +12,7 @@ class Sponsors extends Moloquent
   
    public static function doNotEmbedThis(){
 
-        return [];
+        return ['website', 'logo_url', 'description', 'facebook', 'linkedin', 'twitter', 'solutions', 'contacts', 'tags'];
 
     }
     	
