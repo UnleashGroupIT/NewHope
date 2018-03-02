@@ -3,7 +3,7 @@
     top: 0;
     left: 0;
     right: 0;
-    overflow-y:scroll;
+    overflow-y:auto;
     bottom: 0;
     z-index:110;
     background-color: rgba($black,0.75);
@@ -11,12 +11,15 @@
 
 
 .Modal {
-    width:470px;
-    min-height:100%;
+    width:100%;
+    height: 100%;
+    position:fixed;
+    overflow-y:auto;
     max-width:100%;
     background-color: $grey5;
     outline:0;
-    @media #{$medium} {
+    @media #{$medium-40} {
+    	width:470px;
     	position: absolute;
 	    top: 50%;
 	    left: 50%;
@@ -31,9 +34,9 @@
   .ModalContent{
   	padding:3em 1.5em;
   	min-height:100%;
-  	@media #{$medium} {
-	   	height:auto;
-    }
+  	@media #{$medium-40} {
+  		min-height:0;
+  	}
   	&.signup{
   		background-color:$egg;
   	}

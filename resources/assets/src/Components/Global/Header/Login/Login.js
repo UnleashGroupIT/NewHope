@@ -8,22 +8,32 @@ Modal.setAppElement('#root');
 class Login extends Component {
 	
 	constructor () {
-    super();
-    this.state = {
-      showModal: false
-    };
-    
-    this.handleOpenModal = this.handleOpenModal.bind(this);
-    this.handleCloseModal = this.handleCloseModal.bind(this);
-  }
+	    super();
+	    this.state = {
+	      showModal: false
+	    };
+	    
+	    this.handleOpenModal = this.handleOpenModal.bind(this);
+	    this.handleCloseModal = this.handleCloseModal.bind(this);
+  	}
+
+	componentDidMount() {
+		document.body.classList.toggle('fxs', this.state.showModal)
+	}
+	componentDidUpdate(){
+		document.body.classList.toggle('fxs', this.state.showModal)	
+	}
+  	componentWillUnmount() {
+    	document.body.classList.remove('fxs')
+  	}
   
-  handleOpenModal () {
-    this.setState({ showModal: true });
-  }
-  
-  handleCloseModal () {
-    this.setState({ showModal: false });
-  }
+	handleOpenModal () {
+	    this.setState({ showModal: true });
+	}
+	  
+	handleCloseModal () {
+	    this.setState({ showModal: false });
+	}
 
 
 	render(){
