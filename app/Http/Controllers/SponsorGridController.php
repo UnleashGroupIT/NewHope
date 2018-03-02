@@ -19,7 +19,6 @@ class SponsorGridController extends Controller
 
 
     $validatedData = $request->validate([
-        'limit' => 'numeric',
         'category' => 'numeric'
         ]);
 
@@ -45,6 +44,6 @@ class SponsorGridController extends Controller
 
 
     public function list(){
-        return Grids::where('sponsors_ids', 'exists', true)->with('unleashevents')->get();
+        return Grids::where('sponsors', 'exists', true)->with('unleashevents')->get();
     }
 }
