@@ -25,10 +25,19 @@ $event-teal : #2DBABA;
 
 $purple : #686BF7;
 
+$facebook : #4468B0;
+$twitter : #2AA3EF;
+$linkedin: #1178B3;
+$youtube: #FC0D1C;
+
 
 //FONT
 
 $anton :'Anton';
+
+//TRANSITION
+
+$transition-fast: .3s;
 
 
 //MEDIA QUERIES
@@ -82,6 +91,18 @@ $extra-larg: "screen and (min-width : 75em)";
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     max-width: none;
+}
+
+@mixin after-BGline{
+    content: '';
+    width: 100%;
+    height: 150px;
+    background: url(/storage/Gfx/bg-line.png);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    left: 0;
+    bottom: 0;
 }
 
 

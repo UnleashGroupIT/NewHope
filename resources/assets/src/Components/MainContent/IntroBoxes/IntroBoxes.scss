@@ -27,6 +27,13 @@
 			margin-top:auto;
 			button{
 				margin:0 .5em .5em 0;
+				&:hover{
+					background:$white;
+					transition:all $transition-fast;
+					span{
+						color:$dark-blue;
+					}
+				}
 			}
 		}
 	}

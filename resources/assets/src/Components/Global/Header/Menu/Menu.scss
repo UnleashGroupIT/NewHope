@@ -118,13 +118,13 @@
 		position:absolute;
 		top:15px;
 		right:20px;
-		transition: transform .5s;
+		transition: transform .3s;
 	}
 
 	&.active{
 		&:after{
 		  transform: rotate(180deg);
-		  transition: transform .5s;
+		  transition: transform .3s;
 		}
 		.App-header-dropdownBox--outer{
 			max-height:none;
@@ -135,23 +135,74 @@
 		&:after{
 			content:url("/storage/Gfx/Menu/arrow-purple.svg");
 		}
+		&:hover{ 
+			> p{
+				color:$purple;
+			}
+		}
+		.App-header--subli a:hover {
+			color:$purple;
+		}
+		.all a{
+			color:$purple;
+			&:after{
+				content:url("/storage/Gfx/Global/seeAll-purple.svg")
+			}
+		}
 	}
 	&.talks{
 		&:after{
 			content:url("/storage/Gfx/Menu/arrow-red.svg");
+		}
+		&:hover > p{
+			color:$red;
+		}
+		.App-header--subli a:hover {
+			color:$red;
+		}
+		.all a{
+			color:$red;
+			&:after{
+				content:url("/storage/Gfx/Global/seeAll-red.svg")
+			}
 		}
 	}
 	&.events{
 		&:after{
 			content:url("/storage/Gfx/Menu/arrow-blue.svg");
 		}
+		&:hover > p{
+			color:$light-blue;
+		}
+		.App-header--subli a:hover {
+			color:$light-blue;
+		}
+		.all a{
+			color:$light-blue;
+			&:after{
+				content:url("/storage/Gfx/Global/seeAll-lightblue.svg")
+			}
+		}
 	}
 	&.startup{
 		&:after{
 			content:url("/storage/Gfx/Menu/arrow-orange.svg");
 		}
-		.all{
+		&:hover > p{
+			color:$orange;
+		}
+		.App-header--subli a:hover {
+			color:$orange;
+		}
+		.Startup-card--category{
+			color:$orange;
+		}
+		.all a{
 			margin-top:1em;
+			color:$orange;
+			&:after{
+				content:url("/storage/Gfx/Global/seeAll-orange.svg")
+			}
 		}
 		.App-header--submenu.col3 .App-header--submenu---wrp{
 			flex-basis:100%;
@@ -167,6 +218,21 @@
 		&:after{
 			content:url("/storage/Gfx/Menu/arrow-teal.svg");
 		}
+		&:hover > p{
+			color:$event-teal;
+		}
+		.App-header--subli a:hover {
+			color:$event-teal;
+		}
+		.News-card--author-category{
+			color:$event-teal;
+		}
+		.all a{
+			color:$event-teal;
+			&:after{
+				content:url("/storage/Gfx/Global/seeAll-lightblue.svg")
+			}
+		}
 	}
 
 	@media #{$larg} {
@@ -174,14 +240,41 @@
 		position: static;
 		&:hover{
 			> p{
-				color:$purple;
-				border-bottom:2px solid $purple;
+				border-bottom:2px solid inherit;
 			}
 			.App-header-dropdownBox--outer{
 				max-height:600px;
 				z-index:100;
 			}
 		}
+
+		&.news{
+			&:hover > p{
+				border-bottom:2px solid $purple;
+			}
+		}
+		&.talks{
+			&:hover > p{
+				border-bottom:2px solid $red;
+			}
+		}
+		&.events{
+			&:hover > p{
+				border-bottom:2px solid $light-blue;
+			}
+		}
+		&.startup{
+			&:hover > p{
+				border-bottom:2px solid $orange;
+			}
+		}
+		&.about{
+			&:hover > p{
+				border-bottom:2px solid $event-teal;
+			}
+		}
+
+
 		&:after{
 			display:none;
 		}
@@ -252,11 +345,17 @@
 	}
 	.all{
 		a{
-			color:$purple;
 			font-weight:bold;
 			&::after{
-				content: " ->";
 				font-size:20px;
+				margin-left:.5em;
+				transition: all .3s;
+			}
+			&:hover{
+				&::after{
+					margin-left:.75em;
+					transition: all .3s;
+				}
 			}
 		}
 	}

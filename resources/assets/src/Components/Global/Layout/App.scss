@@ -47,6 +47,10 @@
 	position:relative;
 	text-transform:uppercase;
 	font-weight:bold;
+	cursor:pointer;
+	&:hover{
+		transition:all $transition-fast;
+	}
 	@media #{$larg} {
     	min-width:110px;
     }
@@ -62,12 +66,19 @@
 	@extend %btn;
 	color:$black;
 	background:$white;
+	&:hover{
+		color:$white;
+		background:$light-blue;
+	}
 }
 
 .btn-b{
 	@extend %btn;
 	background:$black;
 	color:$white;
+	&:hover{
+		background:$dark-blue
+	}
 }
 
 .btn-bw{
@@ -94,5 +105,17 @@
 	&.passive{
 		border:none;
 		color:$grey3;
+		&:hover{
+			color:$black;
+			background:none;
+		}
+	}
+
+	&:hover{
+		background:$black;
+		color:$white;
+		&:before,&:after{
+			display:none;
+		}
 	}
 }

@@ -1,5 +1,6 @@
 .SpeakerCard{
 	flex-basis:48%;
+	cursor:pointer;
 	position:relative;
 	margin:.75em 0;
 	@media #{$medium-40} {
@@ -44,6 +45,15 @@
 		position:relative;
 		display:flex;
 		flex-direction:column;
+		&:hover{
+			transition:all $transition-fast;
+			background:$black;
+			color:$white;
+			&:before,&:after{
+				display:none;
+			}
+
+		}
 
 		@media #{$extra-larg} {
 			padding:3em 1.5em 1.5em 1.5em;
@@ -141,11 +151,22 @@
 			img{
 				margin-right:1em;
 				padding: .5em;
+    			cursor:pointer;
     			border-radius: 100%;
     			border: 1px solid $grey4;
     			@media #{$extra-larg} {
 					margin-left:1em;
 					margin-right:0;
+				}
+
+				&.Social--youtube:hover{
+					border-color:$youtube;
+				}
+				&.Social--linkedin:hover{
+					border-color:$linkedin;
+				}
+				&.Social--twitter:hover{
+					border-color:$twitter;
 				}
 			}
 		}

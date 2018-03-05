@@ -11,7 +11,7 @@ const SlideThree = props => (
 	    		<div className="MainContent--title">
 	        		<span>Culture</span>
 	        		<h1>How Can Your Company Work to Eliminate the Gender Pension Gap TO MOVE FORWARD</h1>
-	        		<button className="btn-w">Read now</button>
+	        		<button className="btn-fw">Read now</button>
 	    		</div>
 			    <div className="MainContent--highlight">
 			        <HighLightOne slideOne={props.slideOne}/>

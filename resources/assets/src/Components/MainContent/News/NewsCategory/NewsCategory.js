@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import NewsCard from '../NewsCard/NewsCard'
 import NewsCardHighLight from '../NewsCard/NewsCardHighLight/NewsCardHighLight'
 
@@ -9,7 +10,7 @@ const NewsCategory = props => (
                 <h2>{props.name}</h2>    
             </div>
             <div className="seeAll">
-                <h5>See all</h5>
+                <Link to="news">See all</Link>
             </div> 
         </div>        
         <div className="NewsCard--wrp">

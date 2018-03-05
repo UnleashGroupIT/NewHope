@@ -72,6 +72,7 @@
 		z-index:80;
 		margin-bottom:2em;
 		max-width:400px;
+		cursor:default;
 		@media #{$larg} {
     		flex-basis:55%;
     		margin-bottom:0;
@@ -96,7 +97,7 @@
 		transform: translate(-50%, 0);
 		@media #{$larg} {
 			flex-direction:column;
-			flex-basis:32%;
+			flex-basis:33%;
 			margin-top:0;
 			position:static;
 			transform:none;
@@ -105,9 +106,13 @@
 			background:rgba($black,0.6);
 			width:15px;
 			height:15px;
+			border:2px solid transparent;
 			border-radius:25px;
 			cursor:pointer;
 			margin:0 .25em;
+			&:hover{
+				border-color:$white;
+			}
 			.Highlight--details{
 				display:none;
 			}

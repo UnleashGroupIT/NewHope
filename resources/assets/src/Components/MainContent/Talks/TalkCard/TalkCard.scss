@@ -5,6 +5,14 @@
 	border: 2px solid $grey4;
 	flex-basis: 100%;
     margin: 1em 0;
+    &:hover{
+    	cursor:pointer;
+    	background:rgba($red,0.02);
+    	h5{
+    		color:$red;
+    	}
+    	transition: all $transition-fast;
+    }
     @media #{$medium} {
     	flex-basis:49%;
     }
@@ -40,7 +48,8 @@
 .Talk-card--category{
 	margin-top: auto;
     margin-bottom: .5em;
-	a{color:$purple}
+    color:$red;
+	a{color:$red}
 	@media #{$extra-larg} {
     	margin-top: 1em;
     }
@@ -61,25 +70,6 @@
 	}
 	.Talk-card--category{
 		margin-top:1em;
-	}
-}
-
-.App-header--subli{
-	.News-card{
-		flex-direction:column-reverse;
-		margin:0;
-	}
-	.News-card--details{
-		width:100%;
-		padding: .5em;
-		.News-card--author-category{
-			margin-top:1em;
-		}
-	}
-	.News-card--preview{
-		display:block;
-		img{
-			width:100%;
-		}
+		color:$red;
 	}
 }

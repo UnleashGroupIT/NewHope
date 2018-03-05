@@ -1,5 +1,11 @@
 .Talks--wrp{
 	margin:3em 0;
+	.seeAll a{
+		color:$red;
+		&:after{
+			content:url("/storage/Gfx/Global/seeAll-red.svg");
+		}
+	}
 }
 
 .TalkCard--wrp{

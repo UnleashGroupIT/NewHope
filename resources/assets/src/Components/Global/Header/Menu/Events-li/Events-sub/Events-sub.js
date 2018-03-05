@@ -9,6 +9,7 @@ const EventsSub = () => (
 				<h3>London</h3>
 			</div>
 			<EventCard src="/storage/Gfx/card-london.png"
+				   cls="london"
 				   alt="UNLEASH London"
 				   name="UNLEASH Conference &amp; Expo London"
 				   slogen="Lets warm up for 2019 in London!"
@@ -20,6 +21,7 @@ const EventsSub = () => (
 				<h3>Las Vegas</h3>
 			</div>
 			<EventCard src="/storage/Gfx/card-america.png"
+				   cls="america"
 				   alt="UNLEASH America"
 				   name="UNLEASH Conference &amp; Expo America"
 				   slogen="Future of Work is going to Vegas, baby!"
@@ -31,6 +33,7 @@ const EventsSub = () => (
 				<h3>Amsterdam</h3>
 			</div>
 			<EventCard src="/storage/Gfx/card-amsterdam.png"
+				   cls="amsterdam"
 				   alt="UNLEASH Amsterdam"
 				   name="UNLEASH Conference &amp; Expo Amsterdam"
 				   slogen="We’re back in the ports of Amsterdam!"

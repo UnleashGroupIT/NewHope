@@ -11,7 +11,7 @@ const SlideOne = props => (
 	    		<div className="MainContent--title">
 	        		<span>Alex Cooper &middot; Future of Work</span>
 	        		<h1>The robots are here: is this the end of decision making by humans?</h1>
-	        		<button className="btn-w">Read now</button>
+	        		<button className="btn-fw">Read now</button>
 	    		</div>
 			    <div className="MainContent--highlight">
 			        <HighLightOne active slideOne={props.slideOne}/>

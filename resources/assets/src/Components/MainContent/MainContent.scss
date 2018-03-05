@@ -16,9 +16,15 @@
 	display:flex;
 	padding-left:1em;
 	background:$white;
-	h5{
+	a{
 		margin:auto;
-		color:$red;
+		font-weight:bold;
+		&:after{
+			margin-left:.5em;
+		}
+		&:hover{
+			
+		}
 	}
 }
 

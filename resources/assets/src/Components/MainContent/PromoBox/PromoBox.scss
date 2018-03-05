@@ -7,6 +7,7 @@
 .PromoBox{
 	flex-basis:100%;
 	margin-top:1em;
+	cursor:pointer;
 	color:$white;
 	@include img-crop--parent(230px);
 	@media #{$larg} {
@@ -15,6 +16,10 @@
 
     img{
     	@include img-crop;
+    }
+
+    &:hover{
+    	color:$light-blue;
     }
 }
 

@@ -9,12 +9,25 @@
 		background: rgba($white,0.12);
 		padding:.5em;
 		&:hover{
-			background: rgba($white,0.25);
 			cursor:pointer;
+			transition:all $transition-fast;
 		}
 		@media #{$larg} {
 			margin-right:1em;
 		}
+		&.Social--facebook:hover{
+			background:$facebook;
+		}
+		&.Social--twitter:hover{
+			background:$twitter;
+		}
+		&.Social--linkedin:hover{
+			background:$linkedin;
+		}
+		&.Social--youtube:hover{
+			background:$youtube;
+		}
+
 	}
 }
 
@@ -24,8 +37,6 @@
 	margin-bottom:1em;	
 	img{
 		border:1px solid $grey3;
-		&:hover{
-			background:rgba($black,0.03);
-		}
+		background:rgba($black,0.15);
 	}
 }

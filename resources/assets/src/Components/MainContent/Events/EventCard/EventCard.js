@@ -1,7 +1,7 @@
 import React from 'react'
 
 const EventCard = props => (
-  <div className="Event-card">
+  <div className={"Event-card " + props.cls}>
   	<div className="Event-card--img">
       <img src={props.src} alt={props.alt} />
   	</div>

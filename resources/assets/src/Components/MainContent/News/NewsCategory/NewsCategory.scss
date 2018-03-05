@@ -12,11 +12,10 @@
 
 .News--wrp{
 	margin:3em 0;
-	.seeAll h5{
+	.seeAll a{
 		color:$purple;
 		&:after{
-			content:url("/storage/Gfx/News/arrow-forwardPurple.svg");
-			margin-left:5px;
+			content:url("/storage/Gfx/Global/seeAll-purple.svg");
 		}
 	}
 }

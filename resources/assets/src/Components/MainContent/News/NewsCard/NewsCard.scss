@@ -1,11 +1,19 @@
 .News-card{
 	display:flex;
 	justify-content:space-between;
-	border: 2px solid $grey4;
+	border: 1px solid $grey4;
 	background:$white;
 	flex-basis: 100%;
 	z-index:2;
     margin-bottom: 1em;
+    &:hover{
+    	background:rgba($purple,0.02);
+    	cursor:pointer;
+    	h5{
+    		color:$purple;
+    	}
+    	transition: all $transition-fast;
+    }
     @media #{$larg} {
     	flex-basis:48%;
     }
@@ -39,6 +47,7 @@
 .News-card--author-category{
 	margin-top: auto;
     margin-bottom: .5em;
+    color:$purple;
 	a{color:$purple}
 	@media #{$extra-larg} {
     	margin-top: 1em;
@@ -59,9 +68,6 @@
 	.News-card--details{
 		width:100%;
 		padding: .5em;
-		.News-card--author-category{
-			margin-top:1em;
-		}
 	}
 	.News-card--preview{
 		width:100%;

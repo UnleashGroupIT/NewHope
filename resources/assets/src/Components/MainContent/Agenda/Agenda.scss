@@ -25,7 +25,8 @@
 	}
 
 	.AgendaSessionCard--category{
-		border:1px solid $grey1;
+		background:$green;
+		color:$white;
 		padding:.25em .5em;
 	}
 
@@ -56,6 +57,10 @@
 	border:1px solid $grey4;
 	margin-bottom:2em;
 	margin-right:2em;
+	cursor:pointer;
+	&:hover{
+		background:rgba($green,0.04)
+	}
 	@media #{$extra-larg} {
     	flex-basis:48%;
     	margin-right:0;

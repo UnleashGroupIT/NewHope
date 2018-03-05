@@ -22,9 +22,9 @@ const SpeakerCardHighLight = props => (
 				<div className="SpeakerCardHighLight--name-and-social">
 					<h1>Elon Musk</h1>
 					<div className="SpeakerCardHighLight--social">
-						<img src="/storage/Gfx/Events/Speakers/speaker-youtube.svg" alt="Youtube"/>
-						<img src="/storage/Gfx/Events/Speakers/speaker-linkedin.svg" alt="Linkedin"/>
-						<img src="/storage/Gfx/Events/Speakers/speaker-twitter.svg" alt="Twitter"/>
+						<img className="Social--youtube" src="/storage/Gfx/Events/Speakers/speaker-youtube.svg" alt="Youtube"/>
+						<img className="Social--linkedin" src="/storage/Gfx/Events/Speakers/speaker-linkedin.svg" alt="Linkedin"/>
+						<img className="Social--twitter" src="/storage/Gfx/Events/Speakers/speaker-twitter.svg" alt="Twitter"/>
 					</div>
 				</div>
 				<div className="SpeakerCardHighLight--categ-date-place">

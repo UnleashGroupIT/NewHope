@@ -2,9 +2,54 @@
 	width:285px;
 	margin:0 5%;
 	position:relative;
+	border:1px solid transparent;
 	z-index:1;
 	display:flex;
 	flex-direction:column;
+
+	&:hover{
+		cursor:pointer;
+	}
+
+	&.london {
+		&:hover{
+			.Event-card--place-and-date{
+				border-color:$green;
+			}
+			h4{
+				color:$green;
+			}
+		}
+		.Event-card--name{
+			background:$green;
+		}
+	}
+	&.america{
+		&:hover{
+			.Event-card--place-and-date{
+				border-color:$red;
+			}
+			h4{
+				color:$red;
+			}
+		}
+		.Event-card--name{
+			background:$red;
+		}
+	} 
+	&.amsterdam{
+		&:hover{
+			.Event-card--place-and-date{
+				border-color:$light-blue;
+			}
+			h4{
+				color:$light-blue;
+			}
+		}
+		.Event-card--name{
+			background:$light-blue;
+		}
+	} 
 
 	@media #{$extra-larg} {
     	flex-basis:32%;
@@ -27,7 +72,6 @@
 	color:$white;
 	padding:.25em 0;
 	padding-left:1.5em;
-	background:$green;
 }
 
 .Event-card--slogen{
@@ -35,7 +79,7 @@
 }
 
 .Event-card--place-and-date{
-	border-top:2px solid $grey5;
+	border-top:1px solid $grey5;
 	padding-top:1em;
 
 	.Event-card-date{

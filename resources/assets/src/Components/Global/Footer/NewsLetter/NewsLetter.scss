@@ -6,8 +6,8 @@
 
 	.newsLetter--input{
 		background: rgba($white,0.12);
+		border:1px solid transparent;
 		width:95%;
-    	border: none;
     	padding: 1em;
     	padding-right: 50px;
     	font-size:14px;
@@ -16,7 +16,7 @@
     		color:$grey3;
     	}
     	&:focus{
-    		border:1px solid rgba($white,0.25);
+    		border:1px solid $event-teal;
     	}
     	@media #{$larg} {
 			width:265px;
@@ -45,4 +45,7 @@
 
 .App-header--newsletter .newsLetter{
 	border:1px solid $grey3;
+	.newsLetter--input{
+		color:$black;
+	}
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import TalkCard from '../TalkCard/TalkCard'
 
 const TalksCategory = props => (
@@ -8,7 +9,7 @@ const TalksCategory = props => (
 	        	<h2>{props.name}</h2>
 	        </div>
 	        <div className="seeAll">
-	        	<h5>See all -></h5>
+	        	<Link to="#">See all</Link>
 	        </div>
 	    </div>        
         <div className="TalkCard--wrp">
