@@ -6,7 +6,15 @@ const MobileApp = () => (
 			<img src="/storage/Gfx/MobileApp/U.svg" alt="UNLEASH" />
 			<h3>Wanna get more?</h3>
 			<p>Get personalized content, exclusive features, notifications and more.</p>
-			<button className="btn-bw">Download</button>
+			<button className="btnspn-b">
+			  <span className="border-top">
+			    <span className="transparent"></span>
+			  </span>
+				Download
+			  <span className="border-bottom">
+			    <span className="transparent"></span>
+			  </span>
+			</button>
 		</div>
 	</section>
 )

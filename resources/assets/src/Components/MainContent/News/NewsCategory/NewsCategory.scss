@@ -11,7 +11,7 @@
 }
 
 .News--wrp{
-	margin:3em 0;
+	margin:2.5em 0;
 	.seeAll a{
 		color:$purple;
 		&:after{
@@ -50,11 +50,6 @@
 	.seeAll{
 		margin-top:1em;
 		background:none;
-		button{
-			&:before,&:after{
-				background:$grey5;
-			}
-		}
 	}
 	&:after{
 		content: '';

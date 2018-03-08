@@ -1,6 +1,6 @@
 .Event-card{
-	width:285px;
-	margin:0 5%;
+	width:305px;
+	margin-right:1.5em;
 	position:relative;
 	border:1px solid transparent;
 	z-index:1;
@@ -13,9 +13,6 @@
 
 	&.london {
 		&:hover{
-			.Event-card--place-and-date{
-				border-color:$green;
-			}
 			h4{
 				color:$green;
 			}
@@ -26,9 +23,6 @@
 	}
 	&.america{
 		&:hover{
-			.Event-card--place-and-date{
-				border-color:$red;
-			}
 			h4{
 				color:$red;
 			}
@@ -39,9 +33,6 @@
 	} 
 	&.amsterdam{
 		&:hover{
-			.Event-card--place-and-date{
-				border-color:$light-blue;
-			}
 			h4{
 				color:$light-blue;
 			}

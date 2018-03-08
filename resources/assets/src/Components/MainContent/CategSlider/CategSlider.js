@@ -106,7 +106,7 @@ class CategSlider extends Component {
    		 	)
    		 }else{
    		 	section = (
-   		 		<section className="CategSlider">
+   		 		<section className={this.props.className ? "CategSlider " + this.props.className : "CategSlider"}>
 	   		 		<div className="Layout-width">
 						<Slider {...settings}>
 					        <div><Link to="#">All news</Link></div>

@@ -221,8 +221,15 @@
 		&:hover > p{
 			color:$event-teal;
 		}
-		.App-header--subli a:hover {
-			color:$event-teal;
+		.App-header--subli {
+			.News-card:hover{
+				h5{
+					color:$event-teal;
+				}
+			}
+			a:hover {
+				color:$event-teal;
+			}
 		}
 		.News-card--author-category{
 			color:$event-teal;
@@ -298,9 +305,10 @@
 }
 
 .App-header-dropdownBox--inner{
-	margin-top: 1.2em;
+	margin-top: .5em;
     //transition: all 1s;
     @media #{$larg} {
+    	margin-top: 1.2em;
     	padding:3em 0;
     	background: linear-gradient(180deg, $grey9 0%, $white 100%);
     }
@@ -375,6 +383,37 @@
     }
 }
 
+.App-header--submenu.col1{
+	flex-basis:100%;
+	.App-header--submenu---wrp{
+		flex-basis:100%;
+		&.competitions{
+			flex-basis:32%;
+			margin-top:1em;
+			@media #{$larg} {
+    			margin-top:2em;
+    		}
+			.App-header--subli{
+				flex-basis:32%;
+			}
+		}
+		.App-header--subtitle{
+			display:block;
+			background:none;
+			margin-top:1em;
+			@media #{$larg} {
+    			margin-top:0;
+    		}
+		}
+		.App-header--subli{
+			flex-basis:100%;
+		}
+	}
+	.all{
+		margin-top:1em;
+	}
+}
+
 .App-header--submenu.col3{
 	display:flex;
 	flex-direction:column;
@@ -389,6 +428,7 @@
 	.App-header--subli{
 		flex-basis:100%;
 	}
+
 }
 
 .App-header--subul{
@@ -409,8 +449,12 @@
 }
 
 .App-header--subtitle{
+	display:none;
 	background:repeating-linear-gradient(-45deg,$grey4,$grey4 3px,transparent 3px,transparent 6px);
 	margin-bottom: .75em;
+	@media #{$larg} {
+		display:block;
+	}
 }
 
 .App-header--social{

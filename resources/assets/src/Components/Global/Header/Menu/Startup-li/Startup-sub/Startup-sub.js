@@ -4,10 +4,10 @@ import StartupCard from '../../../../../MainContent/Startup/StartupCard/StartupC
 
 const StartupSub = () => (
 	<div className="App-header--sub col3">
-		<div className="App-header--submenu col3">	
+		<div className="App-header--submenu col1">	
 			<div className="App-header--submenu---wrp">
 				<div className="App-header--subtitle">
-					<h3>About</h3>
+					<h3>Why we do startups</h3>
 				</div>
 				<ul className="App-header--subul">
 					<li className="App-header--subli">
@@ -20,23 +20,14 @@ const StartupSub = () => (
 			</div>
 			<div className="App-header--submenu---wrp competitions">
 				<div className="App-header--subtitle">
-					<h3>Competitions</h3>
+					<h3>Startup zones</h3>
 				</div>
 				<ul className="App-header--subul">
-					<li className="App-header--subli"><Link to="#"><img src="/storage/Gfx/Menu/ams18.png" alt="Startup Amsterdam 2018" /></Link></li>
-					<li className="App-header--subli"><Link to="#"><img src="/storage/Gfx/Menu/lasv18.png" alt="Startup Las Vegas 2018" /></Link></li>
-					<li className="App-header--subli"><Link to="#"><img src="/storage/Gfx/Menu/lon18.png" alt="Startup London 2018" /></Link></li>
+					<li className="App-header--subli"><Link to="#"><img src="/storage/Gfx/Startup/startupzone-amsterdam.png" alt="Startup Amsterdam 2018" /></Link></li>
+					<li className="App-header--subli"><Link to="#"><img src="/storage/Gfx/Startup/startupzone-lasvegas.png" alt="Startup Las Vegas 2018" /></Link></li>
+					<li className="App-header--subli"><Link to="#"><img src="/storage/Gfx/Startup/startupzone-london.png" alt="Startup London 2018" /></Link></li>
 				</ul>
 			</div>
-		</div>
-		<div className="App-header--highlight">
-			<div className="App-header--subtitle">
-				<h3>Recent Members</h3>
-			</div>
-			<ul className="App-header--subul">
-				<li className="App-header--subli"><Link to="#"><StartupCard src="/storage/Gfx/Startup/robotVera.png" /></Link></li>
-				<li className="App-header--subli"><Link to="#"><StartupCard src="/storage/Gfx/Startup/robotVera.png" /></Link></li>
-			</ul>
 		</div>
 	</div>
 );

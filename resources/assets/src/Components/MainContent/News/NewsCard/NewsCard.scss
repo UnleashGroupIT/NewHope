@@ -37,7 +37,7 @@
 
 .News-card--preview{
 	display:flex;
-	@include img-crop--parent($NewsCardHeight);
+	@include img-crop--parent(auto);
 	width:80px;
 	img{
 		@include img-crop;
@@ -71,6 +71,7 @@
 	}
 	.News-card--preview{
 		width:100%;
+		height:180px;
 		img{
 			width:100%;
 		}
@@ -106,6 +107,37 @@
 		@include img-crop--parent($NewsCardHighLightedIMG);
 		img{
 			@include img-crop;
+		}
+	}
+}
+
+//SAVED 
+
+.Pinned{
+	&.Saved{
+		.News-card{
+			&:hover{
+	    		background:rgba($red,0.02);
+	    		h5{
+	    			color:$red;
+	    		}
+	    	}
+	    	.News-card--author-category{
+	    		color:$red;
+	    	}
+		}
+	}
+	&.Recommended{
+		.News-card{
+			&:hover{
+	    		background:rgba($light-blue,0.02);
+	    		h5{
+	    			color:$light-blue;
+	    		}
+	    	}
+	    	.News-card--author-category{
+	    		color:$light-blue;
+	    	}
 		}
 	}
 }

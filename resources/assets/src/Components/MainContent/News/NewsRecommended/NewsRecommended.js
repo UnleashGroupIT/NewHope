@@ -15,7 +15,15 @@ const NewsRecommended = props => (
             <NewsCard />
         </div>
         <div className="seeAll">
-            <button className="btn-bw">Refine Interests</button>
+            <button className="btnspn-b">
+              <span className="border-top">
+                <span className="transparent"></span>
+              </span>
+                Refine Interests
+              <span className="border-bottom">
+                <span className="transparent"></span>
+              </span>
+            </button>
         </div>
     </div>
 )

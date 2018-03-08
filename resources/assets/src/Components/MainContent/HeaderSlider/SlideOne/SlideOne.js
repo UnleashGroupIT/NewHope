@@ -11,7 +11,15 @@ const SlideOne = props => (
 	    		<div className="MainContent--title">
 	        		<span>Alex Cooper &middot; Future of Work</span>
 	        		<h1>The robots are here: is this the end of decision making by humans?</h1>
-	        		<button className="btn-fw">Read now</button>
+	        		<button className="btnspn-w">
+					  <span className="border-top">
+					    <span className="transparent"></span>
+					  </span>
+						Read now
+					  <span className="border-bottom">
+					    <span className="transparent"></span>
+					  </span>
+					</button>
 	    		</div>
 			    <div className="MainContent--highlight">
 			        <HighLightOne active slideOne={props.slideOne}/>

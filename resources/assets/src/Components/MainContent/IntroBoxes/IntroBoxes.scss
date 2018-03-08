@@ -26,14 +26,11 @@
 		.ContentBox--topics{
 			margin-top:auto;
 			button{
-				margin:0 .5em .5em 0;
-				&:hover{
-					background:$white;
-					transition:all $transition-fast;
-					span{
-						color:$dark-blue;
-					}
-				}
+				margin: 0 1em 1em 0;
+			    padding: .75em;
+			    font-family: 'Lato';
+			    text-transform: none;
+			    font-size: .75em;
 			}
 		}
 	}

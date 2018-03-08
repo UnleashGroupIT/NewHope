@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import NewsCard from './NewsCard/NewsCard'
 import NewsCategory from './NewsCategory/NewsCategory'
 import NewsSaved from './NewsSaved/NewsSaved'
 import NewsRecommended from './NewsRecommended/NewsRecommended'
@@ -8,14 +9,18 @@ import CategSlider from '../CategSlider/CategSlider'
 import NewsLetterMobileAppBanner from '../NewsLetter-MobileApp-Banner/NewsLetterMobileAppBanner'
 
 class News extends Component {
-  
-  render(){
-    return(
-        <section className="News">
+    render(){
+        return(
+            <section className="News">
             <HeaderSlider />
             <CategSlider direction={this.props.direction}/>
             <div className="Layout-width">
-                <NewsLatestPopular />
+                <NewsLatestPopular>
+                    <NewsCard />
+                    <NewsCard />
+                    <NewsCard />
+                    <NewsCard />
+                </NewsLatestPopular>
                 <div className="NewsCateg--wrp">
                     <NewsCategory name="HR Tech"/>
                     <NewsSaved />
@@ -31,8 +36,9 @@ class News extends Component {
                 <NewsCategory name="Smart Data" src="/storage/Gfx/News/news-defaultIMG4.jpg" />
             </div>
         </section>
-    )
-  }
+        )
+    }
 }
+
 
 export default News

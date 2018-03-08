@@ -5,6 +5,7 @@
 
 	.Login-btn{
 		background:none;
+		cursor:pointer;
 		border:none;
 		&:after{
 			content:url("/storage/Gfx/Global/Header/user-login.svg");

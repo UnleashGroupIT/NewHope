@@ -41,7 +41,7 @@ class App extends Component {
 
   render() {
     return(
-    	<Router>
+      <Router>
         <div className="App">
     		  <div className="App-container">
             <Header direction={this.state.directionUP}/>

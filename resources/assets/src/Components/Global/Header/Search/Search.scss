@@ -60,11 +60,12 @@
 			&:before{
 				content:url("/storage/Gfx/Search/searchG-M.svg");
 				position:absolute;
-				left: 9px;
+				left: 10px;
 			    top: 7px;
 			    z-index: 1;
 			    @media #{$larg} {
-					top:15px;
+					top:12px;
+					left:20px;
 					content:url("/storage/Gfx/Search/searchG.svg");
 				}
 			}
@@ -75,22 +76,17 @@
 				text-transform:uppercase;
 				height:2em;
 				position:relative;
+				padding: .25em 0;
 				border: 1px solid $grey4;
 				padding-left:2em;
 				&::placeholder{
     				color:$grey4;
     				font-family:'Anton';
     				font-size:1em;
-    				@media #{$larg} {
-						font-size:2em;
-					}
     			}
 				@media #{$larg} {
-					height:3.5em;
-					padding-left:4em;
-					&:placeholder-shown{
-    					padding-top:1em;
-    				}
+					font-size:2em;
+					height:auto;
 				}
 			}
 			p{margin:1.5em 0}
@@ -98,6 +94,11 @@
 			.Search--results{
 				margin:1.5em 0;
 				h5{font-family:'Anton'}
+				a{
+					&:hover{
+						color:$light-blue;
+					}
+				}
 				@media #{$larg} {
 					margin: 3em auto;
 					padding-left:4em;

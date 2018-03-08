@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import { Link } from 'react-router-dom'
 
 class Search extends Component {
 	
@@ -36,11 +37,11 @@ class Search extends Component {
 							<input className="Search--input" type="search" placeholder="SEARCH UNLEASH"/>
 							<div className="Search--results">
 								<h5>DISCOVER UNLEASH</h5>
-								<p>UNLEASH Conference & Expo London 2018</p>
-								<p>Fashion Companies Need to Rethink Their Lonesome HR Function</p>
-								<p>Lonesome HR</p>
-								<p>About UNLEASH</p>
-								<p>Stewart Brand: The Long Now</p>
+								<Link to="#"><p>UNLEASH Conference & Expo London 2018</p></Link>
+								<Link to="#"><p>Fashion Companies Need to Rethink Their Lonesome HR Function</p></Link>
+								<Link to="#"><p>Lonesome HR</p></Link>
+								<Link to="#"><p>About UNLEASH</p></Link>
+								<Link to="#"><p>Stewart Brand: The Long Now</p></Link>
 							</div>
 						</div>
 					</form>

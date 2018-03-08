@@ -5,10 +5,6 @@
 	h2{
 		color:$white;
 		margin-bottom:1em;
-		margin-left: 5%;
-		@media #{$extra-larg} {
-    		margin-left:0;
-    	}
 	}
 
 	&:after{
@@ -20,29 +16,4 @@
 		right:0;
 		top:0;
 	}
-}
-
-.EventCard--wrp{
-	display:-webkit-box;
-	justify-content:space-between;
-	overflow-x:scroll;
-	-webkit-overflow-scrolling: touch;
-	&::-webkit-scrollbar { 
-    	display: none; 
-	}
-
-	@media #{$extra-larg} {
-    	display:flex;
-    }
-}
-
-
-//X SCROLL
-
-.Events .Layout-width{
-	width:100%;
-	max-width:none;
-	@media #{$extra-larg} {
-    	max-width:960px;
-    }
 }

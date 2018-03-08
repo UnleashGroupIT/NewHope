@@ -38,6 +38,7 @@ $anton :'Anton';
 //TRANSITION
 
 $transition-fast: .3s;
+$transition-extrafast: .15s;
 
 
 //MEDIA QUERIES
@@ -109,7 +110,7 @@ $extra-larg: "screen and (min-width : 75em)";
 //SIZES
 
 $NewsCardHeight: 120px;
-$NewsCardHighLightedIMG : 390px;
+$NewsCardHighLightedIMG : 370px;
 
 $SpeakerCardHeight: 315px;
 $SpeakerCardHighLightedIMG : 430px;

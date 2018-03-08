@@ -56,7 +56,7 @@ class Menu extends Component {
 								        	</div>
 										</div>
 										<div className="booknow">
-											<button className="btn-w">Book now</button>
+											<button className="btn-fw">Book now</button>
 										</div>
 									</div>
 							</div>

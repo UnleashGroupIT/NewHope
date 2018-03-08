@@ -15,7 +15,15 @@ const NewsSaved = props => (
             <NewsCard />
         </div>
         <div className="seeAll">
-            <button className="btn-bw">See all</button>
+            <button className="btnspn-b">
+              <span className="border-top">
+                <span className="transparent"></span>
+              </span>
+                See all
+              <span className="border-bottom">
+                <span className="transparent"></span>
+              </span>
+            </button>
         </div>
     </div>
 )

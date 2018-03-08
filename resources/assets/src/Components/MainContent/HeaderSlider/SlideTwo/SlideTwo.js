@@ -11,7 +11,15 @@ const SlideTwo = props => (
 	    		<div className="MainContent--title">
 	        		<span>Barry Flack &middot; HR Technology</span>
 	        		<h1>Control, Flexibility and Balance : Where We’ll Work soon</h1>
-	        		<button className="btn-fw">Read now</button>
+	        		<button className="btnspn-w">
+					  <span className="border-top">
+					    <span className="transparent"></span>
+					  </span>
+						Read now
+					  <span className="border-bottom">
+					    <span className="transparent"></span>
+					  </span>
+					</button>
 	    		</div>
 			    <div className="MainContent--highlight">
 			        <HighLightOne slideOne={props.slideOne}/>

@@ -96,16 +96,28 @@
   			&:before{
   				content:url("/storage/Gfx/Global/Login/login-linkedin.svg");
   			}
+        &:hover{
+          background:rgba($linkedin,0.4);
+          a{color:$white;}
+        }
   		}
   		&.socialLogin--google{
   			&:before{
   				content:url("/storage/Gfx/Global/Login/login-google.svg");
   			}
+        &:hover{
+          background:rgba($grey3,0.6);
+          a{color:$white;}
+        }
   		}
   		&.socialLogin--facebook{
   			&:before{
   				content:url("/storage/Gfx/Global/Login/login-facebook.svg");
   			}
+        &:hover{
+          background:rgba($facebook,0.4);
+          a{color:$white;}
+        }
   		}
 
   		a{
@@ -142,6 +154,9 @@
   		text-decoration:underline;
   		font-size:.875em;
   		margin:auto 0;
+      &:hover{
+        color:$light-blue
+      }
   	}
   }
 

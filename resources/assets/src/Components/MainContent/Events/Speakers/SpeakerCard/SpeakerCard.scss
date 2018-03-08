@@ -3,6 +3,14 @@
 	cursor:pointer;
 	position:relative;
 	margin:.75em 0;
+
+	&:hover{
+		.SpeakerCard--details{
+			color:$black;
+			background:repeating-linear-gradient(-45deg, $white, $white 1px, rgba($white,0.6) 1px, rgba($white,0.6) 2px);
+		}
+	}
+
 	@media #{$medium-40} {
 		flex-basis:32%;
 	}

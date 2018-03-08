@@ -4,10 +4,7 @@
 	flex-basis:100%;
     justify-content: space-between;
     margin-bottom:2em;
-	background:repeating-linear-gradient(-45deg, $grey4, $grey4 3px, transparent 3px, transparent 6px);
-
 	.Headline--title{
-		background:$white;
 		padding-right:1.5em;
 	}
 }
@@ -94,5 +91,6 @@
 	.Layout-width{
 		margin:2em auto;
 		display:flex;
+		justify-content:space-between;
 	}
 }
