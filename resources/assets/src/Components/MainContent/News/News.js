@@ -15,7 +15,7 @@ class News extends Component {
             <HeaderSlider />
             <CategSlider direction={this.props.direction}/>
             <div className="Layout-width">
-                <NewsLatestPopular>
+                <NewsLatestPopular showCategs seeAll>
                     <NewsCard />
                     <NewsCard />
                     <NewsCard />

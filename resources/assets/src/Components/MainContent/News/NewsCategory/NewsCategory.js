@@ -4,7 +4,7 @@ import NewsCard from '../NewsCard/NewsCard'
 import NewsCardHighLight from '../NewsCard/NewsCardHighLight/NewsCardHighLight'
 
 const NewsCategory = props => (
-    <div className={"News--wrp Categ"}>
+    <div className="News--wrp Categ">
         <div className="Headline">
             <div className="News--title">
                 <h2>{props.name}</h2>    

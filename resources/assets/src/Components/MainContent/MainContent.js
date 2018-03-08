@@ -18,6 +18,9 @@ class MainContent extends Component {
                   <main>
                         <Switch>
                               <Route exact path="/" component={Home}/>
+                              <Route path="/talks" component={Talks}/>
+                              <Route path="/london" component={London}/>
+                              <Route path="/about" component={About}/>
                               <Switch>
                                     <Route exact path='/news' render={routeProps => <News {...routeProps} direction={this.props.direction}/>} />
                                     <Switch>
@@ -26,9 +29,6 @@ class MainContent extends Component {
                                           <Route component={NotFound}/>
                                     </Switch>
                               </Switch>
-                              <Route path="/talks" component={Talks}/>
-                              <Route path="/london" component={London}/>
-                              <Route path="/about" component={About}/>
                               <Route component={NotFound}/>
                         </Switch>
                   </main>

@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 
 import HeaderSlider from '../HeaderSlider/HeaderSlider'
 import NewsLatestPopular from '../News/NewsLatestPopular/NewsLatestPopular'
+import NewsCard from '../News/NewsCard/NewsCard'
 import TalksCategory from '../Talks/TalksCategory/TalksCategory'
 import Events from '../Events/Events'
 import StartupBanner from '../Startup/StartupBanner/StartupBanner'
@@ -23,7 +24,12 @@ class Home extends Component {
             <section className="Home">
                 <HeaderSlider />
                 <div className="Layout-width">
-                    <NewsLatestPopular name="News"/>
+                    <NewsLatestPopular name="News" showCategs seeAll >
+                        <NewsCard />
+                        <NewsCard />
+                        <NewsCard />
+                        <NewsCard />
+                    </NewsLatestPopular>
                 </div>
                     <Events />
                 <div className="Layout-width">

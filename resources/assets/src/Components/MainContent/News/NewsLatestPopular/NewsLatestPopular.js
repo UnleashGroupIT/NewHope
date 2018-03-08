@@ -34,7 +34,7 @@ class NewsLatestPopular extends Component {
                         {this.props.name ? <div className="News--title">
                             <h2>{this.props.name}</h2>    
                         </div> : null }
-                        <div className="News--Categs">
+                        {this.props.showCategs ? <div className="News--Categs">
                             <button onClick={this.activateLatest} className={this.state.latest ? "btnspn-b" : "btnspn-b passive"}>
                               <span className="border-top">
                                 <span className="transparent"></span>
@@ -53,7 +53,7 @@ class NewsLatestPopular extends Component {
                                 <span className="transparent"></span>
                               </span>
                             </button>
-                        </div>
+                        </div> : null }
                     </div>
                     {this.props.seeAll ? <div className="seeAll">
                         <Link to="news">See all</Link>
