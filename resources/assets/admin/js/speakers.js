@@ -41,7 +41,7 @@ var spVue = new Vue({
 					let old_item_id = $( "#CustomSpeakerGrid").children().eq(evt.oldIndex).data('speakerid');
 					let gridId = $("#SelectSpeakerGrid").val();
 
-				axios.patch(`/api/speakergrid/${gridId}/${old_item_id}`, {
+				axios.patch(`/api/grid/${gridId}/speaker/${old_item_id}`, {
 				    order_number: old_item_order
 				  })
 				  .then(function (response) {
@@ -56,7 +56,7 @@ var spVue = new Vue({
 					console.log(error);             		  
 				  });
 
-				  axios.patch(`/api/speakergrid/${gridId}/${new_item_id}`, {
+				  axios.patch(`/api/grid/${gridId}/speaker/${new_item_id}`, {
 				    order_number: new_item_order
 				  })
 				  .then(function (response) {
@@ -129,7 +129,7 @@ var spVue = new Vue({
               });
          } else {
 
-			axios.post('/api/grids/speakers/'+this.selected, {
+			axios.post('/api/grid/'+this.selected+'/speaker/', {
 			    speaker_id: speakerId
 			  })
 			  .then(function (response) {
@@ -162,7 +162,7 @@ var spVue = new Vue({
          	alert('No Grid is selected!');
          } else {
 
-			axios.delete('/api/grids/speakers/'+this.selected+'/'+speakerId, {
+			axios.delete('/api/grid/'+this.selected+'/speaker/'+speakerId, {
 			  })
 			  .then(function (response) {
 			    spVue.showGrid('');
